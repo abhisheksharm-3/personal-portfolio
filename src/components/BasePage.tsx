@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ReactNode } from "react";
-import {RiGithubLine, RiLinkedinFill} from "@remixicon/react"
+import {RiGithubFill, RiLinkedinFill} from "@remixicon/react"
 
 const BasePage = ({
   className,
@@ -60,12 +60,16 @@ const BasePage = ({
           <div className="border-r-2 border-r-line px-2 py-3 flex  items-center justify-center">
             <span>find me in:</span>
           </div>
-          <div className="border-r-2 border-r-line px-2 py-3 flex  items-center justify-center">
+          <div className="border-r-2 border-r-line px-2 py-3 flex  items-center justify-center cursor-pointer">
+          <a href="https://www.linkedin.com/in/abhisheksharma20212025/" target="_blank">
             <RiLinkedinFill />
+            </a>
           </div>
         </div>
-        <div className="border-l-2 border-l-line px-3 py-4 gap-2 flex  items-center justify-center">
-        <span className="">@abhisheksharm-3</span><RiGithubLine />
+        <div className="border-l-2 border-l-line px-3 py-4 cursor-pointer">
+        <a className="gap-2 flex  items-center justify-center" href="https://github.com/abhisheksharm-3" target="_blank">
+        <span className="">@abhisheksharm-3</span><RiGithubFill/>
+        </a>
         </div>
       </footer>
     </div>
