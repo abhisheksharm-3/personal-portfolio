@@ -15,6 +15,16 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        'blue-primary': '#011627',
+        'black-primary': '#01080E',
+        'gray-primary': '#011221',
+        'line': '#1E2D3D',
+        'fade-text': '#607B96'
+      },
+      fontFamily: {
+        fira: ['Fira Code', 'monospace'],
+      },
     },
   },
   darkMode: "class",
