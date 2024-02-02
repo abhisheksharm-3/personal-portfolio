@@ -23,7 +23,9 @@ const config: Config = {
         'fade-text': '#607B96',
         'blue-text': '#4D5BCE',
         'green-text': '#43D9AD',
-        'skin-text': '#E99287'
+        'skin-text': '#E99287',
+        'gradient-green': '#43D9AD',
+        'gradient-blue': '#4D5BCE'
       },
       fontFamily: {
         fira: ['Fira Code', 'monospace'],
