@@ -7,12 +7,15 @@ function ComingSoon() {
       <Image
         src={"/illustrations/comingsoon.svg"}
         priority
-        width={700}
+        width={650}
         height={900}
         alt="Image of Robot Being Developed"
       />
-      <span>This Page is Still Being Developed.</span>
-      <span>Visit Back Soon.</span>
+      <span className="text-center">🚧 Under Construction 🚧</span>
+      <span className="text-center">
+        This page is currently under construction. Please pardon our dust and
+        check back later for the final reveal!
+      </span>
     </div>
   );
 }
