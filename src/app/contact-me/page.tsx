@@ -1,4 +1,5 @@
-import BasePage from "@/components/BasePage"
+import BasePage from "@/components/BasePage";
+import ComingSoon from "@/components/ComingSoon/ComingSoon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,9 +10,9 @@ export const metadata: Metadata = {
 function ContactMe() {
   return (
     <BasePage active="_contact-me">
-    Contact Me
+      <ComingSoon />
     </BasePage>
-  )
+  );
 }
 
-export default ContactMe
+export default ContactMe;

@@ -1,4 +1,5 @@
 import BasePage from "@/components/BasePage"
+import ComingSoon from "@/components/ComingSoon/ComingSoon";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 function AboutMe() {
   return (
     <BasePage active="_about-me">
-    About Me
+    <ComingSoon />
     </BasePage>
   )
 }
