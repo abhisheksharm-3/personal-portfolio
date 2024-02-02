@@ -20,7 +20,10 @@ const config: Config = {
         'black-primary': '#01080E',
         'gray-primary': '#011221',
         'line': '#1E2D3D',
-        'fade-text': '#607B96'
+        'fade-text': '#607B96',
+        'blue-text': '#4D5BCE',
+        'green-text': '#43D9AD',
+        'skin-text': '#E99287'
       },
       fontFamily: {
         fira: ['Fira Code', 'monospace'],
