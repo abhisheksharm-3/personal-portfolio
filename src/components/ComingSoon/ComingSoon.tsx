@@ -7,7 +7,7 @@ function ComingSoon() {
       <Image
         src={"/illustrations/comingsoon.svg"}
         priority
-        width={650}
+        width={"650"}
         height={900}
         alt="Image of Robot Being Developed"
       />
