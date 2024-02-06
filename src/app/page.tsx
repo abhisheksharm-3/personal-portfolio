@@ -13,7 +13,7 @@ Code.theme = highlighterTheme;
 function LandingPage() {
   return (
     <BasePage className="" active="_hello">
-      <div className="hidden lg:flex items-center justify-around">
+      <div className="hidden lg:flex items-center justify-around bg-[url('/images/temp-bg-blur.svg')] bg-contain bg-no-repeat bg-right h-screen">
         <div className="flex flex-col items-start justify-center gap-20">
           <div className="flex flex-col items-start justify-center gap-3">
             <span className="text-[16px]">&nbsp;Hi all. I am</span>
@@ -35,7 +35,7 @@ function LandingPage() {
             </span>
           </div>
         </div>
-        <div>
+        <div className="">
           {CodeSnippets.map((snippet, index) => (
             <Code className="rounded-lg" lang="js" key={index}>
               {snippet.Code}
@@ -43,8 +43,8 @@ function LandingPage() {
           ))}
         </div>
       </div>
-      <div className="flex lg:hidden">
-        <div className="flex flex-col items-start justify-between px-4 w-screen py-10 gap-48">
+      <div className="flex lg:hidden bg-[url('/images/temp-bg-blur-mobile.svg')] bg-no-repeat bg-cover h-screen">
+        <div className="flex flex-col items-start justify-around px-4 w-screen py-10">
           <div className="flex flex-col gap-4 text-[#E5E9F0]">
             <span className="text-[16px]">&nbsp;Hi all. I am</span>
             <span className="text-6xl">Abhishek Sharma</span>
