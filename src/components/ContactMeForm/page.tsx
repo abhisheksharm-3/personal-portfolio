@@ -13,7 +13,6 @@ import {
   FormMessage,
 } from "../ui/form";
 import { Input } from "@/components/ui/input";
-import { format } from "path/posix";
 import { Textarea } from "../ui/textarea";
 
 const ContactFormSchema = z.object({
@@ -37,12 +36,10 @@ const ContactMeForm = () => {
 
   const handleSubmit = () => {};
   return (
-    <div className="text-fade-text flex flex-row items-center justify-center">
-      <div className="w-1/2 border-r-2">
-        <Form {...form}>
+      <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleSubmit)}
-            className="w-max flex flex-col gap-4 items-start justify-center px-3 m-auto"
+            className="w-max h-full flex flex-col gap-4 items-start justify-center m-auto"
           >
             <FormField
               control={form.control}
@@ -97,9 +94,6 @@ const ContactMeForm = () => {
             </Button>
           </form>
         </Form>
-      </div>
-      <div className="w-1/2"></div>
-    </div>
   );
 };
 

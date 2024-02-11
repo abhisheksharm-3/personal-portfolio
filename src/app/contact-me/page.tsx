@@ -1,11 +1,7 @@
 import BasePage from "@/components/BasePage";
-import {
-  RiCloseLine,
-  RiExternalLinkLine,
-  RiMailFill,
-  RiPhoneFill,
-  RiTriangleFill,
-} from "@remixicon/react";
+import { Code } from "bright";
+import { myTheme } from "@/constants/ContactmeCodeHighlighter";
+import { RiCloseLine } from "@remixicon/react";
 import ContactMeForm from "@/components/ContactMeForm/page";
 import FindMeAlsoOnSection from "@/components/FindMeAlsoOnSection/FindMeAlsoOnSection";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
@@ -16,7 +12,22 @@ export const metadata: Metadata = {
   description: "",
 };
 
-function ContactMe() {
+Code.theme = myTheme;
+Code.lineNumbers = true;
+
+const ContactMe = () => {
+  const formCode = `const button = document.querySelector('#sendBtn');
+
+  const message = {
+    name: "",
+    email: "",
+    message: "",
+    date: ""
+  }
+  
+  button.addEventListener('click', () => {
+    form.send(message);
+  })`;
   return (
     <BasePage active="_contact-me">
       <div className="flex flex-row h-screen">
@@ -35,13 +46,24 @@ function ContactMe() {
               </div>
             </div>
           </div>
-          <div className="flex-grow">
-            <ContactMeForm />
+          <div className="flex flex-row ">
+            <div className="flex items-center justify-center w-1/2 border-r-2">
+              <ContactMeForm />
+            </div>
+            <div className="w-1/2">
+              <Code className="rounded-lg" lang="js">
+                {formCode}
+              </Code>
+            </div>
+            <div className="px-2 border-l-2 text-fade-text flex items-center">
+              a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
+              <br />s<br />h<br />a<br />r<br />m<br />a
+            </div>
           </div>
         </div>
       </div>
     </BasePage>
   );
-}
+};
 
 export default ContactMe;
