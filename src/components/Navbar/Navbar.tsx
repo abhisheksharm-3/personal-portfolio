@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { RiMenuLine, RiCloseLine } from "@remixicon/react";
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
 import Footer from "../Footer/Footer";
 
 function Navbar({ active }: { active: string }) {
