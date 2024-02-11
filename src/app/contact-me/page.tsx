@@ -1,6 +1,14 @@
 import BasePage from "@/components/BasePage";
-import { RiCloseLine, RiTriangleFill } from "@remixicon/react";
+import {
+  RiCloseLine,
+  RiExternalLinkLine,
+  RiMailFill,
+  RiPhoneFill,
+  RiTriangleFill,
+} from "@remixicon/react";
 import ContactMeForm from "@/components/ContactMeForm/page";
+import FindMeAlsoOnSection from "@/components/FindMeAlsoOnSection/FindMeAlsoOnSection";
+import ContactsSection from "@/components/ContactsSection/ContactsSection";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -14,12 +22,9 @@ function ContactMe() {
       <div className="flex flex-row h-screen">
         {" "}
         {/*remove h-screen in case of overflow */}
-        <div className="flex flex-col">
-          <div className="flex items-center gap-2 pr-40 border-r-2 border-b-2 py-2 px-3 cursor-pointer">
-            <RiTriangleFill className="rotate-180 w-[8.5px] h-[6px]" />{" "}
-            <span className="pr-0.5">contacts&nbsp;&nbsp;</span>
-          </div>
-          <div></div>
+        <div className="flex flex-col border-r-2">
+          <ContactsSection />
+          <FindMeAlsoOnSection />
         </div>
         <div className="flex-grow">
           <div className="border-b-2">
