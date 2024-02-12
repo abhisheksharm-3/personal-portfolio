@@ -39,7 +39,7 @@ const ContactMeForm = () => {
       <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleSubmit)}
-            className="w-max h-full flex flex-col gap-4 items-start justify-center m-auto"
+            className="w-max flex flex-col gap-4 items-start"
           >
             <FormField
               control={form.control}

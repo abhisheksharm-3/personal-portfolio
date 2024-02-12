@@ -37,17 +37,19 @@ const ContactMe = () => {
           <ContactsSection />
           <FindMeAlsoOnSection />
         </div>
-        <div className="flex-grow">
-          <div className="border-b-2">
-            <div className=" border-r-2 max-w-max pr-2 h-fit">
-              <div className="flex items-center gap-12 text-fade-text py-2 px-3">
-                <span className="">contacts</span>
-                <RiCloseLine className="w-[18px] h-[18px] hover:text-white duration-400 cursor-pointer" />{" "}
+        <div className="flex-grow flex flex-col">
+          <div className="flex-grow">
+            <div className="border-b-2">
+              <div className=" border-r-2 max-w-max pr-2 h-fit">
+                <div className="flex items-center gap-12 text-fade-text py-2 px-3">
+                  <span className="">contacts</span>
+                  <RiCloseLine className="w-[18px] h-[18px] hover:text-white duration-400 cursor-pointer" />{" "}
+                </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-row ">
-            <div className="flex items-center justify-center w-1/2 border-r-2">
+          <div className="flex flex-row flex-grow h-full">
+            <div className="flex pt-8 justify-center w-1/2 border-r-2">
               <ContactMeForm />
             </div>
             <div className="w-1/2">
