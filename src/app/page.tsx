@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Code } from "bright";
 import { CodeSnippets } from "@/constants/CodeSnippets";
 import highlighterTheme from "../constants/highlighterTheme.json";
+import TypewriterEffect from "@/components/TypeWriterEffect/TypeWriterEffect";
 
 export const metadata: Metadata = {
   title: "_hello - Abhishek Sharma",
@@ -18,8 +19,8 @@ function LandingPage() {
           <div className="flex flex-col items-start justify-center gap-3">
             <span className="text-[16px]">&nbsp;Hi all. I am</span>
             <span className="text-6xl">Abhishek Sharma</span>
-            <span className="text-4xl text-blue-text">
-              &gt; Front-End Developer
+            <span className="text-4xl text-blue-text flex gap-5">
+              &gt; <TypewriterEffect />
             </span>
           </div>
           <div className="flex flex-col gap-1">
@@ -48,8 +49,8 @@ function LandingPage() {
           <div className="flex flex-col gap-4 text-[#E5E9F0]">
             <span className="text-[16px]">&nbsp;Hi all. I am</span>
             <span className="text-6xl">Abhishek Sharma</span>
-            <span className="text-2xl text-green-text">
-              &gt; Front-End Developer
+            <span className="text-2xl text-green-text flex gap-4">
+              &gt; <TypewriterEffect />
             </span>
           </div>
 

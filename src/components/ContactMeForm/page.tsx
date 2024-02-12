@@ -6,7 +6,6 @@ import { Button } from "../ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -39,7 +38,7 @@ const ContactMeForm = () => {
       <Form {...form}>
           <form
             onSubmit={form.handleSubmit(handleSubmit)}
-            className="w-max flex flex-col gap-4 items-start"
+            className="w-max flex flex-col gap-2 items-start"
           >
             <FormField
               control={form.control}
@@ -80,7 +79,7 @@ const ContactMeForm = () => {
                     <FormLabel>_message</FormLabel>
                     <FormControl>
                       <Textarea
-                        className="bg-[#011221] h-56 w-[372px]"
+                        className="bg-[#011221] h-40 w-[372px]"
                         {...field}
                       />
                     </FormControl>
