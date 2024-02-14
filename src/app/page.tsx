@@ -36,9 +36,10 @@ function LandingPage() {
             </span>
           </div>
         </div>
-        <div className="">
+        <div className=" ">
+          {/*TODO: Inbuilt tailwind classes not working for rounded corners */}
           {CodeSnippets.map((snippet, index) => (
-            <Code className="rounded-lg" lang="js" key={index}>
+            <Code className="" style={{ borderRadius: '8px' }} lang="js" key={index}>
               {snippet.Code}
             </Code>
           ))}

@@ -126,7 +126,7 @@
       "tab.inactiveBackground": "#262626",
       "tab.inactiveForeground": "#7b7f8b",
       "editor.foreground": "#f6f6f4",
-      "editor.background": "#011221ff",
+      "editor.background": "#011221",
       "editorLineNumber.foreground": "#7b7f8b",
       "editor.selectionBackground": "#44475A",
       "editor.selectionHighlightBackground": "#424450",
