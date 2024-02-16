@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { RiMenuLine, RiCloseLine } from "@remixicon/react";
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
 import Footer from "../Footer/Footer";
 
 function Navbar({ active }: { active: string }) {
@@ -98,7 +98,7 @@ function Navbar({ active }: { active: string }) {
           </div>
         )}
         {isMobileNavbarOpen && (
-          <div className="grid grid-rows-[auto,1fr,auto] gap-y-4 h-screen bg-blue-primary w-screen fixed">
+          <div className="grid grid-rows-[auto,1fr,auto] gap-y-4 h-screen bg-blue-primary w-screen fixed z-50">
             <div className="flex items-center justify-between px-4 border-b-2 border-b-line">
               <span className="flex items-center justify-center py-5">
                 abhishek_sharma

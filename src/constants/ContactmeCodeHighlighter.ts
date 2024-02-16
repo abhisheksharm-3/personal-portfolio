@@ -1,4 +1,4 @@
-{
+export const myTheme = {
     "$schema": "vscode://schemas/color-theme",
     "name": "dracula-soft",
     "author": "Zeno Rocha",
@@ -126,7 +126,7 @@
       "tab.inactiveBackground": "#262626",
       "tab.inactiveForeground": "#7b7f8b",
       "editor.foreground": "#f6f6f4",
-      "editor.background": "#011221",
+      "editor.background": "#01122100",
       "editorLineNumber.foreground": "#7b7f8b",
       "editor.selectionBackground": "#44475A",
       "editor.selectionHighlightBackground": "#424450",
@@ -644,7 +644,7 @@
           "keyword.operator.function.infix"
         ],
         "settings": {
-          "foreground": "#62e884"
+          "foreground": "#5565E8"
         }
       },
       {
@@ -689,7 +689,7 @@
           "punctuation.definition.keyword"
         ],
         "settings": {
-          "foreground": "#f286c4"
+          "foreground": "#C98BDF"
         }
       },
       {
@@ -708,7 +708,7 @@
           "meta.selector"
         ],
         "settings": {
-          "foreground": "#f286c4"
+          "foreground": "#C98BDF"
         }
       },
       {
@@ -772,7 +772,7 @@
           "punctuation.separator.annotation"
         ],
         "settings": {
-          "foreground": "#f286c4"
+          "foreground": "#C98BDF"
         }
       },
       {
@@ -797,7 +797,7 @@
           "string.template punctuation.accessor"
         ],
         "settings": {
-          "foreground": "#f6f6f4"
+          "foreground": "#607B96"
         }
       },
       {
@@ -816,7 +816,7 @@
           "punctuation.definition.variable.makefile"
         ],
         "settings": {
-          "foreground": "#f286c4"
+          "foreground": "#607B96"
         }
       },
       {
@@ -920,7 +920,7 @@
           "constant.character.escape.backslash.regexp"
         ],
         "settings": {
-          "foreground": "#e7ee98"
+          "foreground": "#FEA55F"
         }
       },
       {
@@ -985,7 +985,7 @@
           "string"
         ],
         "settings": {
-          "foreground": "#e7ee98"
+          "foreground": "#FEA55F"
         }
       },
       {
@@ -995,7 +995,7 @@
           "punctuation.definition.string.end"
         ],
         "settings": {
-          "foreground": "#dee492"
+          "foreground": "#FEA55F"
         }
       },
       {
@@ -1031,7 +1031,7 @@
           "variable.other.constant.tsx"
         ],
         "settings": {
-          "foreground": "#f6f6f4"
+          "foreground": "#5565E8"
         }
       },
       {
@@ -1183,4 +1183,4 @@
         }
       }
     ]
-  }
+  };
