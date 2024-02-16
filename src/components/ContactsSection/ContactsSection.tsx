@@ -10,7 +10,7 @@ const ContactsSection = () => {
   return (
     <div>
       <div
-        className="flex items-center gap-2 pr-40 border-b-2 py-2 px-3 cursor-pointer"
+        className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
         onClick={toggleContacts}
       >
         <RiTriangleFill
@@ -19,7 +19,7 @@ const ContactsSection = () => {
         <span className="pr-0.5">contacts&nbsp;&nbsp;</span>
       </div>
       {showContacts && (
-        <div className="flex flex-col py-4 px-3 text-fade-text border-b-2">
+        <div className="flex flex-col py-4 px-3 text-fade-text lg:border-b-2">
           <span className="flex gap-2 items-center">
             <RiMailFill className="w-[16px]" /> email@gmail.com
           </span>

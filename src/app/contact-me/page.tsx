@@ -30,7 +30,8 @@ const ContactMe = () => {
   })`;
   return (
     <BasePage active="_contact-me">
-      <div className="flex flex-row h-screen">
+      {/* Desktop Version */}
+      <div className="hidden lg:flex flex-row h-screen">
         {" "}
         {/*remove h-screen in case of overflow */}
         <div className="flex flex-col border-r-2">
@@ -62,6 +63,17 @@ const ContactMe = () => {
               <br />s<br />h<br />a<br />r<br />m<br />a
             </div>
           </div>
+        </div>
+      </div>
+      {/* Mobile Version */}
+      <div className="flex flex-col gap-4 h-screen py-4 lg:hidden overflow-hidden">
+        <div className="flex px-4">_contact-me</div>
+        <div className="flex flex-col gap-1 overflow-auto">
+          <ContactsSection />
+          <FindMeAlsoOnSection />
+        </div>
+        <div className="w-full flex items-center justify-center">
+          <ContactMeForm />
         </div>
       </div>
     </BasePage>

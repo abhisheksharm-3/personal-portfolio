@@ -14,7 +14,7 @@ Code.theme = highlighterTheme;
 function LandingPage() {
   return (
     <BasePage className="" active="_hello">
-      <div className="hidden lg:flex items-center justify-around bg-[url('/images/temp-bg-blur.svg')] bg-contain bg-no-repeat bg-right h-screen">
+      <div className="hidden lg:flex items-center justify-around bg-[url('/images/temp-bg-blur.svg')] bg-contain bg-no-repeat bg-right h-screen ">
         <div className="flex flex-col items-start justify-center gap-20">
           <div className="flex flex-col items-start justify-center gap-3">
             <span className="text-[16px]">&nbsp;Hi all. I am</span>

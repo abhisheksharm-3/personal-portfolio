@@ -10,7 +10,7 @@ const FindMeAlsoOnSection = () => {
   return (
     <div>
       <div
-        className="flex items-center gap-2 border-b-2 py-2 px-3 cursor-pointer"
+        className="flex items-center gap-2 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
         onClick={toggleFindMeAlsoOn}
       >
         <RiTriangleFill
