@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     const mailOptions: nodemailer.SendMailOptions = {
       from: senderEmail,
-      to: process.env.MY_MAIL1!,
+      to: process.env.MY_MAIL!,
       replyTo: senderEmail,
       priority: "high",
       subject: "New Message from Contact Me Form",

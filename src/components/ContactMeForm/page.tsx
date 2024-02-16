@@ -137,7 +137,8 @@ const ContactMeForm = () => {
           />
           {error && (
             <div className="text-red-500 text-sm">
-              Your message couldn&apos;t be sent. <br /> Please try again or<br />{" "}
+              Your message couldn&apos;t be sent. <br /> Please try again or
+              <br />{" "}
               <a
                 href={`mailto:${process.env.MY_MAIL}`}
                 className="underline hover:text-red-400 duration-400"

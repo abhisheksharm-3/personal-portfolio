@@ -15,14 +15,27 @@ export const metadata: Metadata = {
 Code.theme = myTheme;
 Code.lineNumbers = true;
 
+const currentDate = new Date();
+
+const options: Intl.DateTimeFormatOptions = {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: 'Asia/Kolkata',
+};
+
+const formatter = new Intl.DateTimeFormat("en-IN", options);
+const humanReadableDate = formatter.format(currentDate);
+
 const ContactMe = () => {
+  //TODO: TRY TO OVERCOME TECHNICAL PROBLEMS OF CODE UPDATE IN REALTIME
   const formCode = `const button = document.querySelector('#sendBtn');
 
   const message = {
-    name: "",
-    email: "",
-    message: "",
-    date: ""
+    name: "Your Name Here",
+    email: "Your Email Here",
+    message: "Your Message Here",
+    date: "${humanReadableDate}"
   }
   
   button.addEventListener('click', () => {
