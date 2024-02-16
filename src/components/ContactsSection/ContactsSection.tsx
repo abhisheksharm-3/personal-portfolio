@@ -21,10 +21,10 @@ const ContactsSection = () => {
       {showContacts && (
         <div className="flex flex-col py-4 px-3 text-fade-text lg:border-b-2">
           <span className="flex gap-2 items-center">
-            <RiMailFill className="w-[16px]" /> email@gmail.com
+            <RiMailFill className="w-[16px]" /> Hidden
           </span>
           <span className="flex gap-2 items-center">
-            <RiPhoneFill className="w-[16px]" /> +91
+            <RiPhoneFill className="w-[16px]" /> Hidden
           </span>
         </div>
       )}

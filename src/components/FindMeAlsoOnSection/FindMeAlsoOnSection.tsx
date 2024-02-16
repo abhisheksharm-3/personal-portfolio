@@ -25,7 +25,7 @@ const FindMeAlsoOnSection = () => {
           <span className="flex gap-2 items-center text-sm cursor-pointer">
             <RiExternalLinkLine className="w-[16px]" />{" "}
             <span className="hover:text-white duration-400">
-              Instagram Account
+              <a href="https://www.instagram.com/abhishekxsharmaa/" target="_blank">Instagram Account</a>
             </span>
           </span>
         </div>
