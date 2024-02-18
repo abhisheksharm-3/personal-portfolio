@@ -19,6 +19,7 @@ const ContactsSection = () => {
         <span className="pr-0.5">contacts&nbsp;&nbsp;</span>
       </div>
       {showContacts && (
+        //TODO: Figure out how to avoid data harvesting then only display info
         <div className="flex flex-col py-4 px-3 text-fade-text lg:border-b-2">
           <span className="flex gap-2 items-center">
             <RiMailFill className="w-[16px]" /> Hidden
