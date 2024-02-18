@@ -29,7 +29,8 @@ const humanReadableDate = formatter.format(currentDate);
 
 const ContactMe = () => {
   //TODO: TRY TO OVERCOME TECHNICAL PROBLEMS OF CODE UPDATE IN REALTIME
-  const formCode = ` //this code doesn't update in realtime, YET 😜
+  const formCode = ` //this code doesn't update in realtime 
+// due to tech stack limitations, YET 😜
   const button = document.querySelector('#sendBtn');
 
   const message = {
