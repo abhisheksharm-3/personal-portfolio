@@ -41,7 +41,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <>
-      <div className="flex flex-col bg-[#011221] border-1 rounded-lg w-[370px] h-[315px] relative">
+      <div className="flex flex-col bg-[#011221] border-1 rounded-3xl lg:rounded-lg w-[370px] h-[315px] relative">
         <div className="border-b-1 relative h-1/2">
           {/* Showcase Image */}
           <Image
@@ -49,7 +49,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             height={125}
             width={370}
             alt={title}
-            className="rounded-t-lg"
+            className="rounded-t-3xl lg:rounded-t-lg"
           />
           {/* Tech Stack Icon */}
           <TechIcon className="absolute top-0 right-0 transform -translate-x-1/2 translate-y-1/2" />
