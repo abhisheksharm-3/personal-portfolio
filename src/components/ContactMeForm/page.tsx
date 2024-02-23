@@ -4,6 +4,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "../ui/button";
+import { ReloadIcon } from "@radix-ui/react-icons";
 import {
   Form,
   FormControl,
@@ -148,9 +149,16 @@ const ContactMeForm = () => {
               .
             </div>
           )}
-          <Button variant={"secondary"} disabled={loading} type="submit">
-            submit-message
-          </Button>
+          {loading ? (
+            <Button variant={"secondary"} disabled>
+              <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+              Please wait
+            </Button>
+          ) : (
+            <Button variant={"secondary"} disabled={loading} type="submit">
+              submit-message
+            </Button>
+          )}
         </form>
       )}
     </Form>
