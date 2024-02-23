@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiTypescript, SiJavascript } from "react-icons/si";
 import { projects } from "@/constants/projects";
 import {
   RiCloseLine,
@@ -16,6 +18,9 @@ const ProjectsViewfinder = () => {
   const techsWithIcons = [
     { name: "React", icon: <RiReactjsLine /> },
     { name: "HTML", icon: <RiHtml5Line /> },
+    { name: "NextJs", icon: <TbBrandNextjs className="text-2xl" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-2xl" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-2xl" /> },
   ];
 
   const toggleTech = (tech: string) => {

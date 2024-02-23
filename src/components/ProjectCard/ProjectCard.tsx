@@ -2,6 +2,8 @@ import Image from "next/image";
 import React from "react";
 import { Button } from "../ui/button";
 import { RiReactjsFill, RiAngularjsFill, RiVuejsFill, RiHtml5Line } from "@remixicon/react";
+import { TbBrandNextjs } from "react-icons/tb";
+
 import Link from "next/link";
 
 interface ProjectCardProps {
@@ -35,6 +37,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       case "HTML":
       TechIcon = RiHtml5Line;
       break;
+      case "NextJs":
+      TechIcon = TbBrandNextjs;
+      break;
     default:
       TechIcon = RiReactjsFill; // Default to React icon if tech stack is not recognized
   }
@@ -53,7 +58,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             className="rounded-t-3xl lg:rounded-t-lg"
           /> */}
           {/* Tech Stack Icon */}
-          <TechIcon className="absolute top-0 right-0 transform -translate-x-1/2 translate-y-1/2" />
+          <TechIcon className="absolute top-0 right-0 transform -translate-x-1/2 translate-y-1/2 text-2xl" />
         </div>
         <div className="flex flex-col w-full items-start gap-4 px-8 justify-center h-1/2">
           <p className="text-fade-text">{description}</p>
