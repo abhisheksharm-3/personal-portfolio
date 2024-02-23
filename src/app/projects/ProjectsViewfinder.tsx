@@ -19,7 +19,7 @@ const ProjectsViewfinder = () => {
     { name: "React", icon: <RiReactjsLine /> },
     { name: "HTML", icon: <RiHtml5Line /> },
     { name: "NextJs", icon: <TbBrandNextjs className="text-2xl" /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-2xl" /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-2xl " /> },
     { name: "JavaScript", icon: <SiJavascript className="text-2xl" /> },
   ];
 
