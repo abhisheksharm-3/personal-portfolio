@@ -10,11 +10,12 @@ import {
   RiReactjsLine,
   RiTriangleFill,
 } from "@remixicon/react";
-import { Checkbox } from "@nextui-org/react";
+import { Checkbox, Tooltip } from "@nextui-org/react";
 
 const ProjectsViewfinder = () => {
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [showTechStack, setShowTechStack] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const techsWithIcons = [
     { name: "React", icon: <RiReactjsLine /> },
     { name: "HTML", icon: <RiHtml5Line /> },
@@ -93,7 +94,20 @@ const ProjectsViewfinder = () => {
                         : "all projects" // Default to "projects" if no technology is selected
                     }
                   </span>
-                  <RiCloseLine className="w-[18px] h-[18px] hover:text-white duration-400 cursor-pointer" />
+                  <Tooltip
+                    content="Clear Filters"
+                    placement="top"
+                    isOpen={isOpen}
+                    onOpenChange={(open) => setIsOpen(open)}
+                    delay={200}
+                  >
+                    <div>
+                      <RiCloseLine
+                        className="w-[18px] h-[18px] hover:text-white duration-400 cursor-pointer"
+                        onClick={() => setSelectedTechs([])}
+                      />
+                    </div>
+                  </Tooltip>
                 </div>
               </div>
             </div>
