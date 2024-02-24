@@ -62,7 +62,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
   return (
     <>
-      <div className="flex flex-col bg-[#011221] border-1 rounded-3xl lg:rounded-lg w-[370px] h-[315px] relative">
+      <div className="flex flex-col bg-[#011221] border-1 rounded-3xl lg:rounded-lg w-[320px] 3xl:w-[370px] h-[315px] relative flex-shrink">
         <Skeleton
           isLoaded={isLoaded}
           className="rounded-t-3xl lg:rounded-t-lg h-1/2"
