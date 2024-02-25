@@ -1,4 +1,4 @@
-export const myTheme = {
+export const ContactMeCodeUI = {
     "$schema": "vscode://schemas/color-theme",
     "name": "dracula-soft",
     "author": "Zeno Rocha",

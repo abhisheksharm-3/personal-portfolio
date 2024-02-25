@@ -1,6 +1,6 @@
 import BasePage from "@/components/BasePage";
 import { Code } from "bright";
-import { myTheme } from "@/constants/ContactmeCodeHighlighter";
+import { ContactMeCodeUI } from "@/constants/ContactmeCodeHighlighter";
 import { RiCloseLine } from "@remixicon/react";
 import ContactMeForm from "@/components/ContactMeForm/page";
 import FindMeAlsoOnSection from "@/components/FindMeAlsoOnSection/FindMeAlsoOnSection";
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description: "",
 };
 
-Code.theme = myTheme;
+Code.theme = ContactMeCodeUI;
 Code.lineNumbers = true;
 
 const currentDate = new Date();
