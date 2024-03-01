@@ -11,4 +11,4 @@ Design Credits: <a href="https://www.figma.com/community/file/110079486171097914
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://raw.githubusercontent.com/abhisheksharm-3/personal-portfolio/main/public/meta-assets/homepage-demo.png" alt="project-screenshot" width="1920" height="1080/">
+<img src="https://raw.githubusercontent.com/abhisheksharm-3/personal-portfolio/main/public/meta-assets/homepage-demo.png" alt="project-screenshot" style="aspect-ratio: 16/9 auto">
