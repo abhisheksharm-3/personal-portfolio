@@ -1,5 +1,5 @@
 import BasePage from "@/components/BasePage"
-import ComingSoon from "@/components/ComingSoon/ComingSoon";
+import AboutMeViewfinder from "./AboutMeViewfinder";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 function AboutMe() {
   return (
     <BasePage active="_about-me">
-    <ComingSoon />
+    <AboutMeViewfinder />
     </BasePage>
   )
 }
