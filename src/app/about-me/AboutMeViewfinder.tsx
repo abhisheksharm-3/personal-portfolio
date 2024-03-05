@@ -25,7 +25,10 @@ const AboutMeViewfinder = () => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleShowTechStack = () => setShowTechStack(!showTechStack);
-  const toggleShowBio = () => setShowBio(!showBio);
+  const toggleShowBio = () => {
+    setShowBio(!showBio);
+    // setShowSummary(false);
+  };
   const toggleShowEducation = () => setShowEducation(!showEducation);
   const toggleShowInterests = () => setShowInterests(!showInterests);
   const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -65,7 +68,9 @@ const AboutMeViewfinder = () => {
           }`}
           onClick={toggleShowInterests}
         >
-          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"}`} />
+          <RiArrowRightSLine
+            className={`rotate-${showInterests ? "90" : "0"}`}
+          />
           <div className="">
             <div className="flex items-center gap-1">
               <RiFolder3Fill className="text-[#43D9AD] size-4" /> interests
@@ -88,7 +93,9 @@ const AboutMeViewfinder = () => {
           }`}
           onClick={toggleShowEducation}
         >
-          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"}`} />
+          <RiArrowRightSLine
+            className={`rotate-${showEducation ? "90" : "0"}`}
+          />
           <div className="">
             <div className="flex items-center gap-1">
               <RiFolder3Fill className="text-[#3A49A4] size-4" /> education
