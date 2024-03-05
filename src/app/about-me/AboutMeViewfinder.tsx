@@ -6,6 +6,9 @@ import {
   RiGamepadFill,
   RiUser4Fill,
   RiTriangleFill,
+  RiArrowRightSLine,
+  RiFolder3Fill,
+  RiMarkdownFill,
 } from "@remixicon/react";
 import { Tooltip } from "@nextui-org/react";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
@@ -14,9 +17,97 @@ const AboutMeViewfinder = () => {
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
   const [showTechStack, setShowTechStack] = useState<boolean>(true);
   const [selectedTab, setSelectedTab] = useState<string>("personal-info");
+  const [selectedFolder, setSelectedFolder] = useState<number>(2);
+  const [showBio, setShowBio] = useState<boolean>(false);
+  const [showSummary, setShowSummary] = useState<boolean>(false);
+  const [showInterests, setShowInterests] = useState<boolean>(false);
+  const [showEducation, setShowEducation] = useState<boolean>(false);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleShowTechStack = () => setShowTechStack(!showTechStack);
+  const toggleShowBio = () => setShowBio(!showBio);
+  const toggleShowEducation = () => setShowEducation(!showEducation);
+  const toggleShowInterests = () => setShowInterests(!showInterests);
+  const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+    setShowSummary(!showSummary);
+  };
+
+  const PersonalInfo = () => {
+    return (
+      <div className="flex flex-col">
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showBio ? "text-white" : null
+          }`}
+          onClick={toggleShowBio}
+        >
+          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"}`} />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#E99287] size-4" /> bio
+            </div>
+            {showBio ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showSummary ? "text-white" : null
+                }`}
+                onClick={toggleShowSummary}
+              >
+                <RiMarkdownFill className="size-4" /> summary
+              </div>
+            ) : null}
+          </div>
+        </div>
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showInterests ? "text-white" : null
+          }`}
+          onClick={toggleShowInterests}
+        >
+          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"}`} />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#43D9AD] size-4" /> interests
+            </div>
+            {showInterests ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showSummary ? "text-white" : null
+                }`}
+                onClick={toggleShowSummary}
+              >
+                <RiMarkdownFill className="size-4" /> summary
+              </div>
+            ) : null}
+          </div>
+        </div>
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showEducation ? "text-white" : null
+          }`}
+          onClick={toggleShowEducation}
+        >
+          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"}`} />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#3A49A4] size-4" /> education
+            </div>
+            {showEducation ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showSummary ? "text-white" : null
+                }`}
+                onClick={toggleShowSummary}
+              >
+                <RiMarkdownFill className="size-4" /> summary
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
+  };
   return (
     <div className="overflow-y-hidden">
       {/* Desktop Version */}
@@ -25,17 +116,26 @@ const AboutMeViewfinder = () => {
           <Tooltip content="Professional Info" placement="right" delay={200}>
             <div>
               {" "}
-              <RiTerminalBoxFill className="cursor-pointer hover:text-white duration-400 ease-in-out" />
+              <RiTerminalBoxFill
+                className="cursor-pointer hover:text-white duration-400 ease-in-out"
+                onClick={() => setSelectedTab("professional-info")}
+              />
             </div>
           </Tooltip>{" "}
           <Tooltip content="Personal Info" placement="right" delay={200}>
             <div>
-              <RiUser4Fill className="cursor-pointer hover:text-white duration-400 ease-in-out" />{" "}
+              <RiUser4Fill
+                className="cursor-pointer hover:text-white duration-400 ease-in-out"
+                onClick={() => setSelectedTab("personal-info")}
+              />{" "}
             </div>
           </Tooltip>
           <Tooltip content="Hobbies" placement="right" delay={200}>
             <div>
-              <RiGamepadFill className="cursor-pointer hover:text-white duration-400 ease-in-out" />
+              <RiGamepadFill
+                className="cursor-pointer hover:text-white duration-400 ease-in-out"
+                onClick={() => setSelectedTab("hobbies")}
+              />
             </div>
           </Tooltip>
         </div>
@@ -49,10 +149,12 @@ const AboutMeViewfinder = () => {
                 showTechStack ? "180" : "90"
               } w-[8.5px] h-[6px]`}
             />
-            <span className="pr-3">{selectedTab}</span>
+            <span className="pr-3">{selectedTab.toLowerCase()}</span>
           </div>
           {showTechStack ? (
-            <div className="border-b-2 text-fade-text">abc</div>
+            <div className="border-b-2 text-fade-text p-3">
+              <PersonalInfo />
+            </div>
           ) : null}
           <ContactsSection />
         </div>
@@ -82,8 +184,10 @@ const AboutMeViewfinder = () => {
             </div>
           </div>
           <div className="flex flex-row flex-grow h-full">
-            <div className="grid grid-cols-3 gap-4 pt-20 pb-60 w-full px-32 overflow-y-scroll scrollbar-hide">
+            <div className="flex flex-row  w-full overflow-y-scroll scrollbar-hide">
               {/* Display filtered projects */}
+              <div className=" border-r-2 w-1/2"></div>
+              <div className="w-1/2"></div>
             </div>
             <div className="px-2 border-l-2 text-fade-text flex items-center">
               a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
