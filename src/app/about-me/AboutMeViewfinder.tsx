@@ -12,31 +12,68 @@ import {
 } from "@remixicon/react";
 import { Tooltip } from "@nextui-org/react";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
+import NothingOpen from "@/components/NothingOpen/NothingOpen";
 
 const AboutMeViewfinder = () => {
-  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
-  const [showTechStack, setShowTechStack] = useState<boolean>(true);
+  const [selectedView, setSelectedView] = useState<string[]>([]);
+  const [expandFolder, setExpandFolder] = useState<boolean>(true);
   const [selectedTab, setSelectedTab] = useState<string>("personal-info");
   const [selectedFolder, setSelectedFolder] = useState<number>(2);
-  const [showBio, setShowBio] = useState<boolean>(false);
-  const [showSummary, setShowSummary] = useState<boolean>(false);
-  const [showInterests, setShowInterests] = useState<boolean>(false);
-  const [showEducation, setShowEducation] = useState<boolean>(false);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const toggleShowTechStack = () => setShowTechStack(!showTechStack);
-  const toggleShowBio = () => {
-    setShowBio(!showBio);
-    // setShowSummary(false);
-  };
-  const toggleShowEducation = () => setShowEducation(!showEducation);
-  const toggleShowInterests = () => setShowInterests(!showInterests);
-  const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
-    event.stopPropagation();
-    setShowSummary(!showSummary);
-  };
+  const toggleShowTechStack = () => setExpandFolder(!expandFolder);
 
   const PersonalInfo = () => {
+    const [showBio, setShowBio] = useState<boolean>(true);
+    const [showSummary, setShowSummary] = useState<boolean>(false);
+    const [showTechInterests, setShowTechInterests] = useState<boolean>(false);
+    const [showInterests, setShowInterests] = useState<boolean>(false);
+    const [showEducation, setShowEducation] = useState<boolean>(false);
+    const [showHighSchool, setShowHighSchool] = useState<boolean>(false);
+    const [showUniversity, setShowUniversity] = useState<boolean>(false);
+    const toggleShowBio = () => {
+      setShowBio(!showBio);
+      setShowSummary(false);
+    };
+    const toggleShowEducation = () => {
+      setShowEducation(!showEducation);
+      setShowHighSchool(false);
+      setShowUniversity(false);
+    };
+    const toggleShowInterests = () => {
+      setShowInterests(!showInterests);
+      setShowTechInterests(false);
+    };
+    const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      setShowSummary(!showSummary);
+      setShowHighSchool(false);
+      setShowUniversity(false);
+      setShowTechInterests(false);
+    };
+    const toggleShowTechInterests = (
+      event: React.MouseEvent<HTMLDivElement>
+    ) => {
+      event.stopPropagation();
+      setShowTechInterests(!showTechInterests);
+      setShowSummary(false);
+      setShowHighSchool(false);
+      setShowUniversity(false);
+    };
+    const toggleShowHighSchool = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      setShowHighSchool(!showHighSchool);
+      setShowUniversity(false);
+      setShowSummary(false);
+      setShowTechInterests(false);
+    };
+    const toggleShowUniversity = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      setShowUniversity(!showUniversity);
+      setShowHighSchool(false);
+      setShowSummary(false);
+      setShowTechInterests(false);
+    };
     return (
       <div className="flex flex-col">
         <div
@@ -78,11 +115,11 @@ const AboutMeViewfinder = () => {
             {showInterests ? (
               <div
                 className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
-                  showSummary ? "text-white" : null
+                  showTechInterests ? "text-white" : null
                 }`}
-                onClick={toggleShowSummary}
+                onClick={toggleShowTechInterests}
               >
-                <RiMarkdownFill className="size-4" /> summary
+                <RiMarkdownFill className="size-4" /> tech-interests
               </div>
             ) : null}
           </div>
@@ -102,12 +139,192 @@ const AboutMeViewfinder = () => {
             </div>
             {showEducation ? (
               <div
-                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
-                  showSummary ? "text-white" : null
-                }`}
+                className={`text-fade-text flex flex-col items-center gap-1 pt-1`}
                 onClick={toggleShowSummary}
               >
+                <div
+                  className={`flex gap-1 hover:text-white duration-400 ease-in-out items-center ${
+                    showHighSchool ? "text-white" : null
+                  }`}
+                  onClick={toggleShowHighSchool}
+                >
+                  <RiMarkdownFill className="size-4" /> highschool
+                </div>
+                <div
+                  className={`flex gap-1 hover:text-white duration-400 ease-in-out items-center ${
+                    showUniversity ? "text-white" : null
+                  }`}
+                  onClick={toggleShowUniversity}
+                >
+                  <RiMarkdownFill className="size-4" /> university
+                </div>
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const ProfessionalInfo = () => {
+    const [experience, setExperience] = useState(false);
+    const [showExperienceSummary, setShowExperienceSummary] = useState(false);
+    const [showTechStack, setShowTechStack] = useState(false);
+    const [showTechStackDetails, setShowTechStackDetails] = useState(false);
+
+    const toggleExperience = () => {
+      setExperience(!experience);
+      setShowExperienceSummary(false);
+    };
+    const toggleShowExperienceSummary = (
+      event: React.MouseEvent<HTMLDivElement>
+    ) => {
+      event.stopPropagation();
+      setShowExperienceSummary(!showExperienceSummary);
+      setShowTechStackDetails(false);
+    };
+    const toggleShowTechStackDetails = (
+      event: React.MouseEvent<HTMLDivElement>
+    ) => {
+      event.stopPropagation();
+      setShowTechStackDetails(!showTechStackDetails);
+      setShowExperienceSummary(false);
+    };
+    const toggleShowTechStack = () => {
+      setShowTechStack(!showTechStack);
+      setShowTechStackDetails(false);
+    };
+    return (
+      <div className="flex flex-col">
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            experience ? "text-white" : null
+          }`}
+          onClick={toggleExperience}
+        >
+          <RiArrowRightSLine className={`rotate-${experience ? "90" : "0"}`} />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#E99287] size-4" /> experience
+            </div>
+            {experience ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showExperienceSummary ? "text-white" : null
+                }`}
+                onClick={toggleShowExperienceSummary}
+              >
                 <RiMarkdownFill className="size-4" /> summary
+              </div>
+            ) : null}
+          </div>
+        </div>
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showTechStack ? "text-white" : null
+          }`}
+          onClick={toggleShowTechStack}
+        >
+          <RiArrowRightSLine
+            className={`rotate-${showTechStack ? "90" : "0"}`}
+          />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#43D9AD] size-4" /> tech stack
+            </div>
+            {showTechStack ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showTechStackDetails ? "text-white" : null
+                }`}
+                onClick={toggleShowTechStackDetails}
+              >
+                <RiMarkdownFill className="size-4" /> details
+              </div>
+            ) : null}
+          </div>
+        </div>
+      </div>
+    );
+  };
+  const Hobbies = () => {
+    const [showNerdy, setShowNerdy] = useState(false);
+    const [showNerdyDetails, setShowNerdyDetails] = useState(false);
+    const [showNonNerdy, setShowNonNerdy] = useState(false);
+    const [showNonNerdyDetails, setShowNonNerdyDetails] = useState(false);
+
+    const toggleShowNerdy = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      setShowNerdy(!showNerdy);
+      setShowNerdyDetails(false);
+    };
+
+    const toggleShowNerdyDetails = (
+      event: React.MouseEvent<HTMLDivElement>
+    ) => {
+      event.stopPropagation();
+      setShowNerdyDetails(!showNerdyDetails);
+      setShowNonNerdyDetails(false);
+    };
+
+    const toggleShowNonNerdy = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      setShowNonNerdy(!showNonNerdy);
+      setShowNonNerdyDetails(false);
+    };
+
+    const toggleshowNonNerdyDetails = (
+      event: React.MouseEvent<HTMLDivElement>
+    ) => {
+      event.stopPropagation();
+      setShowNonNerdyDetails(!showNonNerdyDetails);
+      setShowNerdyDetails(false);
+    };
+    return (
+      <div className="flex flex-col">
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showNerdy ? "text-white" : null
+          }`}
+          onClick={toggleShowNerdy}
+        >
+          <RiArrowRightSLine className={`rotate-${showNerdy ? "90" : "0"}`} />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#E99287] size-4" /> nerdy
+            </div>
+            {showNerdy ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showNerdyDetails ? "text-white" : null
+                }`}
+                onClick={toggleShowNerdyDetails}
+              >
+                <RiMarkdownFill className="size-4" /> nerdy-hobbies
+              </div>
+            ) : null}
+          </div>
+        </div>
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showNonNerdy ? "text-white" : null
+          }`}
+          onClick={toggleShowNonNerdy}
+        >
+          <RiArrowRightSLine
+            className={`rotate-${showNonNerdy ? "90" : "0"}`}
+          />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#43D9AD] size-4" /> non-nerdy
+            </div>
+            {showNonNerdy ? (
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out ${
+                  showNonNerdyDetails ? "text-white" : null
+                }`}
+                onClick={toggleshowNonNerdyDetails}
+              >
+                <RiMarkdownFill className="size-4" /> non-nerdy-hobbies
               </div>
             ) : null}
           </div>
@@ -124,24 +341,38 @@ const AboutMeViewfinder = () => {
             <div>
               {" "}
               <RiTerminalBoxFill
-                className="cursor-pointer hover:text-white duration-400 ease-in-out"
-                onClick={() => setSelectedTab("professional-info")}
+                className={`cursor-pointer hover:text-white duration-400 ease-in-out ${
+                  selectedFolder == 1 ? "text-white" : null
+                }`}
+                onClick={() => {
+                  setSelectedTab("professional-info"), setSelectedFolder(1);
+                }}
               />
             </div>
           </Tooltip>{" "}
           <Tooltip content="Personal Info" placement="right" delay={200}>
             <div>
               <RiUser4Fill
-                className="cursor-pointer hover:text-white duration-400 ease-in-out"
-                onClick={() => setSelectedTab("personal-info")}
+                className={`cursor-pointer hover:text-white duration-400 ease-in-out ${
+                  selectedFolder == 2 ? "text-white" : null
+                }`}
+                onClick={() => {
+                  setSelectedTab("personal-info");
+                  setSelectedFolder(2);
+                }}
               />{" "}
             </div>
           </Tooltip>
           <Tooltip content="Hobbies" placement="right" delay={200}>
             <div>
               <RiGamepadFill
-                className="cursor-pointer hover:text-white duration-400 ease-in-out"
-                onClick={() => setSelectedTab("hobbies")}
+                className={`cursor-pointer hover:text-white duration-400 ease-in-out ${
+                  selectedFolder == 3 ? "text-white" : null
+                }`}
+                onClick={() => {
+                  setSelectedTab("hobbies");
+                  setSelectedFolder(3);
+                }}
               />
             </div>
           </Tooltip>
@@ -153,14 +384,22 @@ const AboutMeViewfinder = () => {
           >
             <RiTriangleFill
               className={`rotate-${
-                showTechStack ? "180" : "90"
+                expandFolder ? "180" : "90"
               } w-[8.5px] h-[6px]`}
             />
             <span className="pr-3">{selectedTab.toLowerCase()}</span>
           </div>
-          {showTechStack ? (
+          {expandFolder ? (
             <div className="border-b-2 text-fade-text p-3">
-              <PersonalInfo />
+              {selectedFolder === 1 ? (
+                <ProfessionalInfo />
+              ) : selectedFolder === 2 ? (
+                <PersonalInfo />
+              ) : selectedFolder === 3 ? (
+                <Hobbies />
+              ) : (
+                <PersonalInfo />
+              )}
             </div>
           ) : null}
           <ContactsSection />
@@ -182,7 +421,7 @@ const AboutMeViewfinder = () => {
                     <div>
                       <RiCloseLine
                         className="w-[18px] h-[18px] hover:text-white duration-400 cursor-pointer"
-                        onClick={() => setSelectedTechs([])}
+                        onClick={() => setSelectedView([])}
                       />
                     </div>
                   </Tooltip>
@@ -193,7 +432,9 @@ const AboutMeViewfinder = () => {
           <div className="flex flex-row flex-grow h-full">
             <div className="flex flex-row  w-full overflow-y-scroll scrollbar-hide">
               {/* Display filtered projects */}
-              <div className=" border-r-2 w-1/2"></div>
+              <div className=" border-r-2 w-1/2">
+                <NothingOpen />
+              </div>
               <div className="w-1/2"></div>
             </div>
             <div className="px-2 border-l-2 text-fade-text flex items-center">
@@ -214,19 +455,19 @@ const AboutMeViewfinder = () => {
             >
               <RiTriangleFill
                 className={`rotate-${
-                  showTechStack ? "180" : "90"
+                  expandFolder ? "180" : "90"
                 } w-[8.5px] h-[6px]`}
               />
               <span className="pr-0.5">projects&nbsp;&nbsp;</span>
             </div>
-            {showTechStack ? <div className="mt-4 ml-4 space-y-2"></div> : null}
+            {expandFolder ? <div className="mt-4 ml-4 space-y-2"></div> : null}
           </div>
         </div>
         <span className="px-6 pt-6 text-fade-text">
           <span className="text-white">&#x2F;&#x2F; projects&nbsp;</span>
           {
-            selectedTechs.length > 0
-              ? "/ " + selectedTechs.join("; ") // Display selected technologies
+            selectedView.length > 0
+              ? "/ " + selectedView.join("; ") // Display selected technologies
               : "/ all" // Default to "projects" if no technology is selected
           }
         </span>
