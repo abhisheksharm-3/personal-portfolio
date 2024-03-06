@@ -1,6 +1,5 @@
 import BasePage from "@/components/BasePage";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { ContactMeCodeUI } from "@/constants/ContactmeCodeHighlighter";
+import SyntaxHighlighter from "react-syntax-highlighter"; //can use lightasync version but its disturbing styles of code
 import { RiCloseLine } from "@remixicon/react";
 import ContactMeForm from "@/components/ContactMeForm/page";
 import FindMeAlsoOnSection from "@/components/FindMeAlsoOnSection/FindMeAlsoOnSection";
