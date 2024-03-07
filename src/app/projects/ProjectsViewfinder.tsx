@@ -54,7 +54,7 @@ const ProjectsViewfinder = () => {
                 showTechStack ? "180" : "90"
               } w-[8.5px] h-[6px]`}
             />
-            <span className="pr-0.5">projects&nbsp;&nbsp;</span>
+            <span className="pr-0.5 pl-[0.5px]">projects&nbsp;&nbsp;</span>
           </div>
           {showTechStack ? (
             <div className="mt-4 ml-4 space-y-2">

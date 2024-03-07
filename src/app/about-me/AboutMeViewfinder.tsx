@@ -21,7 +21,7 @@ const AboutMeViewfinder = () => {
   const [selectedFolder, setSelectedFolder] = useState<number>(2);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const toggleShowTechStack = () => setExpandFolder(!expandFolder);
+  const toggleExpandFolder = () => setExpandFolder(!expandFolder);
 
   const PersonalInfo = () => {
     const [showBio, setShowBio] = useState<boolean>(true);
@@ -189,7 +189,7 @@ const AboutMeViewfinder = () => {
       setShowTechStackDetails(!showTechStackDetails);
       setShowExperienceSummary(false);
     };
-    const toggleShowTechStack = () => {
+    const toggleExpandFolder = () => {
       setShowTechStack(!showTechStack);
       setShowTechStackDetails(false);
     };
@@ -222,7 +222,7 @@ const AboutMeViewfinder = () => {
           className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
             showTechStack ? "text-white" : null
           }`}
-          onClick={toggleShowTechStack}
+          onClick={toggleExpandFolder}
         >
           <RiArrowRightSLine
             className={`rotate-${showTechStack ? "90" : "0"}`}
@@ -380,7 +380,7 @@ const AboutMeViewfinder = () => {
         <div className="flex flex-col border-r-2">
           <div
             className="flex items-center gap-2 pr-16 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
-            onClick={toggleShowTechStack}
+            onClick={toggleExpandFolder}
           >
             <RiTriangleFill
               className={`rotate-${
@@ -451,7 +451,7 @@ const AboutMeViewfinder = () => {
           <div className="flex flex-col border-r-2">
             <div
               className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
-              onClick={toggleShowTechStack}
+              onClick={toggleExpandFolder}
             >
               <RiTriangleFill
                 className={`rotate-${
