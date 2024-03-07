@@ -13,15 +13,23 @@ import {
 import { Tooltip } from "@nextui-org/react";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
 import NothingOpen from "@/components/NothingOpen/NothingOpen";
+import { high_school, university } from "@/constants/about-me";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import "@/constants/nightOwlContactMe.css";
 
 const AboutMeViewfinder = () => {
   const [selectedView, setSelectedView] = useState<string[]>([]);
   const [expandFolder, setExpandFolder] = useState<boolean>(true);
   const [selectedTab, setSelectedTab] = useState<string>("personal-info");
   const [selectedFolder, setSelectedFolder] = useState<number>(2);
+  const [viewFinderActive, setViewFinderActive] = useState<boolean>(true);
+  const [code, setCode] = useState<string>("");
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleExpandFolder = () => setExpandFolder(!expandFolder);
+  const updateViewfinderStatus = (viewfinder: boolean) => {
+    setViewFinderActive(!viewfinder);
+  };
 
   const PersonalInfo = () => {
     const [showBio, setShowBio] = useState<boolean>(true);
@@ -47,6 +55,8 @@ const AboutMeViewfinder = () => {
     const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setShowSummary(!showSummary);
+      setCode("summary");
+      // if(viewFinderActive) updateViewfinderStatus(viewFinderActive);
       setShowHighSchool(false);
       setShowUniversity(false);
       setShowTechInterests(false);
@@ -56,6 +66,8 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowTechInterests(!showTechInterests);
+      setCode("Tech Interests");
+      // updateViewfinderStatus(viewFinderActive);
       setShowSummary(false);
       setShowHighSchool(false);
       setShowUniversity(false);
@@ -63,6 +75,8 @@ const AboutMeViewfinder = () => {
     const toggleShowHighSchool = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setShowHighSchool(!showHighSchool);
+      setCode(high_school.details);
+      // updateViewfinderStatus(viewFinderActive);
       setShowUniversity(false);
       setShowSummary(false);
       setShowTechInterests(false);
@@ -70,6 +84,8 @@ const AboutMeViewfinder = () => {
     const toggleShowUniversity = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setShowUniversity(!showUniversity);
+      setCode(university.details);
+      // updateViewfinderStatus(viewFinderActive);
       setShowHighSchool(false);
       setShowSummary(false);
       setShowTechInterests(false);
@@ -180,6 +196,8 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowExperienceSummary(!showExperienceSummary);
+      setCode("exp summary");
+      // updateViewfinderStatus(viewFinderActive)
       setShowTechStackDetails(false);
     };
     const toggleShowTechStackDetails = (
@@ -187,6 +205,8 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowTechStackDetails(!showTechStackDetails);
+      setCode("tech stack");
+      // updateViewfinderStatus(viewFinderActive)
       setShowExperienceSummary(false);
     };
     const toggleExpandFolder = () => {
@@ -263,6 +283,8 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowNerdyDetails(!showNerdyDetails);
+      setCode("nerd");
+      // updateViewfinderStatus(viewFinderActive)
       setShowNonNerdyDetails(false);
     };
 
@@ -277,6 +299,8 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowNonNerdyDetails(!showNonNerdyDetails);
+      setCode("still nerd");
+      // updateViewfinderStatus(viewFinderActive)
       setShowNerdyDetails(false);
     };
     return (
@@ -433,7 +457,20 @@ const AboutMeViewfinder = () => {
             <div className="flex flex-row  w-full overflow-y-scroll scrollbar-hide">
               {/* Display filtered projects */}
               <div className=" border-r-2 w-1/2">
-                <NothingOpen />
+                {viewFinderActive ? (
+                  <div className="p-4">
+                    <SyntaxHighlighter
+                      language="js"
+                      useInlineStyles={false}
+                      className="nightOwlContactMe"
+                      showLineNumbers={true}
+                    >
+                      {code}
+                    </SyntaxHighlighter>
+                  </div>
+                ) : (
+                  <NothingOpen />
+                )}
               </div>
               <div className="w-1/2"></div>
             </div>
