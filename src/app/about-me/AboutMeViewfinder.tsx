@@ -1,4 +1,7 @@
 "use client";
+
+//TODO: USE ZUSTAND
+//FIX: EVENT BUBBLING IS STILL GIVING ISSUE
 import React, { useState } from "react";
 import {
   RiCloseLine,
@@ -13,7 +16,16 @@ import {
 import { Tooltip } from "@nextui-org/react";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
 import NothingOpen from "@/components/NothingOpen/NothingOpen";
-import { high_school, university } from "@/constants/about-me";
+import {
+  high_school,
+  university,
+  summary,
+  workExperience,
+  techInterests,
+  techStack,
+  nerdy,
+  nonNerdy,
+} from "@/constants/about-me";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import "@/constants/nightOwlContactMe.css";
 
@@ -33,7 +45,7 @@ const AboutMeViewfinder = () => {
 
   const PersonalInfo = () => {
     const [showBio, setShowBio] = useState<boolean>(true);
-    const [showSummary, setShowSummary] = useState<boolean>(false);
+    const [showSummary, setShowSummary] = useState<boolean>(true);
     const [showTechInterests, setShowTechInterests] = useState<boolean>(false);
     const [showInterests, setShowInterests] = useState<boolean>(false);
     const [showEducation, setShowEducation] = useState<boolean>(false);
@@ -55,7 +67,7 @@ const AboutMeViewfinder = () => {
     const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setShowSummary(!showSummary);
-      setCode("summary");
+      setCode(summary.details);
       // if(viewFinderActive) updateViewfinderStatus(viewFinderActive);
       setShowHighSchool(false);
       setShowUniversity(false);
@@ -66,7 +78,7 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowTechInterests(!showTechInterests);
-      setCode("Tech Interests");
+      setCode(techInterests.details);
       // updateViewfinderStatus(viewFinderActive);
       setShowSummary(false);
       setShowHighSchool(false);
@@ -196,7 +208,7 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowExperienceSummary(!showExperienceSummary);
-      setCode("exp summary");
+      setCode(workExperience.details);
       // updateViewfinderStatus(viewFinderActive)
       setShowTechStackDetails(false);
     };
@@ -205,7 +217,7 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowTechStackDetails(!showTechStackDetails);
-      setCode("tech stack");
+      setCode(techStack.details);
       // updateViewfinderStatus(viewFinderActive)
       setShowExperienceSummary(false);
     };
@@ -283,7 +295,7 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowNerdyDetails(!showNerdyDetails);
-      setCode("nerd");
+      setCode(nerdy.details);
       // updateViewfinderStatus(viewFinderActive)
       setShowNonNerdyDetails(false);
     };
@@ -299,7 +311,7 @@ const AboutMeViewfinder = () => {
     ) => {
       event.stopPropagation();
       setShowNonNerdyDetails(!showNonNerdyDetails);
-      setCode("still nerd");
+      setCode(nonNerdy.details);
       // updateViewfinderStatus(viewFinderActive)
       setShowNerdyDetails(false);
     };
@@ -472,7 +484,11 @@ const AboutMeViewfinder = () => {
                   <NothingOpen />
                 )}
               </div>
-              <div className="w-1/2"></div>
+              <div className=" w-1/2">
+                <p className="text-gray-600 text-lg flex justify-center items-center h-full">
+                  We&apos;re cooking up something special! 🍳 Stay tuned!
+                </p>
+              </div>
             </div>
             <div className="px-2 border-l-2 text-fade-text flex items-center">
               a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
