@@ -466,9 +466,10 @@ const AboutMeViewfinder = () => {
             </div>
           </div>
           <div className="flex flex-row flex-grow h-full">
-            <div className="flex flex-row  w-full overflow-y-scroll scrollbar-hide">
+            <div className="flex flex-row  w-full">
               {/* Display filtered projects */}
-              <div className=" border-r-2 w-1/2">
+              {/* TODO:ADD CERTIFICATIONS */}
+              <div className=" border-r-2 w-1/2 overflow-y-scroll scrollbar-hide pb-36">
                 {viewFinderActive ? (
                   <div className="p-4">
                     <SyntaxHighlighter
@@ -476,6 +477,7 @@ const AboutMeViewfinder = () => {
                       useInlineStyles={false}
                       className="nightOwlContactMe"
                       showLineNumbers={true}
+                      wrapLongLines={true}
                     >
                       {code}
                     </SyntaxHighlighter>
