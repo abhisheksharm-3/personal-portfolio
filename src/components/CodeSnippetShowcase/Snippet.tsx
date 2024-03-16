@@ -5,14 +5,17 @@ import "@/constants/nightOwl.css";
 import { User, Link } from "@nextui-org/react";
 import {
   RiChatSmile3Fill,
-  RiChatSmile3Line,
-  RiCloseFill,
   RiCloseLine,
 } from "@remixicon/react";
-import { CodeSnippets } from "@/constants/CodeSnippets";
 import { Separator } from "@/components/ui/separator";
+interface SnippetProps {
+  data: {
+    Code: string;
+    Details: string;
+  };
+}
 
-const Snippet = () => {
+const Snippet: React.FC<SnippetProps> = ({ data }) => {
   const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(false);
   const showDetailsToggle = (currentState: boolean) => {
     setIsDetailsOpen(!currentState);
@@ -55,13 +58,13 @@ const Snippet = () => {
             backgroundColor: "#011221",
           }}
         >
-          {CodeSnippets[0].Code}
+          {data.Code}
         </SyntaxHighlighter>
         {isDetailsOpen ? (
           <div className="flex flex-col gap-2 py-6">
             <Separator />
             <div className=" flex justify-between text-left">
-              {CodeSnippets[0].Details}{" "}
+              {data.Details}{" "}
               <RiCloseLine
                 className="hover:text-white duration-400 ease-in-out cursor-pointer"
                 onClick={() => showDetailsToggle(true)}
