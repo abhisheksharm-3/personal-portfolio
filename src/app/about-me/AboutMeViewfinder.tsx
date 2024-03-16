@@ -506,33 +506,111 @@ const AboutMeViewfinder = () => {
         </div>
       </div>
       {/* Mobile Version */}
-      <div className="flex flex-col gap-4 h-screen py-4 lg:hidden overflow-hidden">
-        <div className="flex px-4">_projects</div>
+      <div className="flex flex-col gap-4 h-screen py-4 lg:hidden overflow-y-scroll scrollbar-hide">
+        <div className="flex px-4">_about-me</div>
         <div className="flex flex-col gap-1">
-          <div className="flex flex-col border-r-2">
+          <div className="flex flex-col border-r-2 gap-1">
             <div
               className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
               onClick={toggleExpandFolder}
             >
               <RiTriangleFill
                 className={`rotate-${
-                  expandFolder ? "180" : "90"
+                  selectedFolder === 1 ? "180" : "90"
                 } w-[8.5px] h-[6px]`}
               />
-              <span className="pr-0.5">projects&nbsp;&nbsp;</span>
+              <span
+                className="pr-0.5"
+                onClick={() => {
+                  setSelectedTab("personal-info");
+                  setSelectedFolder(1);
+                }}
+              >
+                personal-info&nbsp;&nbsp;
+              </span>
             </div>
-            {expandFolder ? <div className="mt-4 ml-4 space-y-2"></div> : null}
+            {selectedFolder === 1 ? (
+              <div className="py-3 ml-4">
+                <PersonalInfo />
+              </div>
+            ) : null}
+            <div
+              className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
+              onClick={toggleExpandFolder}
+            >
+              <RiTriangleFill
+                className={`rotate-${
+                  selectedFolder === 2 ? "180" : "90"
+                } w-[8.5px] h-[6px]`}
+              />
+              <span
+                className="pr-0.5"
+                onClick={() => {
+                  setSelectedTab("professional-info");
+                  setSelectedFolder(2);
+                }}
+              >
+                professional-info&nbsp;&nbsp;
+              </span>
+            </div>
+            {selectedFolder === 2 ? (
+              <div className="py-3 ml-4">
+                <ProfessionalInfo />
+              </div>
+            ) : null}
+            <div
+              className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
+              onClick={toggleExpandFolder}
+            >
+              <RiTriangleFill
+                className={`rotate-${
+                  selectedFolder === 3 ? "180" : "90"
+                } w-[8.5px] h-[6px]`}
+              />
+              <span
+                className="pr-0.5"
+                onClick={() => {
+                  setSelectedTab("hobbies");
+                  setSelectedFolder(3);
+                }}
+              >
+                hobbies&nbsp;&nbsp;
+              </span>
+            </div>
+            {selectedFolder === 3 ? (
+              <div className="py-3 ml-4">
+                <Hobbies />
+              </div>
+            ) : null}
           </div>
+          <ContactsSection />
         </div>
         <span className="px-6 pt-6 text-fade-text">
-          <span className="text-white">&#x2F;&#x2F; projects&nbsp;</span>
-          {
-            selectedView.length > 0
-              ? "/ " + selectedView.join("; ") // Display selected technologies
-              : "/ all" // Default to "projects" if no technology is selected
-          }
+          <span className="text-white">&#x2F;&#x2F;&nbsp;</span>
+          {selectedTab}
         </span>
-        <div className="w-full grid grid-cols-1 overflow-y-scroll scrollbar-hide place-items-center pb-60 gap-2"></div>
+        <div className="pb-12">
+          {viewFinderActive ? (
+            <div className="p-4">
+              <SyntaxHighlighter
+                language="js"
+                useInlineStyles={false}
+                className="nightOwlContactMe"
+                showLineNumbers={true}
+                wrapLongLines={true}
+              >
+                {code}
+              </SyntaxHighlighter>
+            </div>
+          ) : (
+            <NothingOpen />
+          )}
+        </div>
+        <span className="px-6 pt-6">
+          <span className="text-white">&#x2F;&#x2F;&nbsp;</span>
+          Code snippet showcase:
+        </span>
+        <div className="pb-36"><SnippetShowcase /></div>
       </div>
     </div>
   );

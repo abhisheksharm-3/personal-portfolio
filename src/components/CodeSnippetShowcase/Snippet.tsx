@@ -42,7 +42,7 @@ const Snippet: React.FC<SnippetProps> = ({ data }) => {
           />
         </div>{" "}
         <div
-          className="flex cursor-pointer gap-2 justify-center items-center hover:text-white duration-400 ease-in-out"
+          className="flex cursor-pointer gap-2 justify-center items-center hover:text-white duration-400 ease-in-out text-fade-text"
           onClick={() => showDetailsToggle(isDetailsOpen)}
         >
           <RiChatSmile3Fill /> details{" "}
@@ -63,7 +63,7 @@ const Snippet: React.FC<SnippetProps> = ({ data }) => {
         {isDetailsOpen ? (
           <div className="flex flex-col gap-2 py-6">
             <Separator />
-            <div className=" flex justify-between text-left">
+            <div className=" flex justify-between text-left text-fade-text">
               {data.Details}{" "}
               <RiCloseLine
                 className="hover:text-white duration-400 ease-in-out cursor-pointer"
