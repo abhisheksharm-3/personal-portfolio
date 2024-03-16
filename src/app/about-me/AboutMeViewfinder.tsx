@@ -28,6 +28,7 @@ import {
 } from "@/constants/about-me";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import "@/constants/nightOwlContactMe.css";
+import SnippetShowcase from "@/components/CodeSnippetShowcase/SnippetShowcase";
 
 const AboutMeViewfinder = () => {
   const [selectedView, setSelectedView] = useState<string[]>([]);
@@ -51,16 +52,19 @@ const AboutMeViewfinder = () => {
     const [showEducation, setShowEducation] = useState<boolean>(false);
     const [showHighSchool, setShowHighSchool] = useState<boolean>(false);
     const [showUniversity, setShowUniversity] = useState<boolean>(false);
-    const toggleShowBio = () => {
+    const toggleShowBio = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
       setShowBio(!showBio);
       setShowSummary(false);
     };
-    const toggleShowEducation = () => {
+    const toggleShowEducation = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
       setShowEducation(!showEducation);
       setShowHighSchool(false);
       setShowUniversity(false);
     };
-    const toggleShowInterests = () => {
+    const toggleShowInterests = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
       setShowInterests(!showInterests);
       setShowTechInterests(false);
     };
@@ -199,7 +203,8 @@ const AboutMeViewfinder = () => {
     const [showTechStack, setShowTechStack] = useState(false);
     const [showTechStackDetails, setShowTechStackDetails] = useState(false);
 
-    const toggleExperience = () => {
+    const toggleExperience = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
       setExperience(!experience);
       setShowExperienceSummary(false);
     };
@@ -221,7 +226,8 @@ const AboutMeViewfinder = () => {
       // updateViewfinderStatus(viewFinderActive)
       setShowExperienceSummary(false);
     };
-    const toggleExpandFolder = () => {
+    const toggleExpandFolder = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
       setShowTechStack(!showTechStack);
       setShowTechStackDetails(false);
     };
@@ -486,9 +492,9 @@ const AboutMeViewfinder = () => {
                   <NothingOpen />
                 )}
               </div>
-              <div className=" w-1/2">
-                <p className="text-gray-600 text-lg flex justify-center items-center h-full">
-                  We&apos;re cooking up something special! 🍳 Stay tuned!
+              <div className=" w-1/2 overflow-y-scroll scrollbar-hide mt-10 mb-40">
+                <p className="text-gray-600 text-lg flex h-full">
+                  <SnippetShowcase />
                 </p>
               </div>
             </div>

@@ -36,7 +36,6 @@ function LandingPage() {
           </div>
         </div>
         <div className=" ">
-          {/*TODO: Inbuilt tailwind classes not working for rounded corners */}
           {CodeSnippets.map((snippet, index) => (
             <SyntaxHighlighter
               className="p-16 rounded-lg nightOwl"
