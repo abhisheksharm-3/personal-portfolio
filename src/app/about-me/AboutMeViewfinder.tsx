@@ -36,7 +36,7 @@ const AboutMeViewfinder = () => {
   const [selectedTab, setSelectedTab] = useState<string>("personal-info");
   const [selectedFolder, setSelectedFolder] = useState<number>(2);
   const [viewFinderActive, setViewFinderActive] = useState<boolean>(true);
-  const [code, setCode] = useState<string>("");
+  const [code, setCode] = useState<string>(summary.details);
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleExpandFolder = () => setExpandFolder(!expandFolder);

@@ -1,11 +1,22 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import "@/constants/nightOwl.css";
 import { User, Link } from "@nextui-org/react";
-import { RiChatSmile3Fill, RiChatSmile3Line } from "@remixicon/react";
+import {
+  RiChatSmile3Fill,
+  RiChatSmile3Line,
+  RiCloseFill,
+  RiCloseLine,
+} from "@remixicon/react";
 import { CodeSnippets } from "@/constants/CodeSnippets";
+import { Separator } from "@/components/ui/separator";
 
 const Snippet = () => {
+  const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(false);
+  const showDetailsToggle = (currentState: boolean) => {
+    setIsDetailsOpen(!currentState);
+  };
   return (
     <div className="flex flex-col gap-1 pt-2">
       <div className="flex flex-row justify-between">
@@ -27,21 +38,37 @@ const Snippet = () => {
             }}
           />
         </div>{" "}
-        <div className="flex cursor-pointer gap-2 justify-center items-center hover:text-white duration-400 ease-in-out">
+        <div
+          className="flex cursor-pointer gap-2 justify-center items-center hover:text-white duration-400 ease-in-out"
+          onClick={() => showDetailsToggle(isDetailsOpen)}
+        >
           <RiChatSmile3Fill /> details{" "}
         </div>
       </div>{" "}
       <div className="">
-        
-          <SyntaxHighlighter
-            className="p-16 rounded-lg "
-            useInlineStyles={false}
-            language="js"
-            wrapLongLines={true}
-          >
-            {CodeSnippets[0].Code}
-          </SyntaxHighlighter>
-        
+        <SyntaxHighlighter
+          className="p-16 rounded-lg border"
+          useInlineStyles={false}
+          language="js"
+          wrapLongLines={true}
+          customStyle={{
+            backgroundColor: "#011221",
+          }}
+        >
+          {CodeSnippets[0].Code}
+        </SyntaxHighlighter>
+        {isDetailsOpen ? (
+          <div className="flex flex-col gap-2 py-6">
+            <Separator />
+            <div className=" flex justify-between text-left">
+              {CodeSnippets[0].Details}{" "}
+              <RiCloseLine
+                className="hover:text-white duration-400 ease-in-out cursor-pointer"
+                onClick={() => showDetailsToggle(true)}
+              />
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

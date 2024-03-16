@@ -9,5 +9,6 @@ export const CodeSnippets = [
       </BasePage>
     );
   }`,
+  Details: `This is a Description`
   },
 ];
