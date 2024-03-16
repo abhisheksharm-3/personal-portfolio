@@ -512,7 +512,10 @@ const AboutMeViewfinder = () => {
           <div className="flex flex-col border-r-2 gap-1">
             <div
               className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
-              onClick={toggleExpandFolder}
+              onClick={() => {
+                setSelectedTab("personal-info");
+                setSelectedFolder(1);
+              }}
             >
               <RiTriangleFill
                 className={`rotate-${
@@ -521,10 +524,6 @@ const AboutMeViewfinder = () => {
               />
               <span
                 className="pr-0.5"
-                onClick={() => {
-                  setSelectedTab("personal-info");
-                  setSelectedFolder(1);
-                }}
               >
                 personal-info&nbsp;&nbsp;
               </span>
@@ -536,7 +535,10 @@ const AboutMeViewfinder = () => {
             ) : null}
             <div
               className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
-              onClick={toggleExpandFolder}
+              onClick={() => {
+                setSelectedTab("professional-info");
+                setSelectedFolder(2);
+              }}
             >
               <RiTriangleFill
                 className={`rotate-${
@@ -545,10 +547,6 @@ const AboutMeViewfinder = () => {
               />
               <span
                 className="pr-0.5"
-                onClick={() => {
-                  setSelectedTab("professional-info");
-                  setSelectedFolder(2);
-                }}
               >
                 professional-info&nbsp;&nbsp;
               </span>
@@ -560,7 +558,10 @@ const AboutMeViewfinder = () => {
             ) : null}
             <div
               className="flex items-center gap-2 pr-40 bg-[#1e2d3d] lg:bg-transparent lg:border-b-2 py-2 px-3 cursor-pointer"
-              onClick={toggleExpandFolder}
+              onClick={() => {
+                setSelectedTab("hobbies");
+                setSelectedFolder(3);
+              }}
             >
               <RiTriangleFill
                 className={`rotate-${
@@ -569,10 +570,6 @@ const AboutMeViewfinder = () => {
               />
               <span
                 className="pr-0.5"
-                onClick={() => {
-                  setSelectedTab("hobbies");
-                  setSelectedFolder(3);
-                }}
               >
                 hobbies&nbsp;&nbsp;
               </span>
