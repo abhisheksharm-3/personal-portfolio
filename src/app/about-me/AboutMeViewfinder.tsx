@@ -522,11 +522,7 @@ const AboutMeViewfinder = () => {
                   selectedFolder === 1 ? "180" : "90"
                 } w-[8.5px] h-[6px]`}
               />
-              <span
-                className="pr-0.5"
-              >
-                personal-info&nbsp;&nbsp;
-              </span>
+              <span className="pr-0.5">personal-info&nbsp;&nbsp;</span>
             </div>
             {selectedFolder === 1 ? (
               <div className="py-3 ml-4">
@@ -545,11 +541,7 @@ const AboutMeViewfinder = () => {
                   selectedFolder === 2 ? "180" : "90"
                 } w-[8.5px] h-[6px]`}
               />
-              <span
-                className="pr-0.5"
-              >
-                professional-info&nbsp;&nbsp;
-              </span>
+              <span className="pr-0.5">professional-info&nbsp;&nbsp;</span>
             </div>
             {selectedFolder === 2 ? (
               <div className="py-3 ml-4">
@@ -568,11 +560,7 @@ const AboutMeViewfinder = () => {
                   selectedFolder === 3 ? "180" : "90"
                 } w-[8.5px] h-[6px]`}
               />
-              <span
-                className="pr-0.5"
-              >
-                hobbies&nbsp;&nbsp;
-              </span>
+              <span className="pr-0.5">hobbies&nbsp;&nbsp;</span>
             </div>
             {selectedFolder === 3 ? (
               <div className="py-3 ml-4">
@@ -607,7 +595,9 @@ const AboutMeViewfinder = () => {
           <span className="text-white">&#x2F;&#x2F;&nbsp;</span>
           Code snippet showcase:
         </span>
-        <div className="pb-36"><SnippetShowcase /></div>
+        <div className="pb-36">
+          <SnippetShowcase />
+        </div>
       </div>
     </div>
   );
