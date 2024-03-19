@@ -1,7 +1,7 @@
 //TODO: ADD EMOJIS
 const high_school = {
   details: `{
-    "education": [
+    "high_school": [
       {
         "school": "Mount Carmel School, Chandigarh",
         "achievements": [
@@ -19,8 +19,7 @@ const high_school = {
           }
         ],
         "leadership": {
-          "position": "Prestigious key cabinet position in 10th grade",
-          "comment": "Added a dash of dynamism to my high school journey! 💼✨"
+          "position": "Prestigious key cabinet position in 10th grade"
         }
       }
     ]
@@ -46,7 +45,7 @@ const university = {
         "semester": 2,
         "sgpa": 7.73,
         "cgpa": 8.54,
-        "courses": ["OOP"],
+        "courses": ["OOP with C++"],
         "comment": "Explored OOP, not too shabby with an 8.54!"
       },
       {
@@ -60,7 +59,7 @@ const university = {
         "semester": 4,
         "sgpa": 8.54,
         "cgpa": 8.36,
-        "courses": ["Algorithms", "OS", "Software Engineering", "Web Dev"],
+        "courses": ["Algorithms", "OS", "Web Dev"],
         "comment": "Kept the momentum going with an 8.36, mastering Algorithms, OS, and more!"
       },
       {
@@ -68,8 +67,8 @@ const university = {
         "sgpa": 7.83,
         "cgpa": 8.27,
         "courses": ["AI", "Data Communication"],
-        "additional_activities": ["Wrote a paper on improving AODV"],
-        "comment": "Thrived with an 8.27 CGPA, diving into AI, Data Communication, and innovating with AODV Protocol!"
+        "comment": "Thrived with an 8.27 CGPA, diving into AI and Data Communication!",
+        "additional_activities": ["Wrote a paper on improving AODV"]
       }
     ]
   }
@@ -101,7 +100,8 @@ const summary = {
 }
 `,
 };
-const techInterests = { details: `{
+const techInterests = {
+  details: `{
   "interests": {
     "passions": ["Full Stack Development 🌐", "Mobile App Development 📱"],
     "favorite_languages": ["JavaScript 💻", "Python 🐍"],
@@ -110,8 +110,10 @@ const techInterests = { details: `{
     "excitement": "Eager to dive deep into emerging technologies and push the boundaries of innovation! 🚀"
   }
 }
-` };
-const workExperience = { details: `{
+`,
+};
+const workExperience = {
+  details: `{
   "work_experience": {
     "summary": "Limited professional experience but actively engaged in open-source contributions.",
     "events": [
@@ -122,12 +124,14 @@ const workExperience = { details: `{
     ]
   }
 }
-` };
-const techStack = { details: `{
+`,
+};
+const techStack = {
+  details: `{
   "tech_stack": {
-    "languages 📚": ["C++", "JavaScript", "Python", "GoLang", "TypeScript"],
+    "languages 📚": ["C++", "JavaScript", "Python", "Go", "TypeScript"],
     "front_end 💻": ["HTML", "CSS", "React.js", "Next.js", "Vue.js"],
-    "back_end ⚙️": ["Node.js", "Express.js"],
+    "back_end ⚙️": ["Node.js", "Express.js", "Appwrite"],
     "databases 🗄️": ["MySQL", "MongoDB"],
     "mobile 📱": ["React Native", "Flutter"],
     "tools 🛠️": ["Git", "VS Code", "Postman"],
@@ -135,17 +139,20 @@ const techStack = { details: `{
     "other 🌐": ["Machine Learning", "Linux", "Data Mining"]
   }
 }
-
-` };
-const nonNerdy = { details: `{
+`,
+};
+const nonNerdy = {
+  details: `{
   "non_nerdy_hobbies": [
     "Photography 📷",
     "Reading 📖",
     "Traveling ✈️",
   ]
 }
-` };
-const nerdy = { details: `{
+`,
+};
+const nerdy = {
+  details: `{
   "nerdy_hobbies": [
     "Video Gaming 🎮",
     "Sci-Fi/Fantasy Book Reading 📖",
@@ -153,7 +160,8 @@ const nerdy = { details: `{
     "Model Building 🛠️"
   ]
 }
-` };
+`,
+};
 
 export {
   high_school,

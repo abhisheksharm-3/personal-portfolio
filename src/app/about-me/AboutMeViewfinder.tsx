@@ -493,6 +493,9 @@ const AboutMeViewfinder = () => {
                 )}
               </div>
               <div className=" w-1/2 overflow-y-scroll scrollbar-hide mt-10 mb-40">
+              <span className="text-fade-text px-8 2xl:px-16">
+              &#x2F;&#x2F; Code Snippet Showcase:
+            </span>
                 <p className="text-gray-600 text-lg flex h-full">
                   <SnippetShowcase />
                 </p>

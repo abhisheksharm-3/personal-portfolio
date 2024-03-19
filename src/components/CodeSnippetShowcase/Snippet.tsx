@@ -50,7 +50,7 @@ const Snippet: React.FC<SnippetProps> = ({ data }) => {
       </div>{" "}
       <div className="">
         <SyntaxHighlighter
-          className="p-16 rounded-lg border"
+          className="p-16 text-sm rounded-xl border"
           useInlineStyles={false}
           language="js"
           wrapLongLines={true}
