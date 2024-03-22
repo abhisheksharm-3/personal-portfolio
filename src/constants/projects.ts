@@ -32,6 +32,13 @@ export const projects = [
     techStack: ["React", "TailwindCSS", "JavaScript"],
   },
   {
+    title: "ML Olympiad",
+    showcaseImage: "/images/projects/ml-olympiad.png",
+    description: "Top 10 in detecting smokers with 99.274% accuracy",
+    link: "https://www.kaggle.com/competitions/ml-olympiad-smoking/",
+    techStack: ["Machine Learning", "XGBoost", "GridSearchCV"],
+  },
+  {
     title: "TokyoTaste",
     showcaseImage: "/images/projects/tokyotaste.png",
     description: "A HTML + CSS frontend UI project.",
