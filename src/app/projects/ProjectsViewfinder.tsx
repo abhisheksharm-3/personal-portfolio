@@ -8,7 +8,8 @@ import {
   RiHtml5Line,
   RiReactjsLine,
   RiTriangleFill,
-  RiNextjsFill
+  RiRobot3Fill,
+  RiNextjsLine
 } from "@remixicon/react";
 import { Checkbox, Tooltip } from "@nextui-org/react";
 
@@ -19,9 +20,10 @@ const ProjectsViewfinder = () => {
   const techsWithIcons = [
     { name: "React", icon: <RiReactjsLine /> },
     { name: "HTML", icon: <RiHtml5Line /> },
-    { name: "NextJs", icon: <RiNextjsFill /> },
-    { name: "TypeScript", icon: <SiTypescript className="text-2xl" /> },
-    { name: "JavaScript", icon: <SiJavascript className="text-2xl" /> },
+    { name: "NextJs", icon: <RiNextjsLine /> },
+    { name: "TypeScript", icon: <SiTypescript className="text-xl pl-0.5" /> },
+    { name: "JavaScript", icon: <SiJavascript className="text-xl pl-0.5" /> },
+    { name: "Machine Learning", icon: <RiRobot3Fill /> },
   ];
 
   const toggleTech = (tech: string) => {
