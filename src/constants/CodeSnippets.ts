@@ -9,5 +9,6 @@ export const CodeSnippets = [
       </BasePage>
     );
   }`,
+  Details: `This is the function that renders the Landing Page of this Website`
   },
 ];

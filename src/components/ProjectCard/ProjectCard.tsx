@@ -7,8 +7,8 @@ import {
   RiAngularjsFill,
   RiVuejsFill,
   RiHtml5Line,
+  RiNextjsLine,
 } from "@remixicon/react";
-import { TbBrandNextjs } from "react-icons/tb";
 import { Skeleton } from "@nextui-org/react";
 
 import Link from "next/link";
@@ -54,7 +54,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       TechIcon = RiHtml5Line;
       break;
     case "NextJs":
-      TechIcon = TbBrandNextjs;
+      TechIcon = RiNextjsLine;
       break;
     default:
       TechIcon = RiReactjsFill; // Default to React icon if tech stack is not recognized

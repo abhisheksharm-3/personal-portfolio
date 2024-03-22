@@ -1,16 +1,15 @@
 import BasePage from "@/components/BasePage";
 import type { Metadata } from "next";
-import { Code } from "bright";
 import { CodeSnippets } from "@/constants/CodeSnippets";
-import highlighterTheme from "../constants/highlighterTheme.json";
 import TypewriterEffect from "@/components/TypeWriterEffect/TypeWriterEffect";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import "@/constants/nightOwl.css";
 
 export const metadata: Metadata = {
   title: "_hello - Abhishek Sharma",
   description: "",
 };
 
-Code.theme = highlighterTheme;
 function LandingPage() {
   return (
     <BasePage className="" active="_hello">
@@ -37,11 +36,15 @@ function LandingPage() {
           </div>
         </div>
         <div className=" ">
-          {/*TODO: Inbuilt tailwind classes not working for rounded corners */}
           {CodeSnippets.map((snippet, index) => (
-            <Code className="" style={{ borderRadius: '8px' }} lang="js" key={index}>
+            <SyntaxHighlighter
+              className="p-16 rounded-lg nightOwl"
+              useInlineStyles={false}
+              language="js"
+              key={index}
+            >
               {snippet.Code}
-            </Code>
+            </SyntaxHighlighter>
           ))}
         </div>
       </div>

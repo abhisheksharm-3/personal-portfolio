@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
-import { TbBrandNextjs } from "react-icons/tb";
 import { SiTypescript, SiJavascript } from "react-icons/si";
 import { projects } from "@/constants/projects";
 import {
@@ -9,6 +8,7 @@ import {
   RiHtml5Line,
   RiReactjsLine,
   RiTriangleFill,
+  RiNextjsFill
 } from "@remixicon/react";
 import { Checkbox, Tooltip } from "@nextui-org/react";
 
@@ -19,7 +19,7 @@ const ProjectsViewfinder = () => {
   const techsWithIcons = [
     { name: "React", icon: <RiReactjsLine /> },
     { name: "HTML", icon: <RiHtml5Line /> },
-    { name: "NextJs", icon: <TbBrandNextjs className="text-2xl" /> },
+    { name: "NextJs", icon: <RiNextjsFill /> },
     { name: "TypeScript", icon: <SiTypescript className="text-2xl" /> },
     { name: "JavaScript", icon: <SiJavascript className="text-2xl" /> },
   ];
@@ -54,7 +54,7 @@ const ProjectsViewfinder = () => {
                 showTechStack ? "180" : "90"
               } w-[8.5px] h-[6px]`}
             />
-            <span className="pr-0.5">projects&nbsp;&nbsp;</span>
+            <span className="pr-0.5 pl-[0.5px]">projects&nbsp;&nbsp;</span>
           </div>
           {showTechStack ? (
             <div className="mt-4 ml-4 space-y-2">

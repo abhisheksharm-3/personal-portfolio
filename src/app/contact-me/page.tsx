@@ -1,19 +1,16 @@
 import BasePage from "@/components/BasePage";
-import { Code } from "bright";
-import { ContactMeCodeUI } from "@/constants/ContactmeCodeHighlighter";
+import SyntaxHighlighter from "react-syntax-highlighter"; //can use lightasync version but its disturbing styles of code
 import { RiCloseLine } from "@remixicon/react";
 import ContactMeForm from "@/components/ContactMeForm/page";
 import FindMeAlsoOnSection from "@/components/FindMeAlsoOnSection/FindMeAlsoOnSection";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
 import type { Metadata } from "next";
+import "@/constants/nightOwlContactMe.css"
 
 export const metadata: Metadata = {
   title: "_contact-me - Abhishek Sharma",
   description: "",
 };
-
-Code.theme = ContactMeCodeUI;
-Code.lineNumbers = true;
 
 const currentDate = new Date();
 
@@ -69,9 +66,9 @@ const ContactMe = () => {
               <ContactMeForm />
             </div>
             <div className="w-1/2">
-              <Code className="rounded-lg" lang="js">
+              <SyntaxHighlighter className="nightOwl-ContactMe" showLineNumbers={true} useInlineStyles={false} language="js">
                 {formCode}
-              </Code>
+              </SyntaxHighlighter>
             </div>
             <div className="px-2 border-l-2 text-fade-text flex items-center">
               a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
