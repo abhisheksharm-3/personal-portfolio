@@ -103,11 +103,11 @@ const summary = {
 const techInterests = {
   details: `{
   "interests": {
-    "passions": ["Full Stack Development 🌐", "Mobile App Development 📱"],
-    "favorite_languages": ["JavaScript 💻", "Python 🐍"],
-    "expertise": ["Web Development 🕸️", "Mobile Development 📱"],
+    "passions": ["Full-Stack Development 🌐", "Mobile App Development 📱"],
+    "favorite_languages": ["C++ 💻", "Python 🐍"],
+    "expertise": ["Full Stack Development 🕸️", "Mobile Development 📱"],
     "current_focus": "Exploring AI and Machine Learning for future projects 🤖",
-    "excitement": "Eager to dive deep into emerging technologies and push the boundaries of innovation! 🚀"
+    "excitement": "Eager to dive deep into emerging technologies! 🚀"
   }
 }
 `,
