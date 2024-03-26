@@ -25,6 +25,13 @@ export const projects = [
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
   },
   {
+    title: "Foodix",
+    showcaseImage: "/images/projects/foodix.png",
+    description: "A MERN Stack Food Delivery Website with Live Status.",
+    link: "https://foodixdelivery.vercel.app/",
+    techStack: ["React", "ExpressJs", "TailwindCSS", "TypeScript"],
+  },
+  {
     title: "Sanklp Hotel",
     showcaseImage: "/images/projects/sanklp.png",
     description: "A frontend UI project based on design from figma community.",
