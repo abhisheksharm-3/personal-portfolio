@@ -32,7 +32,7 @@ const university = {
     "university_name": "Panjab University",
     "college_name": "Chandigarh College of Engineering and Technology",
     "degree": "BE in Computer Science and Engineering",
-    "current_cgpa": 8.27,
+    "current_cgpa": 8.28,
     "semesters": [
       {
         "semester": 1,
@@ -64,10 +64,10 @@ const university = {
       },
       {
         "semester": 5,
-        "sgpa": 7.83,
-        "cgpa": 8.27,
+        "sgpa": 8.00,
+        "cgpa": 8.28,
         "courses": ["AI", "Data Communication"],
-        "comment": "Thrived with an 8.27 CGPA, diving into AI and Data Communication!",
+        "comment": "Thrived with an 8.28 CGPA, diving into AI and Data Communication!",
         "additional_activities": ["Wrote a paper on improving AODV"]
       }
     ]
