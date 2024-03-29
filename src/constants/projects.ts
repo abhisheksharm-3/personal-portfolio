@@ -29,7 +29,7 @@ export const projects = [
     showcaseImage: "/images/projects/foodix.png",
     description: "A MERN Stack Food Delivery Website with Live Status.",
     link: "https://foodixdelivery.vercel.app/",
-    techStack: ["React", "ExpressJs", "TailwindCSS", "TypeScript"],
+    techStack: ["ExpressJs", "React", "TailwindCSS", "TypeScript"],
   },
   {
     title: "Sanklp Hotel",
