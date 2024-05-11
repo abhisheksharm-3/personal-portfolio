@@ -6,6 +6,7 @@ const TypewriterEffect = () => {
     "Full-Stack Developer",
     "Hybrid Mobile Developer",
     "ML Enthusiast",
+    "CyberSecurity Newbie",
   ];
 
   return (
@@ -28,6 +29,9 @@ const TypewriterEffect = () => {
           .pauseFor(4000)
           .deleteAll()
           .pauseFor(2000)
+          .typeString(strings[3])
+          .pauseFor(4000)
+          .deleteAll()
           .start();
       }}
     />

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
-import { SiTypescript, SiJavascript, SiExpress } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiExpress, SiFlask } from "react-icons/si";
 import { projects } from "@/constants/projects";
 import {
   RiCloseLine,
@@ -25,6 +25,7 @@ const ProjectsViewfinder = () => {
     { name: "TypeScript", icon: <SiTypescript className="text-xl pl-0.5" /> },
     { name: "JavaScript", icon: <SiJavascript className="text-xl pl-0.5" /> },
     { name: "Machine Learning", icon: <RiRobot3Fill /> },
+    { name: "Flask", icon: <SiFlask className="text-2xl pl-1"/> },
   ];
 
   const toggleTech = (tech: string) => {

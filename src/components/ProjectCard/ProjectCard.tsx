@@ -13,7 +13,7 @@ import {
 import { Skeleton } from "@nextui-org/react";
 
 import Link from "next/link";
-import { SiExpress } from "react-icons/si";
+import { SiExpress, SiFlask } from "react-icons/si";
 
 interface ProjectCardProps {
   title: string;
@@ -61,9 +61,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     case "Machine Learning":
       TechIcon = RiRobot3Fill;
       break;
-      case "ExpressJs":
+    case "ExpressJs":
       TechIcon = SiExpress;
       break;
+      case "Flask":
+        TechIcon = SiFlask;
+        break;
     default:
       TechIcon = RiReactjsFill; // Default to React icon if tech stack is not recognized
   }

@@ -32,6 +32,13 @@ export const projects = [
     techStack: ["ExpressJs", "React", "TailwindCSS", "TypeScript"],
   },
   {
+    title: "LiveHealthy",
+    showcaseImage: "/images/projects/livehealthy.png",
+    description: "A React + Flask ML project to predict your health.",
+    link: "https://livehealthy.vercel.app/",
+    techStack: ["Flask", "React"],
+  },
+  {
     title: "Sanklp Hotel",
     showcaseImage: "/images/projects/sanklp.png",
     description: "A frontend UI project based on design from figma community.",
@@ -45,6 +52,7 @@ export const projects = [
     link: "https://www.kaggle.com/competitions/ml-olympiad-smoking/",
     techStack: ["Machine Learning", "XGBoost", "GridSearchCV"],
   },
+
   {
     title: "TokyoTaste",
     showcaseImage: "/images/projects/tokyotaste.png",
@@ -52,13 +60,6 @@ export const projects = [
     link: "https://tokyotaste.netlify.app/",
     techStack: ["HTML"],
   },
-  // {
-  //   title: "SoChat",
-  //   showcaseImage: "/images/test2.png",
-  //   description: "A Chat to PDF Platform made with nextjs + typecript.",
-  //   link: "https://sochatnow.vercel.app/",
-  //   techStack: ["React, NextJs, TailwindCSS"],
-  // },
   {
     title: "VisualAlg",
     showcaseImage: "/images/projects/visualalg.png",

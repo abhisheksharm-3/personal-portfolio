@@ -12,6 +12,7 @@ import {
   RiArrowRightSLine,
   RiFolder3Fill,
   RiMarkdownFill,
+  RiFilePdf2Fill,
 } from "@remixicon/react";
 import { Tooltip } from "@nextui-org/react";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
@@ -52,6 +53,7 @@ const AboutMeViewfinder = () => {
     const [showEducation, setShowEducation] = useState<boolean>(false);
     const [showHighSchool, setShowHighSchool] = useState<boolean>(false);
     const [showUniversity, setShowUniversity] = useState<boolean>(false);
+    const [selectedPdfUrl, setSelectedPdfUrl] = useState<string>("");
     const toggleShowBio = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setShowBio(!showBio);
@@ -202,11 +204,17 @@ const AboutMeViewfinder = () => {
     const [showExperienceSummary, setShowExperienceSummary] = useState(false);
     const [showTechStack, setShowTechStack] = useState(false);
     const [showTechStackDetails, setShowTechStackDetails] = useState(false);
+    const [showCertificates, setShowCertificates] = useState(false);
+    const [selectedPdfUrl, setSelectedPdfUrl] = useState<string>("");
 
+    const toggleCertificateURL = (event: React.MouseEvent<HTMLDivElement>, pdfUrl: string) => {
+      event.stopPropagation();
+      setSelectedPdfUrl(pdfUrl);
+    };
     const toggleExperience = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setExperience(!experience);
-      setShowExperienceSummary(false);
+      // setShowExperienceSummary(false);
     };
     const toggleShowExperienceSummary = (
       event: React.MouseEvent<HTMLDivElement>
@@ -230,6 +238,10 @@ const AboutMeViewfinder = () => {
       event.stopPropagation();
       setShowTechStack(!showTechStack);
       setShowTechStackDetails(false);
+    };
+    const toggleCertificate = (event: React.MouseEvent<HTMLDivElement>) => {
+      event.stopPropagation();
+      setShowCertificates(!showCertificates);
     };
     return (
       <div className="flex flex-col">
@@ -278,6 +290,49 @@ const AboutMeViewfinder = () => {
               >
                 <RiMarkdownFill className="size-4" /> details
               </div>
+            ) : null}
+          </div>
+        </div>
+        <div
+          className={`flex cursor-pointer hover:text-white duration-400 ease-in-out ${
+            showCertificates ? "text-white" : null
+          }`}
+          onClick={toggleCertificate}
+        >
+          <RiArrowRightSLine
+            className={`rotate-${showCertificates ? "90" : "0"}`}
+          />
+          <div className="">
+            <div className="flex items-center gap-1">
+              <RiFolder3Fill className="text-[#3A49A4] size-4" /> certificates
+            </div>
+            {showCertificates ? (
+              <div>
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                onClick={(e) => toggleCertificateURL(e, "/path/to/core-java-certificate.pdf")}
+              >
+                <RiFilePdf2Fill className="size-4" /> Core Java by Infosys
+              </div>
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                onClick={(e) => toggleCertificateURL(e, "/path/to/linux-certificate.pdf")}
+              >
+                <RiFilePdf2Fill className="size-4" /> Linux by Cisco
+              </div>
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                onClick={(e) => toggleCertificateURL(e, "/path/to/linear-algebra-certificate.pdf")}
+              >
+                <RiFilePdf2Fill className="size-4" /> Linear Algebra for ML
+              </div>
+              <div
+                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                onClick={(e) => toggleCertificateURL(e, "/path/to/fe-certificate.pdf")}
+              >
+                <RiFilePdf2Fill className="size-4" /> FE Certificate by Meta
+              </div>
+            </div>
             ) : null}
           </div>
         </div>
@@ -493,9 +548,9 @@ const AboutMeViewfinder = () => {
                 )}
               </div>
               <div className=" w-1/2 overflow-y-scroll scrollbar-hide mt-10 mb-40">
-              <span className="text-fade-text px-8 2xl:px-16">
-              &#x2F;&#x2F; Code Snippet Showcase:
-            </span>
+                <span className="text-fade-text px-8 2xl:px-16">
+                  &#x2F;&#x2F; Code Snippet Showcase:
+                </span>
                 <p className="text-gray-600 text-lg flex h-full">
                   <SnippetShowcase />
                 </p>
