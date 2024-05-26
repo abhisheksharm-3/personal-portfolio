@@ -36,7 +36,7 @@ export const projects = [
     showcaseImage: "/images/projects/livehealthy.png",
     description: "A React + Flask ML project to predict your health.",
     link: "https://livehealthy.vercel.app/",
-    techStack: ["Flask", "React"],
+    techStack: ["Flask", "React", "Machine Learning"],
   },
   {
     title: "Sanklp Hotel",
