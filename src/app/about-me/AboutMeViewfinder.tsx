@@ -2,7 +2,7 @@
 
 //TODO: USE ZUSTAND
 //FIX: EVENT BUBBLING IS STILL GIVING ISSUE
-import React, { useState } from "react";
+import React, {useState } from "react";
 import {
   RiCloseLine,
   RiTerminalBoxFill,
@@ -30,6 +30,7 @@ import {
 import SyntaxHighlighter from "react-syntax-highlighter";
 import "@/constants/nightOwlContactMe.css";
 import SnippetShowcase from "@/components/CodeSnippetShowcase/SnippetShowcase";
+import PDFDisplayComponent from "@/components/PDFDisplayComponent/PDFDisplayComponent";
 
 const AboutMeViewfinder = () => {
   const [selectedView, setSelectedView] = useState<string[]>([]);
@@ -38,6 +39,8 @@ const AboutMeViewfinder = () => {
   const [selectedFolder, setSelectedFolder] = useState<number>(2);
   const [viewFinderActive, setViewFinderActive] = useState<boolean>(true);
   const [code, setCode] = useState<string>(summary.details);
+  const [currentViewFinder, setcurrentViewFinder] = useState(true);
+  const [selectedPdfUrl, setSelectedPdfUrl] = useState<string>("");
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const toggleExpandFolder = () => setExpandFolder(!expandFolder);
@@ -53,7 +56,6 @@ const AboutMeViewfinder = () => {
     const [showEducation, setShowEducation] = useState<boolean>(false);
     const [showHighSchool, setShowHighSchool] = useState<boolean>(false);
     const [showUniversity, setShowUniversity] = useState<boolean>(false);
-    const [selectedPdfUrl, setSelectedPdfUrl] = useState<string>("");
     const toggleShowBio = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
       setShowBio(!showBio);
@@ -72,6 +74,7 @@ const AboutMeViewfinder = () => {
     };
     const toggleShowSummary = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowSummary(!showSummary);
       setCode(summary.details);
       // if(viewFinderActive) updateViewfinderStatus(viewFinderActive);
@@ -83,6 +86,7 @@ const AboutMeViewfinder = () => {
       event: React.MouseEvent<HTMLDivElement>
     ) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowTechInterests(!showTechInterests);
       setCode(techInterests.details);
       // updateViewfinderStatus(viewFinderActive);
@@ -92,6 +96,7 @@ const AboutMeViewfinder = () => {
     };
     const toggleShowHighSchool = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowHighSchool(!showHighSchool);
       setCode(high_school.details);
       // updateViewfinderStatus(viewFinderActive);
@@ -101,6 +106,7 @@ const AboutMeViewfinder = () => {
     };
     const toggleShowUniversity = (event: React.MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowUniversity(!showUniversity);
       setCode(university.details);
       // updateViewfinderStatus(viewFinderActive);
@@ -205,10 +211,13 @@ const AboutMeViewfinder = () => {
     const [showTechStack, setShowTechStack] = useState(false);
     const [showTechStackDetails, setShowTechStackDetails] = useState(false);
     const [showCertificates, setShowCertificates] = useState(false);
-    const [selectedPdfUrl, setSelectedPdfUrl] = useState<string>("");
 
-    const toggleCertificateURL = (event: React.MouseEvent<HTMLDivElement>, pdfUrl: string) => {
+    const toggleCertificateURL = (
+      event: React.MouseEvent<HTMLDivElement>,
+      pdfUrl: string
+    ) => {
       event.stopPropagation();
+      setcurrentViewFinder(false);
       setSelectedPdfUrl(pdfUrl);
     };
     const toggleExperience = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -220,6 +229,7 @@ const AboutMeViewfinder = () => {
       event: React.MouseEvent<HTMLDivElement>
     ) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowExperienceSummary(!showExperienceSummary);
       setCode(workExperience.details);
       // updateViewfinderStatus(viewFinderActive)
@@ -229,6 +239,7 @@ const AboutMeViewfinder = () => {
       event: React.MouseEvent<HTMLDivElement>
     ) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowTechStackDetails(!showTechStackDetails);
       setCode(techStack.details);
       // updateViewfinderStatus(viewFinderActive)
@@ -308,31 +319,45 @@ const AboutMeViewfinder = () => {
             </div>
             {showCertificates ? (
               <div>
-              <div
-                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
-                onClick={(e) => toggleCertificateURL(e, "/path/to/core-java-certificate.pdf")}
-              >
-                <RiFilePdf2Fill className="size-4" /> Core Java by Infosys
+                <div
+                  className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                  onClick={(e) =>
+                    toggleCertificateURL(
+                      e,
+                      "/certificates/Java_Infosys.pdf"
+                    )
+                  }
+                >
+                  <RiFilePdf2Fill className="size-4" /> Core Java by Infosys
+                </div>
+                <div
+                  className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                  onClick={(e) =>
+                    toggleCertificateURL(e, "/certificates/AbhishekSharma-NDG Linux Unhatc-certificate (2).pdf")
+                  }
+                >
+                  <RiFilePdf2Fill className="size-4" /> Linux by Cisco
+                </div>
+                <div
+                  className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                  onClick={(e) =>
+                    toggleCertificateURL(
+                      e,
+                      "/certificates/LA For ML Coursera.pdf"
+                    )
+                  }
+                >
+                  <RiFilePdf2Fill className="size-4" /> Linear Algebra for ML
+                </div>
+                <div
+                  className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                  onClick={(e) =>
+                    toggleCertificateURL(e, "/certificates/Meta Front End Developer Certificate.pdf")
+                  }
+                >
+                  <RiFilePdf2Fill className="size-4" /> FE Certificate by Meta
+                </div>
               </div>
-              <div
-                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
-                onClick={(e) => toggleCertificateURL(e, "/path/to/linux-certificate.pdf")}
-              >
-                <RiFilePdf2Fill className="size-4" /> Linux by Cisco
-              </div>
-              <div
-                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
-                onClick={(e) => toggleCertificateURL(e, "/path/to/linear-algebra-certificate.pdf")}
-              >
-                <RiFilePdf2Fill className="size-4" /> Linear Algebra for ML
-              </div>
-              <div
-                className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
-                onClick={(e) => toggleCertificateURL(e, "/path/to/fe-certificate.pdf")}
-              >
-                <RiFilePdf2Fill className="size-4" /> FE Certificate by Meta
-              </div>
-            </div>
             ) : null}
           </div>
         </div>
@@ -355,6 +380,7 @@ const AboutMeViewfinder = () => {
       event: React.MouseEvent<HTMLDivElement>
     ) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowNerdyDetails(!showNerdyDetails);
       setCode(nerdy.details);
       // updateViewfinderStatus(viewFinderActive)
@@ -371,6 +397,7 @@ const AboutMeViewfinder = () => {
       event: React.MouseEvent<HTMLDivElement>
     ) => {
       event.stopPropagation();
+      setcurrentViewFinder(true);
       setShowNonNerdyDetails(!showNonNerdyDetails);
       setCode(nonNerdy.details);
       // updateViewfinderStatus(viewFinderActive)
@@ -430,7 +457,7 @@ const AboutMeViewfinder = () => {
     );
   };
   return (
-    <div className="overflow-y-hidden">
+    <div className="overflow-y-hidden overflow-x-hidden">
       {/* Desktop Version */}
       <div className="hidden lg:flex flex-row h-screen">
         <div className="flex flex-col border-r-2 px-4 py-5 gap-8 text-fade-text">
@@ -532,17 +559,21 @@ const AboutMeViewfinder = () => {
               {/* TODO:ADD CERTIFICATIONS */}
               <div className=" border-r-2 w-1/2 overflow-y-scroll scrollbar-hide pb-36">
                 {viewFinderActive ? (
-                  <div className="p-4">
-                    <SyntaxHighlighter
-                      language="js"
-                      useInlineStyles={false}
-                      className="nightOwlContactMe"
-                      showLineNumbers={true}
-                      wrapLongLines={true}
-                    >
-                      {code}
-                    </SyntaxHighlighter>
-                  </div>
+                  currentViewFinder ? (
+                    <div className="p-4">
+                      <SyntaxHighlighter
+                        language="js"
+                        useInlineStyles={false}
+                        className="nightOwlContactMe"
+                        showLineNumbers={true}
+                        wrapLongLines={true}
+                      >
+                        {code}
+                      </SyntaxHighlighter>
+                    </div>
+                  ) : (
+                    <PDFDisplayComponent key={selectedPdfUrl} url={selectedPdfUrl} />
+                  )
                 ) : (
                   <NothingOpen />
                 )}
@@ -634,17 +665,17 @@ const AboutMeViewfinder = () => {
         </span>
         <div className="pb-12">
           {viewFinderActive ? (
-            <div className="p-4">
-              <SyntaxHighlighter
-                language="js"
-                useInlineStyles={false}
-                className="nightOwlContactMe"
-                showLineNumbers={true}
-                wrapLongLines={true}
-              >
-                {code}
-              </SyntaxHighlighter>
-            </div>
+            currentViewFinder ? (<div className="p-4">
+            <SyntaxHighlighter
+              language="js"
+              useInlineStyles={false}
+              className="nightOwlContactMe"
+              showLineNumbers={true}
+              wrapLongLines={true}
+            >
+              {code}
+            </SyntaxHighlighter>
+          </div>) : <PDFDisplayComponent url={selectedPdfUrl} />
           ) : (
             <NothingOpen />
           )}
