@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import ProjectCard from "@/components/ProjectCard/ProjectCard";
-import { SiTypescript, SiJavascript, SiExpress, SiFlask } from "react-icons/si";
+import { SiTypescript, SiJavascript, SiExpress, SiFlask, SiHiveBlockchain } from "react-icons/si";
 import { projects } from "@/constants/projects";
 import {
   RiCloseLine,
@@ -9,7 +9,8 @@ import {
   RiReactjsLine,
   RiTriangleFill,
   RiRobot3Fill,
-  RiNextjsLine
+  RiNextjsLine,
+  RiSvelteLine
 } from "@remixicon/react";
 import { Checkbox, Tooltip } from "@nextui-org/react";
 
@@ -21,10 +22,12 @@ const ProjectsViewfinder = () => {
     { name: "React", icon: <RiReactjsLine /> },
     { name: "HTML", icon: <RiHtml5Line /> },
     { name: "NextJs", icon: <RiNextjsLine /> },
+    { name: "SvelteKit", icon: <RiSvelteLine/> },
     { name: "ExpressJs", icon: <SiExpress className="text-2xl pl-0.5" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-xl pl-0.5" /> },
     { name: "JavaScript", icon: <SiJavascript className="text-xl pl-0.5" /> },
     { name: "Machine Learning", icon: <RiRobot3Fill /> },
+    { name: "Web3", icon: <SiHiveBlockchain className="text-2xl pl-1"/> },
     { name: "Flask", icon: <SiFlask className="text-2xl pl-1"/> },
   ];
 

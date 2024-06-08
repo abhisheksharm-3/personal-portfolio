@@ -9,11 +9,12 @@ import {
   RiHtml5Line,
   RiNextjsLine,
   RiRobot3Fill,
+  RiSvelteFill,
 } from "@remixicon/react";
 import { Skeleton } from "@nextui-org/react";
 
 import Link from "next/link";
-import { SiExpress, SiFlask } from "react-icons/si";
+import { SiExpress, SiFlask, SiHiveBlockchain } from "react-icons/si";
 
 interface ProjectCardProps {
   title: string;
@@ -64,9 +65,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     case "ExpressJs":
       TechIcon = SiExpress;
       break;
-      case "Flask":
-        TechIcon = SiFlask;
-        break;
+    case "Flask":
+      TechIcon = SiFlask;
+      break;
+    case "SvelteKit":
+      TechIcon = RiSvelteFill;
+      break;
+    case "Web3":
+      TechIcon = SiHiveBlockchain;
+      break;
     default:
       TechIcon = RiReactjsFill; // Default to React icon if tech stack is not recognized
   }

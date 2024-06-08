@@ -39,14 +39,14 @@ export const projects = [
     techStack: ["Flask", "React", "Machine Learning"],
   },
   {
-    title: "Sanklp Hotel",
+    title: "Sanklp-Hotel",
     showcaseImage: "/images/projects/sanklp.png",
     description: "A frontend UI project based on design from figma community.",
     link: "https://sanklphotel.netlify.app/",
     techStack: ["React", "TailwindCSS", "JavaScript"],
   },
   {
-    title: "ML Olympiad",
+    title: "ML-Olympiad",
     showcaseImage: "/images/projects/ml-olympiad.png",
     description: "Top 10 in detecting smokers with 99.274% accuracy",
     link: "https://www.kaggle.com/competitions/ml-olympiad-smoking/",
