@@ -46,6 +46,13 @@ export const projects = [
     techStack: ["Flask", "React", "Machine Learning"],
   },
   {
+    title: "Aestoti",
+    showcaseImage: "/images/projects/aestoti.png",
+    description: "A Pomodoro timer built with SvelteKit.",
+    link: "https://aestoti.vercel.app/",
+    techStack: ["SvelteKit", "TailwindCSS"],
+  },
+  {
     title: "Sanklp-Hotel",
     showcaseImage: "/images/projects/sanklp.png",
     description: "A frontend UI project based on design from figma community.",
