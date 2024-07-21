@@ -18,6 +18,13 @@ export const projects = [
     techStack: ["React", "TailwindCSS", "JavaScript"],
   },
   {
+    title: "Votegrity",
+    showcaseImage: "/images/projects/votegrity.png",
+    description: "A dApp voting platform made with nextjs + solidity.",
+    link: "https://votegrity.vercel.app/",
+    techStack: ["Web3", "Solidity", "NextJs", "React", "TailwindCSS", "TypeScript"],
+  },
+  {
     title: "TripTalkies",
     showcaseImage: "/images/projects/triptalkies.png",
     description: "A trip planning platform made with nextjs + typecript.",
@@ -37,6 +44,13 @@ export const projects = [
     description: "A React + Flask ML project to predict your health.",
     link: "https://livehealthy.vercel.app/",
     techStack: ["Flask", "React", "Machine Learning"],
+  },
+  {
+    title: "Aestoti",
+    showcaseImage: "/images/projects/aestoti.png",
+    description: "A Pomodoro timer built with SvelteKit.",
+    link: "https://aestoti.vercel.app/",
+    techStack: ["SvelteKit", "TailwindCSS"],
   },
   {
     title: "Sanklp-Hotel",
@@ -73,6 +87,13 @@ export const projects = [
     description: "A vanilla js API weather web-app.",
     link: "https://overcastly.netlify.app/",
     techStack: ["HTML", "JavaScript"],
+  },
+  {
+    title: "REST-Countries",
+    showcaseImage: "/images/projects/restcountries.png",
+    description: "SvelteKit implementation of the Frontend Mentor REST Countries Challenge.",
+    link: "https://restcountriesvelte.vercel.app/",
+    techStack: ["SvelteKit", "TailwindCSS"],
   },
   {
     title: "TacTicPlay",
