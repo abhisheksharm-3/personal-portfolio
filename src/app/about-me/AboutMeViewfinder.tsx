@@ -357,6 +357,14 @@ const AboutMeViewfinder = () => {
                 >
                   <RiFilePdf2Fill className="size-4" /> FE Certificate by Meta
                 </div>
+                <div
+                  className={`text-fade-text flex items-center gap-1  hover:text-white duration-400 ease-in-out`}
+                  onClick={(e) =>
+                    toggleCertificateURL(e, "/certificates/IJNRD2407360.pdf")
+                  }
+                >
+                  <RiFilePdf2Fill className="size-4" /> Research Paper
+                </div>
               </div>
             ) : null}
           </div>
