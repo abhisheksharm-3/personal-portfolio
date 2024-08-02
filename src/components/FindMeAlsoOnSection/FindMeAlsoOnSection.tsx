@@ -16,7 +16,7 @@ const FindMeAlsoOnSection = () => {
         <RiTriangleFill
           className={`rotate-${
             showFindMeAlsoOn ? "180" : "90"
-          } w-[8.5px] h-[6px]`}
+          } w-[8.5px] h-[6px] transition-transform`}
         />
         <span className="pr-0.5">find-me-also-on</span>
       </div>

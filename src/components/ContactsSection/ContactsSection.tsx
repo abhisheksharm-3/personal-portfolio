@@ -15,7 +15,7 @@ const ContactsSection = () => {
         onClick={toggleContacts}
       >
         <RiTriangleFill
-          className={`rotate-${showContacts ? "180" : "90"} w-[8.5px] h-[6px]`}
+          className={`rotate-${showContacts ? "180" : "90"} w-[8.5px] h-[6px] transition-transform`}
         />
         <span className="pr-0.5">contacts&nbsp;&nbsp;</span>
       </div>

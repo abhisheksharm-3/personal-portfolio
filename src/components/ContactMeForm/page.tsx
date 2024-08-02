@@ -86,7 +86,6 @@ const ContactMeForm = () => {
     form.send(message);
     // 🎉 Message sent! Time to celebrate!
   });
-  
   `;
 
   const handleSubmit = async (formData: FormData) => {
@@ -111,7 +110,7 @@ const ContactMeForm = () => {
   };
 
   return (
-    <><div className="flex pt-8 justify-center w-1/2 border-r-2"><Form {...form}>
+    <><div className="lg:flex lg:pt-8 lg:justify-center lg:w-1/2 lg:border-r-2"><Form {...form}>
       {isSubmitted ? (
         <div className=" flex flex-col items-center justify-center gap-2">
           <p className="text-[32px]">Thank you! 🤘</p>
@@ -205,7 +204,8 @@ const ContactMeForm = () => {
           )}
         </form>
       )}
-    </Form></div><div className="w-1/2">
+    </Form></div><div className="lg:w-1/2 hidden lg:block">
+      {/* see why styles are not being applied in production */}
         <SyntaxHighlighter className="nightOwl-ContactMe" showLineNumbers={true} useInlineStyles={false} language="js">
           {formCode}
         </SyntaxHighlighter>

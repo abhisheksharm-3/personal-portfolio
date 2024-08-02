@@ -122,7 +122,7 @@ const AboutMeViewfinder = () => {
           }`}
           onClick={toggleShowBio}
         >
-          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"}`} />
+          <RiArrowRightSLine className={`rotate-${showBio ? "90" : "0"} transition-transform`} />
           <div className="">
             <div className="flex items-center gap-1">
               <RiFolder3Fill className="text-[#E99287] size-4" /> bio
@@ -146,7 +146,7 @@ const AboutMeViewfinder = () => {
           onClick={toggleShowInterests}
         >
           <RiArrowRightSLine
-            className={`rotate-${showInterests ? "90" : "0"}`}
+            className={`rotate-${showInterests ? "90" : "0"} transition-transform`}
           />
           <div className="">
             <div className="flex items-center gap-1">
@@ -171,7 +171,7 @@ const AboutMeViewfinder = () => {
           onClick={toggleShowEducation}
         >
           <RiArrowRightSLine
-            className={`rotate-${showEducation ? "90" : "0"}`}
+            className={`rotate-${showEducation ? "90" : "0"} transition-transform`}
           />
           <div className="">
             <div className="flex items-center gap-1">
@@ -262,7 +262,7 @@ const AboutMeViewfinder = () => {
           }`}
           onClick={toggleExperience}
         >
-          <RiArrowRightSLine className={`rotate-${experience ? "90" : "0"}`} />
+          <RiArrowRightSLine className={`rotate-${experience ? "90" : "0"} transition-transform`} />
           <div className="">
             <div className="flex items-center gap-1">
               <RiFolder3Fill className="text-[#E99287] size-4" /> experience
@@ -286,7 +286,7 @@ const AboutMeViewfinder = () => {
           onClick={toggleExpandFolder}
         >
           <RiArrowRightSLine
-            className={`rotate-${showTechStack ? "90" : "0"}`}
+            className={`rotate-${showTechStack ? "90" : "0"} transition-transform`}
           />
           <div className="">
             <div className="flex items-center gap-1">
@@ -311,7 +311,7 @@ const AboutMeViewfinder = () => {
           onClick={toggleCertificate}
         >
           <RiArrowRightSLine
-            className={`rotate-${showCertificates ? "90" : "0"}`}
+            className={`rotate-${showCertificates ? "90" : "0"} transition-transform`}
           />
           <div className="">
             <div className="flex items-center gap-1">
@@ -419,7 +419,7 @@ const AboutMeViewfinder = () => {
           }`}
           onClick={toggleShowNerdy}
         >
-          <RiArrowRightSLine className={`rotate-${showNerdy ? "90" : "0"}`} />
+          <RiArrowRightSLine className={`rotate-${showNerdy ? "90" : "0"} transition-transform`} />
           <div className="">
             <div className="flex items-center gap-1">
               <RiFolder3Fill className="text-[#E99287] size-4" /> nerdy
@@ -443,7 +443,7 @@ const AboutMeViewfinder = () => {
           onClick={toggleShowNonNerdy}
         >
           <RiArrowRightSLine
-            className={`rotate-${showNonNerdy ? "90" : "0"}`}
+            className={`rotate-${showNonNerdy ? "90" : "0"} transition-transform`}
           />
           <div className="">
             <div className="flex items-center gap-1">
@@ -517,12 +517,12 @@ const AboutMeViewfinder = () => {
             <RiTriangleFill
               className={`rotate-${
                 expandFolder ? "180" : "90"
-              } w-[8.5px] h-[6px]`}
+              } w-[8.5px] h-[6px] transition-transform`}
             />
             <span className="pr-3">{selectedTab.toLowerCase()}</span>
           </div>
           {expandFolder ? (
-            <div className="border-b-2 text-fade-text p-3">
+            <div className="border-b-2 text-fade-text p-3 transition-colors duration-400">
               {selectedFolder === 1 ? (
                 <ProfessionalInfo />
               ) : selectedFolder === 2 ? (
@@ -617,7 +617,7 @@ const AboutMeViewfinder = () => {
               <RiTriangleFill
                 className={`rotate-${
                   selectedFolder === 1 ? "180" : "90"
-                } w-[8.5px] h-[6px]`}
+                } w-[8.5px] h-[6px] transition-transform`}
               />
               <span className="pr-0.5">personal-info&nbsp;&nbsp;</span>
             </div>
@@ -636,7 +636,7 @@ const AboutMeViewfinder = () => {
               <RiTriangleFill
                 className={`rotate-${
                   selectedFolder === 2 ? "180" : "90"
-                } w-[8.5px] h-[6px]`}
+                } w-[8.5px] h-[6px] transition-transform`}
               />
               <span className="pr-0.5">professional-info&nbsp;&nbsp;</span>
             </div>
@@ -655,7 +655,7 @@ const AboutMeViewfinder = () => {
               <RiTriangleFill
                 className={`rotate-${
                   selectedFolder === 3 ? "180" : "90"
-                } w-[8.5px] h-[6px]`}
+                } w-[8.5px] h-[6px] transition-transform`}
               />
               <span className="pr-0.5">hobbies&nbsp;&nbsp;</span>
             </div>
