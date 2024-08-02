@@ -40,44 +40,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 
     return () => clearTimeout(timeout);
   }, []);
-  let TechIcon;
 
   // Dynamically select the appropriate icon based on the techStack value
-  switch (techStack) {
-    case "React":
-      TechIcon = RiReactjsFill;
-      break;
-    case "Angular":
-      TechIcon = RiAngularjsFill;
-      break;
-    case "Vue":
-      TechIcon = RiVuejsFill;
-      break;
-    case "HTML":
-      TechIcon = RiHtml5Line;
-      break;
-    case "NextJs":
-      TechIcon = RiNextjsLine;
-      break;
-    case "Machine Learning":
-      TechIcon = RiRobot3Fill;
-      break;
-    case "ExpressJs":
-      TechIcon = SiExpress;
-      break;
-    case "Flask":
-      TechIcon = SiFlask;
-      break;
-    case "SvelteKit":
-      TechIcon = RiSvelteFill;
-      break;
-    case "Web3":
-      TechIcon = SiHiveBlockchain;
-      break;
-    default:
-      TechIcon = RiReactjsFill; // Default to React icon if tech stack is not recognized
-  }
+  const getTechIcon = (techStack: string) => {
+    const iconMap: { [key: string]: React.ElementType } = {
+      React: RiReactjsFill,
+      Angular: RiAngularjsFill,
+      Vue: RiVuejsFill,
+      HTML: RiHtml5Line,
+      NextJs: RiNextjsLine,
+      "Machine Learning": RiRobot3Fill,
+      ExpressJs: SiExpress,
+      Flask: SiFlask,
+      SvelteKit: RiSvelteFill,
+      Web3: SiHiveBlockchain,
+    };
 
+    const Icon = iconMap[techStack] || RiReactjsFill;
+    return <Icon className="text-2xl" />;
+  };
   return (
     <>
       <div className="flex flex-col bg-[#011221] border-1 rounded-3xl lg:rounded-lg w-[320px] 3xl:w-[370px] h-[315px] relative flex-shrink">
@@ -88,7 +69,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           {/* added showcase image to bg of upper div so as to avoid it overflowing to lower div and taking more space */}
           <div
             className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg"
-            // style={{ backgroundImage: `url(${showcaseImage})` }}
           >
             {/* Showcase Image */}
             <Image
@@ -99,22 +79,25 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               className="rounded-t-3xl lg:rounded-t-lg"
             />
             {/* Tech Stack Icon */}
-            <TechIcon className="absolute top-0 right-0 transform -translate-x-1/2 translate-y-1/2 text-2xl" />
+            <div className="absolute top-2 right-2 bg-[#011221] p-1 rounded-full">
+            {getTechIcon(techStack)}
+          </div>
           </div>
         </Skeleton>
-        <div className="flex flex-col w-full items-start gap-4 px-8 justify-center h-1/2 border-t-1">
-          <Skeleton isLoaded={isLoaded} className="rounded-lg">
-            <p className="text-fade-text">{description}</p>
-          </Skeleton>
-          <Skeleton isLoaded={isLoaded} className="rounded-lg">
-            <Button asChild variant={"secondary"}>
-              <Link href={link} target="_blank">
-                view-project
-              </Link>
-            </Button>
-          </Skeleton>
-        </div>
+        <div className="flex flex-col flex-grow p-4 justify-between">
+        <Skeleton isLoaded={isLoaded} className="mb-4">
+          <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+          <p className="text-fade-text text-sm">{description}</p>
+        </Skeleton>
+        <Skeleton isLoaded={isLoaded} className="w-full">
+          <Button asChild variant="secondary" className="w-full">
+            <Link href={link} target="_blank" rel="noopener noreferrer">
+              view-project
+            </Link>
+          </Button>
+        </Skeleton>
       </div>
+    </div>
     </>
   );
 };
