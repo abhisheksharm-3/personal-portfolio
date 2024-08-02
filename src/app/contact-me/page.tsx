@@ -1,45 +1,21 @@
 import BasePage from "@/components/BasePage";
-import SyntaxHighlighter from "react-syntax-highlighter"; //can use lightasync version but its disturbing styles of code
+
 import { RiCloseLine } from "@remixicon/react";
 import ContactMeForm from "@/components/ContactMeForm/page";
 import FindMeAlsoOnSection from "@/components/FindMeAlsoOnSection/FindMeAlsoOnSection";
 import ContactsSection from "@/components/ContactsSection/ContactsSection";
 import type { Metadata } from "next";
-import "@/constants/nightOwlContactMe.css"
+
 
 export const metadata: Metadata = {
   title: "_contact-me - Abhishek Sharma",
   description: "",
 };
 
-const currentDate = new Date();
-
-const options: Intl.DateTimeFormatOptions = {
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-  timeZone: 'Asia/Kolkata',
-};
-
-const formatter = new Intl.DateTimeFormat("en-IN", options);
-const humanReadableDate = formatter.format(currentDate);
 
 const ContactMe = () => {
   //TODO: TRY TO OVERCOME TECHNICAL PROBLEMS OF CODE UPDATE IN REALTIME
-  const formCode = ` //this code doesn't update in realtime 
-// due to tech stack limitations, YET 😜
-  const button = document.querySelector('#sendBtn');
-
-  const message = {
-    name: "Your Name Here",
-    email: "Your Email Here",
-    message: "Your Message Here",
-    date: "${humanReadableDate}"
-  }
   
-  button.addEventListener('click', () => {
-    form.send(message);
-  })`;
   return (
     <BasePage active="_contact-me">
       {/* Desktop Version */}
@@ -62,14 +38,10 @@ const ContactMe = () => {
             </div>
           </div>
           <div className="flex flex-row flex-grow h-full">
-            <div className="flex pt-8 justify-center w-1/2 border-r-2">
+            
               <ContactMeForm />
-            </div>
-            <div className="w-1/2">
-              <SyntaxHighlighter className="nightOwl-ContactMe" showLineNumbers={true} useInlineStyles={false} language="js">
-                {formCode}
-              </SyntaxHighlighter>
-            </div>
+            
+            
             <div className="px-2 border-l-2 text-fade-text flex items-center">
               a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
               <br />s<br />h<br />a<br />r<br />m<br />a

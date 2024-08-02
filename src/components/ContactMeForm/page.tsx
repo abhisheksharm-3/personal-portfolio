@@ -1,10 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { Button } from "../ui/button";
 import { ReloadIcon } from "@radix-ui/react-icons";
+import SyntaxHighlighter from "react-syntax-highlighter"; //can use lightasync version but its disturbing styles of code
 import {
   Form,
   FormControl,
@@ -16,6 +17,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import axios from "axios";
+import "@/constants/nightOwlContactMe.css"
 
 const ContactFormSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -27,6 +29,7 @@ const ContactFormSchema = z.object({
 });
 
 const ContactMeForm = () => {
+
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     resolver: zodResolver(ContactFormSchema),
     defaultValues: {
@@ -44,6 +47,47 @@ const ContactMeForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const [formValues, setFormValues] = useState(form.getValues());
+
+  useEffect(() => {
+    const subscription = form.watch((value) => {
+      setFormValues({ name: value.name || '', message: value.message || '', email: value.email || '' });
+
+    });
+    return () => subscription.unsubscribe();
+  }, [form]);
+  const currentDate = new Date();
+
+  const options: Intl.DateTimeFormatOptions = {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: 'Asia/Kolkata',
+  };
+
+  const formatter = new Intl.DateTimeFormat("en-IN", options);
+  const humanReadableDate = formatter.format(currentDate);
+  const formCode = `// 🌟 Real-time Form Magic! 🌟
+// This code updates live as you type in the form 😎
+  
+  const button = document.querySelector('#sendBtn');
+  
+  // Meet the amazing message object 🎉
+  const message = {
+    name: "${formValues.name || 'Your Name'}",
+    email: "${formValues.email || 'your.email@example.com'}",
+    message: "${formValues.message || 'Your awesome message'}",
+    date: "${humanReadableDate || 'Today'}"
+  };
+  
+  // When the button is clicked, the form sends its magic message 🪄
+  button.addEventListener('click', () => {
+    // 📨 Form, meet message!
+    form.send(message);
+    // 🎉 Message sent! Time to celebrate!
+  });
+  
+  `;
 
   const handleSubmit = async (formData: FormData) => {
     setLoading(true);
@@ -67,7 +111,7 @@ const ContactMeForm = () => {
   };
 
   return (
-    <Form {...form}>
+    <><div className="flex pt-8 justify-center w-1/2 border-r-2"><Form {...form}>
       {isSubmitted ? (
         <div className=" flex flex-col items-center justify-center gap-2">
           <p className="text-[32px]">Thank you! 🤘</p>
@@ -161,7 +205,11 @@ const ContactMeForm = () => {
           )}
         </form>
       )}
-    </Form>
+    </Form></div><div className="w-1/2">
+        <SyntaxHighlighter className="nightOwl-ContactMe" showLineNumbers={true} useInlineStyles={false} language="js">
+          {formCode}
+        </SyntaxHighlighter>
+      </div></>
   );
 };
 

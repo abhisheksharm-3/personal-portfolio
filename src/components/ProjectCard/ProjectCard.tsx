@@ -34,6 +34,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
   //TODO: fix the unwanted loading of the skeleton when the mouse hovers over clear filter or project tab changes state
+  //TODO: Fix page wide skeleto issue on load
 
   // Dynamically select the appropriate icon based on the techStack value
   const getTechIcon = (techStack: string) => {
