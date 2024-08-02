@@ -70,7 +70,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               height={125}
               width={370}
               alt={title}
-              className="rounded-t-3xl lg:rounded-t-lg object-cover w-full h-full"
+              className="rounded-t-3xl lg:rounded-t-lg"
               onLoad={() => setIsImageLoaded(true)}
             onError={() => setIsImageLoaded(true)}
             />
