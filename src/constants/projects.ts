@@ -1,3 +1,5 @@
+import { SiTruenas } from "react-icons/si";
+
 /**
  * Array of project objects containing information about each project.
  * To add a new project, follow the structure below:
@@ -7,15 +9,17 @@
  *    description: "Project description.",
  *    link: "https://example.com/project",
  *    techStack: ["Tech Stack"]
+ *    building: true;
  * }
  */
 export const projects = [
   {
-    title: "Nostra",
-    showcaseImage: "/images/projects/nostra.png",
-    description: "A restaurant website made with react and appwrite.",
-    link: "https://nostrarestaurant.vercel.app/",
-    techStack: ["React", "TailwindCSS", "JavaScript"],
+    title: "GetResume",
+    showcaseImage: "/images/projects/getresume.png",
+    description: "A resume parsing platform with nextjs + Gemini API.",
+    link: "https://getresumes.vercel.app/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
+    building: true,
   },
   {
     title: "Votegrity",
@@ -23,6 +27,23 @@ export const projects = [
     description: "A dApp voting platform made with nextjs + solidity.",
     link: "https://votegrity.vercel.app/",
     techStack: ["Web3", "Solidity", "NextJs", "React", "TailwindCSS", "TypeScript"],
+    building: true,
+  }, 
+  {
+    title: "Kalendar",
+    showcaseImage: "/images/projects/kalendar.png",
+    description: "An AI scheduling webapp made with Nextjs + Gemini API.",
+    link: "https://kalendarapp.vercel.app/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
+    building: true,
+  },
+  {
+    title: "Nostra",
+    showcaseImage: "/images/projects/nostra.png",
+    description: "A restaurant website made with react and appwrite.",
+    link: "https://nostrarestaurant.vercel.app/",
+    techStack: ["React", "TailwindCSS", "JavaScript"],
+    building: false,
   },
   {
     title: "TripTalkies",
@@ -30,6 +51,7 @@ export const projects = [
     description: "A trip planning platform made with nextjs + typecript.",
     link: "https://triptalkies.vercel.app/",
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
+    building: false,
   },
   {
     title: "Foodix",
@@ -37,6 +59,7 @@ export const projects = [
     description: "A MERN Stack Food Delivery Website with Live Status.",
     link: "https://foodixdelivery.vercel.app/",
     techStack: ["ExpressJs", "React", "TailwindCSS", "TypeScript"],
+    building: false,
   },
   {
     title: "LiveHealthy",
@@ -44,6 +67,7 @@ export const projects = [
     description: "A React + Flask ML project to predict your health.",
     link: "https://livehealthy.vercel.app/",
     techStack: ["Flask", "React", "Machine Learning"],
+    building: false,
   },
   {
     title: "Aestoti",
@@ -51,6 +75,7 @@ export const projects = [
     description: "A Pomodoro timer built with SvelteKit.",
     link: "https://aestoti.vercel.app/",
     techStack: ["SvelteKit", "TailwindCSS"],
+    building: true,
   },
   {
     title: "Sanklp-Hotel",
@@ -58,6 +83,7 @@ export const projects = [
     description: "A frontend UI project based on design from figma community.",
     link: "https://sanklphotel.netlify.app/",
     techStack: ["React", "TailwindCSS", "JavaScript"],
+    building: false,
   },
   // {
   //   title: "ML-Olympiad",
@@ -74,6 +100,7 @@ export const projects = [
     description: "A HTML + CSS frontend UI project.",
     link: "https://tokyotaste.netlify.app/",
     techStack: ["HTML"],
+    building: false,
   },
   {
     title: "VisualAlg",
@@ -81,6 +108,7 @@ export const projects = [
     description: "A Website to Visualize BFS and DFS Algorithms.",
     link: "https://visualalg.vercel.app/",
     techStack: ["React", "TailwindCSS", "JavaScript"],
+    building: false,
   },
   {
     title: "Overcastly",
@@ -88,6 +116,7 @@ export const projects = [
     description: "A vanilla js API weather web-app.",
     link: "https://overcastly.netlify.app/",
     techStack: ["HTML", "JavaScript"],
+    building: false,
   },
   {
     title: "REST-Countries",
@@ -95,6 +124,7 @@ export const projects = [
     description: "SvelteKit REST Countries API challenge implementation.",
     link: "https://restcountriesvelte.vercel.app/",
     techStack: ["SvelteKit", "TailwindCSS"],
+    building: false,
   },
   {
     title: "TacTicPlay",
@@ -102,5 +132,6 @@ export const projects = [
     description: "A MiniMax Algorithm Based Tic Tac Toe Game.",
     link: "https://tacticplay.netlify.app/",
     techStack: ["React", "TailwindCSS", "JavaScript"],
+    building: false,
   },
 ];

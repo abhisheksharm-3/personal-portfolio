@@ -46,6 +46,8 @@ const ProjectsViewfinder = () => {
   };
   const toggleShowTechStack = () => setShowTechStack(!showTechStack);
 
+  //TODO:use alternate mathod to store projects independent of portfolio
+
   const filteredProjects = useMemo(
     () =>
       projects.filter(
@@ -111,14 +113,10 @@ const ProjectsViewfinder = () => {
                 <Tooltip
                   content="Clear Filters"
                   placement="top"
-                  isOpen={isTooltipOpen}
-                  onOpenChange={setIsTooltipOpen}
                 >
                   <button
                     className="focus:outline-none"
                     onClick={() => setSelectedTechs([])}
-                    onMouseEnter={() => setIsTooltipOpen(true)}
-                    onMouseLeave={() => setIsTooltipOpen(false)}
                   >
                     <RiCloseLine className="w-[18px] h-[18px] text-fade-text hover:text-white transition-colors duration-300" />
                   </button>
@@ -143,6 +141,7 @@ const ProjectsViewfinder = () => {
                   description={project.description}
                   link={project.link}
                   techStack={project.techStack[0]}
+                  building={project.building}
                 />
               </div>
             ))}
@@ -220,6 +219,7 @@ const ProjectsViewfinder = () => {
               description={project.description}
               link={project.link}
               techStack={project.techStack[0]}
+              building={project.building}
             />
           </div>
         ))}
