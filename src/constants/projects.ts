@@ -91,7 +91,7 @@ export const projects = [
   {
     title: "REST-Countries",
     showcaseImage: "/images/projects/restcountries.png",
-    description: "SvelteKit implementation of the Frontend Mentor REST Countries Challenge.",
+    description: "SvelteKit REST Countries API challenge implementation.",
     link: "https://restcountriesvelte.vercel.app/",
     techStack: ["SvelteKit", "TailwindCSS"],
   },
