@@ -8,6 +8,7 @@ import {
   SiFlask,
   SiHiveBlockchain,
 } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
 import { projects } from "@/constants/projects";
 import {
   RiCloseLine,
@@ -19,6 +20,7 @@ import {
   RiSvelteLine,
 } from "@remixicon/react";
 import { Checkbox, Tooltip } from "@nextui-org/react";
+import NoProjectsYet from "@/components/NoProjects/NoProjectsYet";
 
 const ProjectsViewfinder = () => {
   const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
@@ -33,6 +35,7 @@ const ProjectsViewfinder = () => {
       { name: "ExpressJs", icon: <SiExpress className="text-2xl pl-0.5" /> },
       { name: "TypeScript", icon: <SiTypescript className="text-xl pl-0.5" /> },
       { name: "JavaScript", icon: <SiJavascript className="text-xl pl-0.5" /> },
+      { name: "GoLang", icon: <FaGolang className="text-2xl" /> },
       { name: "Machine Learning", icon: <RiRobot3Fill /> },
       { name: "Web3", icon: <SiHiveBlockchain className="text-2xl pl-1" /> },
       { name: "Flask", icon: <SiFlask className="text-2xl pl-1" /> },
@@ -126,26 +129,32 @@ const ProjectsViewfinder = () => {
           </div>
         </div>
         <div className="flex flex-row flex-grow h-full">
-          <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 pt-20 pb-60 w-full px-32 overflow-y-scroll scrollbar-hide">
+          
             {/* Display filtered projects */}
-            {filteredProjects.map((project, index) => (
-              <div key={index}>
-                <div className="flex gap-8 py-2">
-                  <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
-                  <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
-                </div>
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  showcaseImage={project.showcaseImage}
-                  description={project.description}
-                  link={project.link}
-                  techStack={project.techStack[0]}
-                  building={project.building}
-                />
-              </div>
-            ))}
-          </div>
+            {filteredProjects.length > 0 ? (
+  <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 pt-20 pb-60 w-full px-32 overflow-y-scroll scrollbar-hide">
+    {filteredProjects.map((project, index) => (
+      <div key={index}>
+        <div className="flex gap-8 py-2">
+          <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
+          <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
+        </div>
+        <ProjectCard
+          key={index}
+          title={project.title}
+          showcaseImage={project.showcaseImage}
+          description={project.description}
+          link={project.link}
+          techStack={project.techStack[0]}
+          building={project.building}
+        />
+      </div>
+    ))}
+  </div>
+) : (
+  <NoProjectsYet />
+)}
+          
           <div className="px-2 border-l-2 text-fade-text flex items-center">
             a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
             <br />s<br />h<br />a<br />r<br />m<br />a
@@ -205,25 +214,30 @@ const ProjectsViewfinder = () => {
             : "/ all" // Default to "projects" if no technology is selected
         }
       </span>
-      <div className="w-full grid grid-cols-1 overflow-y-scroll scrollbar-hide place-items-center pb-60 gap-2">
-        {filteredProjects.map((project, index) => (
-          <div key={index}>
-            <div className="flex gap-8 py-2">
-              <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
-              <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
-            </div>
-            <ProjectCard
-              key={index}
-              title={project.title}
-              showcaseImage={project.showcaseImage}
-              description={project.description}
-              link={project.link}
-              techStack={project.techStack[0]}
-              building={project.building}
-            />
-          </div>
-        ))}
+      
+      {filteredProjects.length > 0 ? (
+  <div className="w-full grid grid-cols-1 overflow-y-scroll scrollbar-hide place-items-center pb-60 gap-2">
+    {filteredProjects.map((project, index) => (
+      <div key={index}>
+        <div className="flex gap-8 py-2">
+          <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
+          <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
+        </div>
+        <ProjectCard
+          key={index}
+          title={project.title}
+          showcaseImage={project.showcaseImage}
+          description={project.description}
+          link={project.link}
+          techStack={project.techStack[0]}
+          building={project.building}
+        />
       </div>
+    ))}
+  </div>
+) : (
+ <NoProjectsYet />
+)}
     </div>
   );
   return (

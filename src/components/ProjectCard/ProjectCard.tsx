@@ -16,6 +16,7 @@ import { Skeleton, Tooltip } from "@nextui-org/react";
 
 import Link from "next/link";
 import { SiExpress, SiFlask, SiHiveBlockchain } from "react-icons/si";
+import { FaGolang } from "react-icons/fa6";
 
 interface ProjectCardProps {
   title: string;
@@ -52,6 +53,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       Flask: SiFlask,
       SvelteKit: RiSvelteFill,
       Web3: SiHiveBlockchain,
+      GoLang: FaGolang,
     };
 
     const Icon = iconMap[techStack] || RiReactjsFill;
