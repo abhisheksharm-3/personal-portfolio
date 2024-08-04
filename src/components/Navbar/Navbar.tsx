@@ -18,7 +18,7 @@ function Navbar({ active }: { active: string }) {
     { href: "/", text: "_hello", activeKey: "_hello" },
     { href: "/about-me", text: "_about-me", activeKey: "_about-me" },
     { href: "/projects", text: "_projects", activeKey: "_projects" },
-    { href: "/contact-me", text: "_contact-me", activeKey: "_contact-me" },
+    // { href: "/contact-me", text: "_contact-me", activeKey: "_contact-me" },
   ];
 
   return (
@@ -103,7 +103,7 @@ function Navbar({ active }: { active: string }) {
                 </motion.div>
               </div>
               <motion.div className="flex flex-col gap-4 text-lg font-light w-screen">
-                {navItems.map((item, index) => (
+                {[...navItems, { href: "/contact-me", text: "_contact-me", activeKey: "_contact-me" }].map((item, index) => (
                   <motion.div
                     key={item.href}
                     initial={{ opacity: 0, y: 20 }}
