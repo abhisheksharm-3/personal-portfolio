@@ -78,10 +78,10 @@ const university = {
       {
         "semester": 6,
         "sgpa": 8.00,
-        "cgpa": 8.28,
+        "cgpa": 8.23,
         "courses": ["Data Mining ⛏️", "Computer Networks 🖧"],
         "comment": "Delved into data and networking.",
-        "trend": "➡️",
+        "trend": "⬇️",
         "additional_activities": [
           {
             "type": "Publication",

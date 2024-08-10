@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import { Button } from "../ui/button";
 import {
   RiReactjsFill,
   RiAngularjsFill,
@@ -12,9 +11,7 @@ import {
   RiSvelteFill,
   RiToolsFill,
 } from "@remixicon/react";
-import { Skeleton, Tooltip } from "@nextui-org/react";
-
-import Link from "next/link";
+import { Button, Link, Skeleton, Tooltip } from "@nextui-org/react";
 import { SiExpress, SiFlask, SiHiveBlockchain } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 
@@ -67,9 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           className="rounded-t-3xl lg:rounded-t-lg h-1/2"
         >
           {/* added showcase image to bg of upper div so as to avoid it overflowing to lower div and taking more space */}
-          <div
-            className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg"
-          >
+          <div className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg">
             {/* Showcase Image */}
             <Image
               src={showcaseImage}
@@ -79,6 +74,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               className="rounded-t-3xl lg:rounded-t-lg"
               onLoad={() => setIsImageLoaded(true)}
               onError={() => setIsImageLoaded(true)}
+              quality={100}
             />
             {/* Tech Stack Icon */}
             <div className="absolute top-2 right-2 flex items-center gap-2 z-40">
@@ -89,7 +85,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
                   content={
                     <div className="p-2">
                       <p className="font-semibold">Work in Progress</p>
-                      <p className="text-xs">This project is actively being developed</p>
+                      <p className="text-xs">
+                        This project is actively being developed
+                      </p>
                     </div>
                   }
                 >
@@ -121,10 +119,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             <p className="text-fade-text text-sm">{description}</p>
           </Skeleton>
           <Skeleton isLoaded={isImageLoaded} className="w-full">
-            <Button asChild variant="secondary" className="w-full">
-              <Link href={link} target="_blank" rel="noopener noreferrer">
-                view-project
-              </Link>
+            <Button
+              as={Link}
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full z-40 rounded-md bg-[#1f2937] h-9 font-medium"
+            >
+              view-project
             </Button>
           </Skeleton>
         </div>
