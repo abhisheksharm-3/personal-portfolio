@@ -32,7 +32,7 @@ const university = {
     "university_name": "Panjab University",
     "college_name": "Chandigarh College of Engineering and Technology",
     "degree": "BE in Computer Science and Engineering",
-    "current_cgpa": 8.28,
+    "current_cgpa": 8.23,
     "total_credits": 184,
     "semesters": [
       {

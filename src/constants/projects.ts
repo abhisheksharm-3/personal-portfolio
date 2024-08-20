@@ -37,14 +37,14 @@ export const projects = [
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
     building: true,
   },
-  // {
-  //   title: "QuickGist",
-  //   showcaseImage: "/images/projects/quickgist.png",
-  //   description: "A GitHub Gist like website with React + GoLang.",
-  //   link: "https://quickgist.vercel.app/",
-  //   techStack: ["GoLang", "React", "TailwindCSS", "TypeScript"],
-  //   building: true,
-  // },
+  {
+    title: "QuickGist",
+    showcaseImage: "/images/projects/quickgist.png",
+    description: "A GitHub Gist like website with React + GoLang.",
+    link: "https://quickgist.vercel.app/",
+    techStack: ["GoLang", "React", "TailwindCSS", "TypeScript"],
+    building: true,
+  },
   {
     title: "Nostra",
     showcaseImage: "/images/projects/nostra.png",
