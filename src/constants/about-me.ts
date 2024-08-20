@@ -105,7 +105,7 @@ const summary = {
       "degree": "BE in Computer Science and Engineering",
       "institution": "Chandigarh College of Engineering and Technology, Panjab University",
       "expected_graduation": "June 2025",
-      "current_cgpa": 8.28
+      "current_cgpa": 8.23
     },
     "key_attributes": [
       "Full-stack enthusiast with a passion for mobile development 📱💻",
