@@ -1,3 +1,4 @@
+import { setupDevPlatform } from '@cloudflare/next-on-pages/next-dev';
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     webpack: (config) => {
@@ -6,5 +7,8 @@ const nextConfig = {
         return config;
     },
 };
+if (process.env.NODE_ENV === 'development') {
+    await setupDevPlatform();
+  }
 
 export default nextConfig;
