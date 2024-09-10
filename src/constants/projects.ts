@@ -35,7 +35,7 @@ export const projects = [
     description: "An AI scheduling webapp made with Nextjs + Gemini API.",
     link: "https://kalendarapp.vercel.app/",
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
-    building: true,
+    building: false,
   },
   {
     title: "QuickGist",
@@ -43,7 +43,7 @@ export const projects = [
     description: "A GitHub Gist like website with React + GoLang.",
     link: "https://quickgist.vercel.app/",
     techStack: ["GoLang", "React", "TailwindCSS", "TypeScript"],
-    building: true,
+    building: false,
   },
   {
     title: "Nostra",
