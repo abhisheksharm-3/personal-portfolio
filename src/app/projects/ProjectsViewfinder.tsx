@@ -7,6 +7,7 @@ import {
   SiExpress,
   SiFlask,
   SiHiveBlockchain,
+  SiFastapi,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { projects } from "@/constants/projects";
@@ -39,6 +40,7 @@ const ProjectsViewfinder = () => {
       { name: "Machine Learning", icon: <RiRobot3Fill /> },
       { name: "Web3", icon: <SiHiveBlockchain className="text-2xl pl-1" /> },
       { name: "Flask", icon: <SiFlask className="text-2xl pl-1" /> },
+      { name: "FastAPI", icon: <SiFastapi className="text-2xl pl-1" /> },
     ],
     []
   );

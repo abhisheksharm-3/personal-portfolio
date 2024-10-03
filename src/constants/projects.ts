@@ -1,5 +1,3 @@
-import { SiTruenas } from "react-icons/si";
-
 /**
  * Array of project objects containing information about each project.
  * To add a new project, follow the structure below:
@@ -14,11 +12,19 @@ import { SiTruenas } from "react-icons/si";
  */
 export const projects = [
   {
+    title: "Credify",
+    showcaseImage: "/images/projects/credify.png",
+    description: "A content verification platform built with nextjs + FastAPI.",
+    link: "https://credify.fun/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
+    building: false,
+  },
+  {
     title: "GetResume",
     showcaseImage: "/images/projects/getresume.png",
     description: "A resume parsing platform with nextjs + Gemini API.",
     link: "https://getresumes.vercel.app/",
-    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
     building: true,
   },
   {
