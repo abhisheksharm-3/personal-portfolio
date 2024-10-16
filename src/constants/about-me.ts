@@ -100,7 +100,7 @@ const summary = {
   details: `{
   "profile": {
     "title": "Innovative Computer Science Engineer-in-Training 🚀",
-    "tagline": "Bridging Theory and Practice in the Digital Realm",
+    "tagline": "Crafting Consumer-Centric Software Solutions for Tomorrow's Challenges",
     "education": {
       "degree": "BE in Computer Science and Engineering",
       "institution": "Chandigarh College of Engineering and Technology, Panjab University",
@@ -109,17 +109,17 @@ const summary = {
     },
     "key_attributes": [
       "Full-stack enthusiast with a passion for mobile development 📱💻",
-      "Open-source contributor and Hacktoberfest participant 🌟",
+      "Hackathon champion and innovative problem-solver 🏆",
       "Published researcher in network protocols 📊",
-      "Adept problem-solver with a track record of academic excellence 🏆"
+      "Proficient in multiple programming languages and frameworks 🌐"
     ],
     "technical_proficiencies": [
       "Full-stack Development",
       "Mobile App Development",
+      "AI and Machine Learning",
       "Data Structures & Algorithms",
       "Database Management",
-      "Object-Oriented Programming",
-      "Emerging Technologies (AI/ML)"
+      "Cloud Technologies (AWS)"
     ],
     "soft_skills": [
       "Self-directed learning",
@@ -129,9 +129,9 @@ const summary = {
     ],
     "career_objectives": [
       "Contribute to cutting-edge software solutions",
-      "Drive innovation in the global tech industry",
-      "Continuously expand expertise in emerging technologies",
-      "Develop scalable and efficient applications that solve real-world problems"
+      "Drive innovation in AI and machine learning applications",
+      "Develop scalable and efficient applications that solve real-world problems",
+      "Continuously expand expertise in emerging technologies"
     ],
     "aspirations": "Eager to drive innovation in the global software industry. 🚀"
   }
@@ -142,9 +142,8 @@ const techInterests = {
   details: `{
   "interests": {
     "passions": ["Full-Stack Development 🌐", "Mobile App Development 📱"],
-    "favorite_languages": ["C++ 💻", "Python 🐍"],
     "expertise": ["Full Stack Development 🕸️", "Mobile Development 📱"],
-    "current_focus": "Exploring AI and Machine Learning 🤖",
+    "current_focus": "Exploring AI, Machine Learning 🤖 and Native Android Development 📱",
     "excitement": "Eager to dive into emerging technologies! 🚀"
   }
 }`
@@ -153,11 +152,32 @@ const techInterests = {
 const workExperience = {
   details: `{
   "work_experience": {
-    "summary": "Actively engaged in open-source contributions.",
+    "summary": "Actively engaged in hackathons, open-source contributions, and innovative projects.",
     "events": [
+            {
+        "event": "Gen AI Exchange Hackathon by Google 🏆",
+        "description": "Champion of Network 18 Track",
+        "achievements": [
+          "Engineered an innovative media attribution and tampering detection system",
+          "Addressed critical challenges in digital content verification"
+        ],
+        "date": "October 2024"
+      },
+      {
+        "event": "Smart India Hackathon 🥇",
+        "description": "Internal Winner - AICTE Problem Statement (ID: 1728)",
+        "achievements": [
+          "Proposed an innovative paperless scholarship disbursement system for PMSSS",
+          "Leveraged advanced Next.js features, including parallel routing, for a highly responsive prototype"
+        ],
+        "date": "September 2024"
+      },
       {
         "event": "Hacktoberfest 🍂",
-        "description": "Contributed to two open-source projects.",
+        "description": "Open-source contributor",
+        "achievements": [
+          "Contributed to two open-source projects"
+        ],
         "year": 2023
       }
     ]
@@ -168,15 +188,24 @@ const workExperience = {
 const techStack = {
   details: `{
   "tech_stack": {
-    "languages 📚": ["C++", "JavaScript", "Python", "Go", "TypeScript", "Solidity"],
-    "front_end 💻": ["HTML", "CSS", "React.js", "Next.js", "Vue.js", "SvelteKit"],
-    "back_end ⚙️": ["Node.js", "Express.js", "Appwrite", "Flask"],
+    "languages 📚": ["Python", "C/C++", "JavaScript", "TypeScript", "HTML/CSS", "GoLang", "Solidity", "Kotlin"],
+    "front_end 💻": ["React.js", "Next.js", "SvelteKit", "TailwindCSS"],
+    "back_end ⚙️": ["Node.js", "Express.js", "Flask", "FastAPI"],
     "databases 🗄️": ["MySQL", "MongoDB"],
-    "mobile 📱": ["React Native", "Flutter"],
-    "tools 🛠️": ["Git", "VS Code", "Postman", "Docker", "Kubernetes"],
-    "blockchain 🔗": ["Hardhat"],
+    "mobile 📱": ["React Native", "Expo", "Jetpack Compose"],
+    "tools 🛠️": ["Git", "Docker", "Kubernetes", "VS Code", "Linux/Unix"],
     "cloud ☁️": ["AWS"],
-    "other 🌐": ["Machine Learning", "Linux", "Data Mining"]
+    "machine_learning 🤖": ["pandas", "NumPy", "Matplotlib"],
+    "other 🌐": [
+      "Data Structures & Algorithms",
+      "API Development",
+      "Responsive Design",
+      "Gemini API",
+      "Prisma",
+      "Zustand",
+      "Ethers.js",
+      "HardHat"
+    ]
   }
 }`
 };
