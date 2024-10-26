@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 
 
 const ContactMe = () => {
-  //TODO: TRY TO OVERCOME TECHNICAL PROBLEMS OF CODE UPDATE IN REALTIME
   
   return (
     <BasePage active="_contact-me">

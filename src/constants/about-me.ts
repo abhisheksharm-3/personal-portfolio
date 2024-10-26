@@ -1,4 +1,3 @@
-//TODO: ADD EMOJIS
 const high_school = {
   details: `{
     "high_school": [
@@ -9,17 +8,17 @@ const high_school = {
             "grade": "10th",
             "result": "92.2%",
             "year": 2019,
-            "comment": "Soared through with flying colors! 🚀"
+            "comment": "Pretty proud of this one! 😊"
           },
           {
             "grade": "12th",
             "result": "92.4%",
             "year": 2021,
-            "comment": "Triumphed once again with a stellar performance! 🏆"
+            "comment": "Hard work paid off! 🎉"
           }
         ],
         "leadership": {
-          "position": "Prestigious key cabinet position in 10th grade 🔑"
+          "position": "Key Student Council Member in 10th grade 🤝"
         }
       }
     ]
@@ -39,55 +38,55 @@ const university = {
         "semester": 1,
         "sgpa": 9.3,
         "cgpa": 9.3,
-        "courses": ["C Language 💻"],
-        "comment": "Nailed it from the start!",
+        "courses": ["C Programming 💻"],
+        "comment": "Great start! Still remember my first 'Hello World'",
         "trend": "⬆️"
       },
       {
         "semester": 2,
         "sgpa": 7.73,
         "cgpa": 8.54,
-        "courses": ["OOP with C++ 🧱"],
-        "comment": "Explored OOP concepts.",
+        "courses": ["C++ and OOP 🎯"],
+        "comment": "OOP was tricky but fascinating",
         "trend": "⬇️"
       },
       {
         "semester": 3,
         "sgpa": 7.82,
         "cgpa": 8.29,
-        "courses": ["Data Structures 🌳", "DBMS 🗄️"],
-        "comment": "Dove into DS and DBMS.",
+        "courses": ["Data Structures 🌳", "Databases 📊"],
+        "comment": "Binary trees became my new friends",
         "trend": "⬆️"
       },
       {
         "semester": 4,
         "sgpa": 8.54,
         "cgpa": 8.36,
-        "courses": ["Algorithms 🧮", "OS 💽", "Web Development 🌐"],
-        "comment": "Mastered core CS concepts.",
+        "courses": ["Algorithms", "Operating Systems", "Web Dev 🌐"],
+        "comment": "Finally built my first website!",
         "trend": "⬆️"
       },
       {
         "semester": 5,
         "sgpa": 8.00,
         "cgpa": 8.28,
-        "courses": ["AI 🤖", "Data Communication 📡"],
-        "comment": "Explored cutting-edge tech.",
+        "courses": ["AI Basics 🤖", "Data Communication"],
+        "comment": "AI opened up a whole new world",
         "trend": "⬇️"
       },
       {
         "semester": 6,
         "sgpa": 8.00,
         "cgpa": 8.23,
-        "courses": ["Data Mining ⛏️", "Computer Networks 🖧"],
-        "comment": "Delved into data and networking.",
+        "courses": ["Data Mining", "Computer Networks"],
+        "comment": "Networks are actually pretty cool!",
         "trend": "⬇️",
         "additional_activities": [
           {
             "type": "Publication",
-            "description": "Published a paper on improving AODV",
+            "description": "Published my first research paper on AODV improvements",
             "link": "http://doi.one/10.1729/Journal.40670",
-            "link_text": "View Paper 📄"
+            "link_text": "Check it out here 📄"
           }
         ]
       }
@@ -99,41 +98,41 @@ const university = {
 const summary = {
   details: `{
   "profile": {
-    "title": "Innovative Computer Science Engineer-in-Training 🚀",
-    "tagline": "Crafting Consumer-Centric Software Solutions for Tomorrow's Challenges",
+    "title": "CS Student & Tech Enthusiast 👨‍💻",
+    "tagline": "Building useful stuff with code, one project at a time",
     "education": {
       "degree": "BE in Computer Science and Engineering",
-      "institution": "Chandigarh College of Engineering and Technology, Panjab University",
+      "institution": "CCET, Panjab University",
       "expected_graduation": "June 2025",
       "current_cgpa": 8.23
     },
     "key_attributes": [
-      "Full-stack enthusiast with a passion for mobile development 📱💻",
-      "Hackathon champion and innovative problem-solver 🏆",
-      "Published researcher in network protocols 📊",
-      "Proficient in multiple programming languages and frameworks 🌐"
+      "Love building apps that solve real problems 📱",
+      "Always up for a good hackathon challenge 💡",
+      "Published my first research paper (still can't believe it!) 📝",
+      "Enjoy learning new programming languages and tools 🛠️"
     ],
-    "technical_proficiencies": [
-      "Full-stack Development",
-      "Mobile App Development",
-      "AI and Machine Learning",
-      "Data Structures & Algorithms",
-      "Database Management",
-      "Cloud Technologies (AWS)"
+    "technical_skills": [
+      "Web Development",
+      "Mobile Apps",
+      "Getting better at AI/ML",
+      "Data Structures",
+      "Databases",
+      "Learning AWS"
     ],
     "soft_skills": [
-      "Self-directed learning",
-      "Adaptability to new technologies",
-      "Effective communication",
-      "Team collaboration"
+      "Quick learner",
+      "Team player",
+      "Good at explaining tech stuff",
+      "Open to feedback"
     ],
-    "career_objectives": [
-      "Contribute to cutting-edge software solutions",
-      "Drive innovation in AI and machine learning applications",
-      "Develop scalable and efficient applications that solve real-world problems",
-      "Continuously expand expertise in emerging technologies"
+    "goals": [
+      "Build software that makes a difference",
+      "Learn more about AI and ML",
+      "Create apps people actually want to use",
+      "Keep growing as a developer"
     ],
-    "aspirations": "Eager to drive innovation in the global software industry. 🚀"
+    "aspirations": "Want to create tech that helps solve real-world problems 🎯"
   }
 }`
 };
@@ -141,10 +140,10 @@ const summary = {
 const techInterests = {
   details: `{
   "interests": {
-    "passions": ["Full-Stack Development 🌐", "Mobile App Development 📱"],
-    "expertise": ["Full Stack Development 🕸️", "Mobile Development 📱"],
-    "current_focus": "Exploring AI, Machine Learning 🤖 and Native Android Development 📱",
-    "excitement": "Eager to dive into emerging technologies! 🚀"
+    "current_loves": ["Building websites 🌐", "Mobile apps 📱"],
+    "getting_good_at": ["Full stack development", "Android apps"],
+    "learning_now": "Exploring AI/ML and native Android development",
+    "excitement": "Can't wait to learn what's next in tech! 💡"
   }
 }`
 };
@@ -152,33 +151,33 @@ const techInterests = {
 const workExperience = {
   details: `{
   "work_experience": {
-    "summary": "Actively engaged in hackathons, open-source contributions, and innovative projects.",
+    "summary": "Love participating in hackathons and contributing to open-source when I can",
     "events": [
-            {
-        "event": "Gen AI Exchange Hackathon by Google 🏆",
-        "description": "Champion of Network 18 Track",
+      {
+        "event": "Gen AI Exchange Hackathon by Google",
+        "description": "Won the Network 18 Track! 🎉",
         "achievements": [
-          "Engineered an innovative media attribution and tampering detection system",
-          "Addressed critical challenges in digital content verification"
+          "Built a cool system to detect fake media",
+          "Learned a ton about AI and media verification and attribution"
         ],
         "date": "October 2024"
       },
       {
-        "event": "Smart India Hackathon 🥇",
-        "description": "Internal Winner - AICTE Problem Statement (ID: 1728)",
+        "event": "Smart India Hackathon",
+        "description": "Internal Winner - AICTE Track",
         "achievements": [
-          "Proposed an innovative paperless scholarship disbursement system for PMSSS",
-          "Leveraged advanced Next.js features, including parallel routing, for a highly responsive prototype"
+          "Created a digital scholarship system",
+          "First time using Next.js parallel routing - mind blown!"
         ],
         "date": "September 2024"
       },
       {
-        "event": "Hacktoberfest 🍂",
-        "description": "Open-source contributor",
+        "event": "Hacktoberfest 2023",
+        "description": "First time contributing to open source!",
         "achievements": [
-          "Contributed to two open-source projects"
+          "Made two small but meaningful contributions"
         ],
-        "year": 2023
+        "date": "October 2023"
       }
     ]
   }
@@ -188,23 +187,57 @@ const workExperience = {
 const techStack = {
   details: `{
   "tech_stack": {
-    "languages 📚": ["Python", "C/C++", "JavaScript", "TypeScript", "HTML/CSS", "GoLang", "Solidity", "Kotlin"],
-    "front_end 💻": ["React.js", "Next.js", "SvelteKit", "TailwindCSS"],
-    "back_end ⚙️": ["Node.js", "Express.js", "Flask", "FastAPI"],
-    "databases 🗄️": ["MySQL", "MongoDB"],
-    "mobile 📱": ["React Native", "Expo", "Jetpack Compose"],
-    "tools 🛠️": ["Git", "Docker", "Kubernetes", "VS Code", "Linux/Unix"],
-    "cloud ☁️": ["AWS"],
-    "machine_learning 🤖": ["pandas", "NumPy", "Matplotlib"],
-    "other 🌐": [
-      "Data Structures & Algorithms",
-      "API Development",
-      "Responsive Design",
-      "Gemini API",
-      "Prisma",
-      "Zustand",
-      "Ethers.js",
-      "HardHat"
+    "languages": [
+      "JavaScript/TypeScript 💻",
+      "Python 🐍",
+      "C/C++ ⚡",
+      "Getting better at Go 🏃",
+      "SQL 📊",
+      "Learning Solidity & Kotlin 🌱"
+    ],
+    "frontend": [
+      "React.js ⚛️",
+      "Next.js 🚀",
+      "SvelteKit 🔧",
+      "TailwindCSS 🎨",
+      "Component Libraries (shadCN UI, NextUI) 🧩"
+    ],
+    "backend": [
+      "Node.js 🟢",
+      "Express.js 🚂",
+      "Flask 🌶️",
+      "Getting familiar with API design patterns 🔄"
+    ],
+    "mobile": [
+      "React Native 📱",
+      "Expo 🚀",
+      "Learning Jetpack Compose 🤖"
+    ],
+    "databases": [
+      "MongoDB 🍃",
+      "MySQL 🗄️",
+      "Prisma ORM 🔗"
+    ],
+    "cloud_devops": [
+      "Basic AWS services ☁️",
+      "Docker fundamentals 🐳",
+      "Linux/Unix essentials 🐧"
+    ],
+    "data_ml": [
+      "pandas 🐼",
+      "NumPy 📊",
+      "Matplotlib 📈",
+      "Basic ML concepts 🤖"
+    ],
+    "web3": [
+      "Ethers.js 🌐",
+      "HardHat 🏗️",
+      "Learning blockchain development 🔗"
+    ],
+    "tools": [
+      "VS Code (my trusty companion) 💻",
+      "Git (saving my life daily) 🌳",
+      "State Management (Zustand) 🔄"
     ]
   }
 }`
@@ -212,21 +245,93 @@ const techStack = {
 
 const nonNerdy = {
   details: `{
-  "non_nerdy_hobbies": [
-    "Photography 📷",
-    "Reading 📖",
-    "Traveling ✈️"
+  "life_outside_code": [
+    {
+      "hobby": "Photography 📸",
+      "details": "Love capturing city life and nature. My phone gallery is basically 70% clouds shots!",
+      "favorite": "Golden hour urban photography",
+      "recent_adventure": "Trying to master low-light photography"
+    },
+    {
+      "hobby": "Reading 📚",
+      "current_reads": [
+        "The Almanack of Naval Ravikant",
+        "The Courage to be disliked"
+      ],
+      "favorite_genres": [
+        "Personal development",
+        "Popular science",
+        "Business & tech"
+      ],
+      "reading_goal": "12 books this year - currently at 7!"
+    },
+    {
+      "hobby": "Exploring Places 🌎",
+      "style": "Weekend wanderer & street food hunter",
+      "favorite_spots": [
+        "Hidden cafes in Chandigarh",
+        "Quiet spots for reading & coding"
+      ],
+      "dream_destinations": [
+        "Silicon Valley",
+        "Tokyo's tech district",
+        "European startup hubs"
+      ]
+    },
+    {
+      "hobby": "Music 🎵",
+      "listening_habits": "Perfect coding companion",
+      "favorite_work_genres": [
+        "Lo-fi for coding sessions",
+        "Rock for debugging marathons",
+        "Classical for complex problem-solving"
+      ],
+      "spotify_wrapped_flex": "Top 2% listener hours last year!"
+    }
   ]
 }`
 };
 
 const nerdy = {
   details: `{
-  "nerdy_hobbies": [
-    "Video Gaming 🎮",
-    "Sci-Fi/Fantasy Book Reading 📚",
-    "Coding/Programming 💻",
-    "Model Building 🛠️"
+  "tech_hobbies": [
+    {
+      "hobby": "Gaming 🎮",
+      "current_favorites": [
+        "Valorant with college friends",
+      ],
+      "gaming_philosophy": "Perfect way to unwind after debugging sessions",
+      "fun_fact": "Bought a gaming laptop just to play these better!"
+    },
+    {
+      "hobby": "Sci-Fi Adventures 🚀",
+      "movies": [
+        "Interstellar (watched it 4 times!)",
+        "Martian",
+        "Inception"
+      ]
+    },
+    {
+      "hobby": "Side Projects 💻",
+      "current_project": "Well too many",
+      "project_stack": "Next.Js + Appwrite",
+      "motivation": "Love making software for my use case",
+      "status": "70% done, 90% to go 😅"
+    },
+    {
+      "hobby": "Learning New Tech 📱",
+      "current_obsessions": [
+        "Web3 development",
+        "Machine Learning projects",
+        "Mobile app development"
+      ],
+      "learning_style": "Weekend warrior - tutorials by day, coding by night",
+      "favorite_resources": [
+        "YouTube tech channels",
+        "Dev.to articles",
+        "Open source projects"
+      ]
+    }
   ]
 }`
 };

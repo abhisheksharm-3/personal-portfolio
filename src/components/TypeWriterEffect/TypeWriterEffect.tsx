@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 const TypewriterEffect = () => {
   const strings = [
     "Full-Stack Developer",
-    "Hybrid Mobile Developer",
+    "Android Developer",
     "ML Enthusiast",
     "CyberSecurity Newbie",
   ];
