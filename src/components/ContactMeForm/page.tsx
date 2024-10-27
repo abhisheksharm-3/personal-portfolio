@@ -18,6 +18,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "../ui/textarea";
 import axios from "axios";
 import "@/constants/nightOwlContactMe.css"
+import { Separator } from "../ui/separator";
+import { CalComponent } from "../ContactsSection/CalComponent";
 
 const ContactFormSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -110,106 +112,126 @@ const ContactMeForm = () => {
   };
 
   return (
-    <><div className="lg:flex lg:pt-8 lg:justify-center lg:w-1/2 lg:border-r-2"><Form {...form}>
-      {isSubmitted ? (
-        <div className=" flex flex-col items-center justify-center gap-2">
-          <p className="text-[32px]">Thank you! 🤘</p>
-          <div className="flex flex-col items-center text-fade-text">
-            <p>Your message has been received.</p>
-            <p>You will receive an answer really soon!</p>
-          </div>
-          <Button
-            variant={"secondary"}
-            className="mt-6"
-            onClick={sendNewMessage}
-          >
-            send-new-message
-          </Button>
-        </div>
-      ) : (
-        <form
-          onSubmit={form.handleSubmit(handleSubmit)}
-          className="w-max flex flex-col gap-2 items-start"
-        >
-          <FormField
-            control={form.control}
-            name="name"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel aria-label="Name">_name</FormLabel>
-                  <FormControl>
-                    <Input className="bg-[#011221] w-[372px]" {...field} />
-                  </FormControl>
-                  <FormMessage aria-describedby="name-error" />
-                </FormItem>
-              );
-            }}
-          />
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel aria-label="Email">_email</FormLabel>
-                  <FormControl>
-                    <Input className="bg-[#011221] w-[372px]" {...field} />
-                  </FormControl>
-                  <FormMessage aria-describedby="email-error" />
-                </FormItem>
-              );
-            }}
-          />
-          <FormField
-            control={form.control}
-            name="message"
-            render={({ field }) => {
-              return (
-                <FormItem>
-                  <FormLabel aria-label="Message">_message</FormLabel>
-                  <FormControl>
-                    <Textarea
-                      className="bg-[#011221] h-40 w-[372px]"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage aria-describedby="message-error" />
-                </FormItem>
-              );
-            }}
-          />
-          {error && (
-            <div className="text-red-500 text-sm">
-              Your message couldn&apos;t be sent. <br /> Please try again or
-              <br />{" "}
-              <a
-                href={`mailto:${process.env.MY_MAIL}`}
-                className="underline hover:text-red-400 duration-400"
-              >
-                send directly using this link
-              </a>
-              .
+    <><div className="lg:flex lg:pt-8 lg:justify-center lg:w-1/2 lg:border-r-2">
+      <Form {...form}>
+        {isSubmitted ? (
+          <div className="flex flex-col items-center justify-center gap-2">
+            <p className="text-[32px]">Thank you! 🤘</p>
+            <div className="flex flex-col items-center text-fade-text">
+              <p>Your message has been received.</p>
+              <p>You will receive an answer really soon!</p>
             </div>
-          )}
-          {loading ? (
-            <Button variant={"secondary"} disabled>
-              <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
-              Please wait
+            <Button
+              variant={"secondary"}
+              className="mt-6"
+              onClick={sendNewMessage}
+            >
+              send-new-message
             </Button>
-          ) : (
-            <Button variant={"secondary"} disabled={loading} type="submit">
-              submit-message
-            </Button>
-          )}
-        </form>
-      )}
-    </Form></div><div className="lg:w-1/2 hidden lg:block">
-      {/* see why styles are not being applied in production */}
-        <SyntaxHighlighter className="nightOwl-ContactMe" showLineNumbers={true} useInlineStyles={false} language="js">
-          {formCode}
-        </SyntaxHighlighter>
-      </div></>
+          </div>
+        ) : (
+          <div className="">
+            <form
+              onSubmit={form.handleSubmit(handleSubmit)}
+              className="w-max flex flex-col gap-2 items-start"
+            >
+              <FormField
+                control={form.control}
+                name="name"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel aria-label="Name">_name</FormLabel>
+                      <FormControl>
+                        <Input className="bg-[#011221] w-[372px]" {...field} />
+                      </FormControl>
+                      <FormMessage aria-describedby="name-error" />
+                    </FormItem>
+                  );
+                }}
+              />
+              <FormField
+                control={form.control}
+                name="email"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel aria-label="Email">_email</FormLabel>
+                      <FormControl>
+                        <Input className="bg-[#011221] w-[372px]" {...field} />
+                      </FormControl>
+                      <FormMessage aria-describedby="email-error" />
+                    </FormItem>
+                  );
+                }}
+              />
+              <FormField
+                control={form.control}
+                name="message"
+                render={({ field }) => {
+                  return (
+                    <FormItem>
+                      <FormLabel aria-label="Message">_message</FormLabel>
+                      <FormControl>
+                        <Textarea
+                          className="bg-[#011221] h-40 w-[372px]"
+                          {...field}
+                        />
+                      </FormControl>
+                      <FormMessage aria-describedby="message-error" />
+                    </FormItem>
+                  );
+                }}
+              />
+              {error && (
+                <div className="text-red-500 text-sm">
+                  Your message couldn&apos;t be sent. <br /> Please try again or
+                  <br />{" "}
+                  <a
+                    href={`mailto:${process.env.MY_MAIL}`}
+                    className="underline hover:text-red-400 duration-400"
+                  >
+                    send directly using this link
+                  </a>
+                  .
+                </div>
+              )}
+              {loading ? (
+                <Button variant={"secondary"} disabled>
+                  <ReloadIcon className="mr-2 h-4 w-4 animate-spin" />
+                  Please wait
+                </Button>
+              ) : (
+                <Button variant={"secondary"} disabled={loading} type="submit">
+                  submit-message
+                </Button>
+              )}
+            </form>
+
+            <div className="w-[372px] mt-8">
+              <Separator className="mb-4" />
+              <p className="text-center mb-4">or</p>
+              {/* <iframe
+                src="https://cal.com/abhisheksan"
+                style={{
+                  width: '100%',
+                  height: '400px',
+                  border: 'none',
+                  borderRadius: '8px',
+                }}
+                className="scrollbar-hide"
+              /> */}
+              <CalComponent />
+            </div>
+          </div>
+        )}
+      </Form>
+    </div>
+    <div className="lg:w-1/2 hidden lg:block">
+      <SyntaxHighlighter className="nightOwl-ContactMe" showLineNumbers={true} useInlineStyles={false} language="js">
+        {formCode}
+      </SyntaxHighlighter>
+    </div></>
   );
 };
 

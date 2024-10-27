@@ -51,10 +51,10 @@ const ContactMe = () => {
       {/* Mobile Version */}
       <div className="flex flex-col gap-4 h-screen py-4 lg:hidden overflow-hidden">
         <div className="flex px-4">_contact-me</div>
-        <div className="flex flex-col gap-1 overflow-auto">
+        {/* <div className="flex flex-col gap-1 overflow-auto">
           <ContactsSection />
           <FindMeAlsoOnSection />
-        </div>
+        </div> */}
         <div className="w-full flex items-center justify-center">
           <ContactMeForm />
         </div>

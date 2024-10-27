@@ -11,7 +11,7 @@ export const CalComponent = () => {
           Schedule a quick 15-30 minute chat about potential collaboration
         </p>
         <a
-          href="https://cal.com/abhisheksharma"
+          href="https://cal.com/abhisheksan"
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center gap-2 px-4 py-2 bg-primary text-black rounded hover:bg-primary/90 transition-colors duration-300"
