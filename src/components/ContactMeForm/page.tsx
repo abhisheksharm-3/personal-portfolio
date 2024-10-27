@@ -208,7 +208,7 @@ const ContactMeForm = () => {
               )}
             </form>
 
-            <div className="w-[372px] mt-8">
+            <div className="w-[372px] mt-8 hidden lg:block">
               <Separator className="mb-4" />
               <p className="text-center mb-4">or</p>
               {/* <iframe
