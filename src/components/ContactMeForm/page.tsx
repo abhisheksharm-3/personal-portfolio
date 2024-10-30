@@ -207,8 +207,8 @@ const ContactMeForm = () => {
                 </Button>
               )}
             </form>
-
-            <div className="w-[372px] mt-8 hidden lg:block">
+{/* hidden due to overflow issues */}
+            <div className="w-[372px] mt-8 hidden "> 
               <Separator className="mb-4" />
               <p className="text-center mb-4">or</p>
               {/* <iframe
