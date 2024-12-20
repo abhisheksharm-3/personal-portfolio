@@ -44,6 +44,22 @@ export const projects = [
     building: false,
   },
   {
+    title: "Poetica",
+    showcaseImage: "/images/projects/poetica.png",
+    description: "A LLM based poem generation platform.",
+    link: "https://poetica-ai.vercel.app/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
+    building: true,
+  },
+  {
+    title: "Lexalyze",
+    showcaseImage: "/images/projects/lexalyze.png",
+    description: "A legal document parser with SvelteKit.",
+    link: "https://getresumes.vercel.app/",
+    techStack: ["Svelte", "SvelteKit", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
+    building: true,
+  },
+  {
     title: "QuickGist",
     showcaseImage: "/images/projects/quickgist.png",
     description: "A GitHub Gist like website with React + GoLang.",
@@ -89,7 +105,7 @@ export const projects = [
     description: "A Pomodoro timer built with SvelteKit.",
     link: "https://aestoti.vercel.app/",
     techStack: ["SvelteKit", "TailwindCSS"],
-    building: true,
+    building: false,
   },
   {
     title: "Sanklp-Hotel",
