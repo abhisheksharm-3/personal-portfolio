@@ -55,7 +55,7 @@ export const projects = [
     title: "Lexalyze",
     showcaseImage: "/images/projects/lexalyze.png",
     description: "A legal document parser with SvelteKit.",
-    link: "https://getresumes.vercel.app/",
+    link: "https://lexalyze.vercel.app/",
     techStack: ["Svelte", "SvelteKit", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
     building: true,
   },
