@@ -12,7 +12,7 @@ import {
   RiToolsFill,
 } from "@remixicon/react";
 import { Button, Link, Skeleton, Tooltip } from "@nextui-org/react";
-import { SiExpress, SiFlask, SiHiveBlockchain } from "react-icons/si";
+import { SiExpress, SiFlask, SiHiveBlockchain, SiJetpackcompose } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 
 interface ProjectCardProps {
@@ -51,6 +51,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
       SvelteKit: RiSvelteFill,
       Web3: SiHiveBlockchain,
       GoLang: FaGolang,
+      "Jetpack Compose": SiJetpackcompose,
     };
 
     const Icon = iconMap[techStack] || RiReactjsFill;

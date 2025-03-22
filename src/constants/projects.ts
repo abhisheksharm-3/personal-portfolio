@@ -20,12 +20,20 @@ export const projects = [
     building: false,
   },
   {
+    title: "Retask",
+    showcaseImage: "/images/projects/retask.png",
+    description: "A minimal todo app with Jetpack Compose and MAD.",
+    link: "https://github.com/abhisheksharm-3/retask/releases",
+    techStack: ["Jetpack Compose", "Android", "Native", "Room", "Kotlin"],
+    building: false,
+  },
+  {
     title: "GetResume",
     showcaseImage: "/images/projects/getresume.png",
     description: "A resume parsing platform with nextjs + Gemini API.",
     link: "https://getresumes.vercel.app/",
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
-    building: true,
+    building: false,
   },
   {
     title: "Votegrity",
@@ -33,7 +41,7 @@ export const projects = [
     description: "A dApp voting platform made with nextjs + solidity.",
     link: "https://votegrity.vercel.app/",
     techStack: ["Web3", "Solidity", "NextJs", "React", "TailwindCSS", "TypeScript"],
-    building: true,
+    building: false,
   }, 
   {
     title: "Kalendar",
@@ -49,7 +57,7 @@ export const projects = [
     description: "A LLM based poem generation platform.",
     link: "https://poetica-ai.vercel.app/",
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
-    building: true,
+    building: false,
   },
   {
     title: "Lexalyze",
@@ -57,7 +65,7 @@ export const projects = [
     description: "A legal document parser with SvelteKit.",
     link: "https://lexalyze.vercel.app/",
     techStack: ["Svelte", "SvelteKit", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
-    building: true,
+    building: false,
   },
   {
     title: "QuickGist",

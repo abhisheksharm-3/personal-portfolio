@@ -8,6 +8,7 @@ import {
   SiFlask,
   SiHiveBlockchain,
   SiFastapi,
+  SiJetpackcompose,
 } from "react-icons/si";
 import { FaGolang } from "react-icons/fa6";
 import { projects } from "@/constants/projects";
@@ -30,10 +31,11 @@ const ProjectsViewfinder = () => {
   const techsWithIcons = useMemo(
     () => [
       { name: "React", icon: <RiReactjsLine /> },
-      { name: "HTML", icon: <RiHtml5Line /> },
+      { name: "Jetpack Compose", icon: <SiJetpackcompose className="text-2xl pl-0.5"/> },
       { name: "NextJs", icon: <RiNextjsLine /> },
       { name: "SvelteKit", icon: <RiSvelteLine /> },
       { name: "ExpressJs", icon: <SiExpress className="text-2xl pl-0.5" /> },
+      { name: "HTML", icon: <RiHtml5Line /> },
       { name: "TypeScript", icon: <SiTypescript className="text-xl pl-0.5" /> },
       { name: "JavaScript", icon: <SiJavascript className="text-xl pl-0.5" /> },
       { name: "GoLang", icon: <FaGolang className="text-2xl" /> },
@@ -78,7 +80,7 @@ const ProjectsViewfinder = () => {
         </div>
         {showTechStack ? (
           // added mb-32 to the div below to show all options in scroll on small screens
-          <div className="mt-4 mb-32 ml-4 space-y-2 overflow-y-scroll scrollbar-hide"> 
+          <div className="mt-4 mb-32 ml-4 space-y-2 overflow-y-scroll scrollbar-hide">
             {techsWithIcons.map((tech, index) => (
               <Checkbox
                 key={index}
@@ -115,10 +117,7 @@ const ProjectsViewfinder = () => {
                       : "all projects" // Default to "projects" if no technology is selected
                   }
                 </span>
-                <Tooltip
-                  content="Clear Filters"
-                  placement="top"
-                >
+                <Tooltip content="Clear Filters" placement="top">
                   <button
                     className="focus:outline-none"
                     onClick={() => setSelectedTechs([])}
@@ -131,32 +130,31 @@ const ProjectsViewfinder = () => {
           </div>
         </div>
         <div className="flex flex-row flex-grow h-full">
-          
-            {/* Display filtered projects */}
-            {filteredProjects.length > 0 ? (
-  <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 pt-20 pb-60 w-full px-32 overflow-y-scroll scrollbar-hide">
-    {filteredProjects.map((project, index) => (
-      <div key={index}>
-        <div className="flex gap-8 py-2">
-          <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
-          <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
-        </div>
-        <ProjectCard
-          key={index}
-          title={project.title}
-          showcaseImage={project.showcaseImage}
-          description={project.description}
-          link={project.link}
-          techStack={project.techStack[0]}
-          building={project.building}
-        />
-      </div>
-    ))}
-  </div>
-) : (
-  <NoProjectsYet />
-)}
-          
+          {/* Display filtered projects */}
+          {filteredProjects.length > 0 ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 pt-20 pb-60 w-full px-32 overflow-y-scroll scrollbar-hide">
+              {filteredProjects.map((project, index) => (
+                <div key={index}>
+                  <div className="flex gap-8 py-2">
+                    <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
+                    <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
+                  </div>
+                  <ProjectCard
+                    key={index}
+                    title={project.title}
+                    showcaseImage={project.showcaseImage}
+                    description={project.description}
+                    link={project.link}
+                    techStack={project.techStack[0]}
+                    building={project.building}
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <NoProjectsYet />
+          )}
+
           <div className="px-2 border-l-2 text-fade-text flex items-center">
             a<br />b<br />h<br />i<br />s<br />h<br />e<br />k<br />
             <br />s<br />h<br />a<br />r<br />m<br />a
@@ -216,30 +214,30 @@ const ProjectsViewfinder = () => {
             : "/ all" // Default to "projects" if no technology is selected
         }
       </span>
-      
+
       {filteredProjects.length > 0 ? (
-  <div className="w-full grid grid-cols-1 overflow-y-scroll scrollbar-hide place-items-center pb-60 gap-2">
-    {filteredProjects.map((project, index) => (
-      <div key={index}>
-        <div className="flex gap-8 py-2">
-          <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
-          <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
+        <div className="w-full grid grid-cols-1 overflow-y-scroll scrollbar-hide place-items-center pb-60 gap-2">
+          {filteredProjects.map((project, index) => (
+            <div key={index}>
+              <div className="flex gap-8 py-2">
+                <p className="text-[#5565E8]">{`Project ${index + 1}`}</p>
+                <p className="text-fade-text lowercase">{`// _${project.title}`}</p>
+              </div>
+              <ProjectCard
+                key={index}
+                title={project.title}
+                showcaseImage={project.showcaseImage}
+                description={project.description}
+                link={project.link}
+                techStack={project.techStack[0]}
+                building={project.building}
+              />
+            </div>
+          ))}
         </div>
-        <ProjectCard
-          key={index}
-          title={project.title}
-          showcaseImage={project.showcaseImage}
-          description={project.description}
-          link={project.link}
-          techStack={project.techStack[0]}
-          building={project.building}
-        />
-      </div>
-    ))}
-  </div>
-) : (
- <NoProjectsYet />
-)}
+      ) : (
+        <NoProjectsYet />
+      )}
     </div>
   );
   return (
