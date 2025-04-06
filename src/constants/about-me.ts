@@ -150,39 +150,51 @@ const techInterests = {
 
 const workExperience = {
   details: `{
-  "work_experience": {
-    "summary": "Love participating in hackathons and contributing to open-source when I can",
-    "events": [
-      {
-        "event": "Gen AI Exchange Hackathon by Google",
-        "description": "Won the Network 18 Track! 🎉",
-        "achievements": [
-          "Built a cool system to detect fake media",
-          "Learned a ton about AI and media verification and attribution"
-        ],
-        "date": "October 2024"
-      },
-      {
-        "event": "Smart India Hackathon",
-        "description": "Internal Winner - AICTE Track",
-        "achievements": [
-          "Created a digital scholarship system",
-          "First time using Next.js parallel routing - mind blown!"
-        ],
-        "date": "September 2024"
-      },
-      {
-        "event": "Hacktoberfest 2023",
-        "description": "First time contributing to open source!",
-        "achievements": [
-          "Made two small but meaningful contributions"
-        ],
-        "date": "October 2023"
-      }
-    ]
-  }
-}`
+    "work_experience": {
+      "summary": "Love participating in hackathons, contributing to open source, and building real-world products through internships.",
+      "events": [
+        {
+          "event": "Software Development Intern @ Stardom",
+          "description": "Helping shape the company’s website and digital infrastructure.",
+          "link": "https://stardom.co.in",
+          "achievements": [
+            "Built and deployed their main site using Next.js + TailwindCSS",
+            "Integrated CI/CD workflows for smoother releases",
+            "Set up cloud infrastructure and email systems from scratch"
+          ],
+          "date": "January 2025 – Present"
+        },
+        {
+          "event": "Gen AI Exchange Hackathon by Google",
+          "description": "Won the Network 18 Track! 🎉",
+          "achievements": [
+            "Built a cool system to detect fake media",
+            "Learned a ton about AI and media verification and attribution"
+          ],
+          "date": "October 2024"
+        },
+        {
+          "event": "Smart India Hackathon",
+          "description": "Internal Winner - AICTE Track",
+          "achievements": [
+            "Created a digital scholarship system",
+            "First time using Next.js parallel routing – mind blown!"
+          ],
+          "date": "September 2024"
+        },
+        {
+          "event": "Hacktoberfest 2023",
+          "description": "First time contributing to open source!",
+          "achievements": [
+            "Made two small but meaningful contributions"
+          ],
+          "date": "October 2023"
+        }
+      ]
+    }
+  }`
 };
+
 
 const techStack = {
   details: `{
