@@ -3,10 +3,12 @@ import Typewriter from "typewriter-effect";
 
 const TypewriterEffect = () => {
   const strings = [
-    "Full-Stack Developer",
-    "Android Developer",
-    "ML Enthusiast",
-    "CyberSecurity Newbie",
+    "Full-Stack Developer 💻",
+    "Android Developer 📱",
+    "AI/ML Explorer 🤖",
+    "Open Source Contributor 🌍",
+    "Product Builder 🛠️",
+    "Cloud & DevOps Learner ☁️",
   ];
 
   return (
@@ -16,23 +18,14 @@ const TypewriterEffect = () => {
         loop: true,
       }}
       onInit={(typewriter) => {
-        typewriter
-          .typeString(strings[0])
-          .pauseFor(4000)
-          .deleteAll()
-          .pauseFor(2000)
-          .typeString(strings[1])
-          .pauseFor(4000)
-          .deleteAll()
-          .pauseFor(2000)
-          .typeString(strings[2])
-          .pauseFor(4000)
-          .deleteAll()
-          .pauseFor(2000)
-          .typeString(strings[3])
-          .pauseFor(4000)
-          .deleteAll()
-          .start();
+        strings.forEach((str) => {
+          typewriter
+            .typeString(str)
+            .pauseFor(4000)
+            .deleteAll()
+            .pauseFor(2000);
+        });
+        typewriter.start();
       }}
     />
   );
