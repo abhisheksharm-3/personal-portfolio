@@ -42,7 +42,22 @@ const FindMeAlsoOnSection = () => {
               >
                 <RiExternalLinkLine className="w-[16px]" />{" "}
                 <span className="hover:text-white duration-400">
-                  <a href="https://www.instagram.com/abhishekxsharmaa/" target="_blank">Instagram Account</a>
+                  <a href="https://www.instagram.com/abhishekxsharmaa/" target="_blank">
+                    Instagram Account
+                  </a>
+                </span>
+              </motion.span>
+              <motion.span
+                initial={{ x: -20, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.2 }}
+                className="flex gap-2 items-center text-sm cursor-pointer mt-2"
+              >
+                <RiExternalLinkLine className="w-[16px]" />{" "}
+                <span className="hover:text-white duration-400">
+                  <a href="https://x.com/iabhisheksan" target="_blank">
+                    X (Twitter) Profile
+                  </a>
                 </span>
               </motion.span>
             </div>
