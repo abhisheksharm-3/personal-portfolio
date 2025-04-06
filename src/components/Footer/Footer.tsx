@@ -11,7 +11,7 @@ function Footer() {
           </div>
           <div className="border-r-2 border-r-line px-3 py-3 flex  items-center justify-center cursor-pointer hover:text-[#C4C4C4] duration-400">
             <a
-              href="https://www.linkedin.com/in/abhisheksharma20212025/"
+              href="https://www.linkedin.com/in/abhisheksan/"
               target="_blank"
             >
               <RiLinkedinFill />
