@@ -29,6 +29,14 @@ export const projects = [
   },
   {
     title: "GetResume",
+    showcaseImage: "/images/projects/resummarize.png",
+    description: "An AI powered note taking WebApp with Supabase.",
+    link: "https://re-summarize.vercel.app/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "Supabase"],
+    building: false,
+  },
+  {
+    title: "Resummarie",
     showcaseImage: "/images/projects/getresume.png",
     description: "A resume parsing platform with nextjs + Gemini API.",
     link: "https://getresumes.vercel.app/",
