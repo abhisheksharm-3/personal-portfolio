@@ -18,6 +18,7 @@ function Navbar({ active }: { active: string }) {
     { href: "/", text: "_hello", activeKey: "_hello" },
     { href: "/about-me", text: "_about-me", activeKey: "_about-me" },
     { href: "/projects", text: "_projects", activeKey: "_projects" },
+    { href: "/project-graveyard", text: "_project-graveyard", activeKey: "_project-graveyard" },
     // { href: "/contact-me", text: "_contact-me", activeKey: "_contact-me" },
   ];
 
