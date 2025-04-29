@@ -274,35 +274,40 @@ const GraveyardEntrance: React.FC<GraveyardEntranceProps> = ({ onAnimationComple
             </motion.p>
           </motion.div>
           
+          {/* Fixed gate animation */}
           <motion.div
             className="absolute z-40 w-full h-full pointer-events-none"
             initial={{ opacity: 1 }}
             animate={{ opacity: 0 }}
             transition={{ delay: 3, duration: 1.5 }}
           >
-            {['left', 'right'].map(side => (
-              <motion.div
-                key={side}
-                className={`absolute ${side}-0 top-0 w-1/2 h-full bg-[#0a0e14] border-${side === 'left' ? 'r' : 'l'}-2 border-gray-800`}
-                initial={{ x: 0 }}
-                animate={{ x: side === 'left' ? '-100%' : '100%' }}
-                transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
-              >
-                <div className={`h-full flex items-center ${side === 'left' ? 'justify-end' : 'justify-start'}`}>
-                  {side === 'left' ? (
-                    <>
-                      <div className="w-10 h-3/4 border-r-2 border-gray-700 mr-5"></div>
-                      <div className="w-5 h-1/2 border-r-2 border-gray-700 mr-10"></div>
-                    </>
-                  ) : (
-                    <>
-                      <div className="w-5 h-1/2 border-l-2 border-gray-700 ml-10"></div>
-                      <div className="w-10 h-3/4 border-l-2 border-gray-700 ml-5"></div>
-                    </>
-                  )}
-                </div>
-              </motion.div>
-            ))}
+            {/* Left gate */}
+            <motion.div
+              key="left-gate"
+              className="absolute left-0 top-0 w-1/2 h-full bg-[#0a0e14] border-r-2 border-gray-800"
+              initial={{ x: 0 }}
+              animate={{ x: '-100%' }}
+              transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+            >
+              <div className="h-full flex items-center justify-end">
+                <div className="w-10 h-3/4 border-r-2 border-gray-700 mr-5"></div>
+                <div className="w-5 h-1/2 border-r-2 border-gray-700 mr-10"></div>
+              </div>
+            </motion.div>
+            
+            {/* Right gate */}
+            <motion.div
+              key="right-gate"
+              className="absolute right-0 top-0 w-1/2 h-full bg-[#0a0e14] border-l-2 border-gray-800"
+              initial={{ x: 0 }}
+              animate={{ x: '100%' }}
+              transition={{ delay: 2, duration: 1.5, ease: "easeInOut" }}
+            >
+              <div className="h-full flex items-center justify-start">
+                <div className="w-5 h-1/2 border-l-2 border-gray-700 ml-10"></div>
+                <div className="w-10 h-3/4 border-l-2 border-gray-700 ml-5"></div>
+              </div>
+            </motion.div>
           </motion.div>
         </motion.div>
       )}
