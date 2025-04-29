@@ -1,0 +1,79 @@
+.food {
+    background-color: #43D9AD;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #43D9AD;
+    width: 8px;
+    height: 8px;
+  }
+  
+  #corner {
+    width: 24px;
+    height: 24px;
+  }
+  
+  @media (min-width: 1024px) and (max-width: 1536px) {
+    #game-screen {
+      width: 192px !important;
+      height: 320px !important;
+    }
+  
+    #console {
+      width: 420px !important;
+      height: 370px !important;
+      padding: 24px !important;
+    }
+  
+    #start-button {
+      padding-inline: 12px !important;
+      padding-block: 6px !important;
+      border-radius: 8px !important;
+      bottom: 20% !important;
+      left: 17% !important;
+      font-size: 0.75rem !important;
+      line-height: 1rem !important;
+    }
+  
+    #console-menu {
+      height: 320px !important;
+    }
+  
+    #instructions {
+      font-size: 12px !important;
+    }
+  
+    #console-button {
+      width: 40px !important;
+      height: 25px !important;
+      border-radius: 6px !important;
+    }
+  
+    #score-board {
+      font-size: 12px !important;
+    }
+  
+    .food {
+      width: 6px !important;
+      height: 6px !important;
+    }
+  
+    #game-over, #congrats {
+      bottom: 10% !important;
+      width: 192px !important;
+    }
+  
+    #game-over > span, #congrats > span {
+      font-size: 1.125rem !important; 
+      line-height: 1.75rem !important;
+    }
+  
+    #corner {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  
+    #skip-btn {
+      font-size: 12px !important;
+      padding-inline: 12px !important;
+      padding-block: 6px !important;
+    }
+  }

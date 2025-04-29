@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   RiReactjsFill,
   RiAngularjsFill,
@@ -34,9 +34,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   const [isImageLoaded, setIsImageLoaded] = useState(false);
 
-  //TODO: fix the unwanted loading of the skeleton when the mouse hovers over clear filter or project tab changes state
-  //TODO: Fix page wide skeleto issue on load
-
   // Dynamically select the appropriate icon based on the techStack value
   const getTechIcon = (techStack: string) => {
     const iconMap: { [key: string]: React.ElementType } = {
@@ -57,82 +54,86 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
     const Icon = iconMap[techStack] || RiReactjsFill;
     return <Icon className="text-2xl" />;
   };
+
   return (
-    <>
-      <div className="flex flex-col bg-[#011221] border-1 rounded-3xl lg:rounded-lg w-[320px] 3xl:w-[370px] h-[315px] relative flex-shrink">
-        <Skeleton
-          isLoaded={isImageLoaded}
-          className="rounded-t-3xl lg:rounded-t-lg h-1/2"
-        >
-          {/* added showcase image to bg of upper div so as to avoid it overflowing to lower div and taking more space */}
-          <div className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg">
-            {/* Showcase Image */}
-            <Image
-              src={showcaseImage}
-              height={125}
-              width={370}
-              alt={title}
-              className="rounded-t-3xl lg:rounded-t-lg"
-              onLoad={() => setIsImageLoaded(true)}
-              onError={() => setIsImageLoaded(true)}
-              quality={100}
-            />
-            {/* Tech Stack Icon */}
-            <div className="absolute top-2 right-2 flex items-center gap-2 z-40">
-              {building && (
-                <Tooltip
-                  showArrow={true}
-                  placement="top"
-                  content={
-                    <div className="p-2">
-                      <p className="font-semibold">Work in Progress</p>
-                      <p className="text-xs">
-                        This project is actively being developed
-                      </p>
-                    </div>
-                  }
-                >
-                  <div className="bg-[#011221] rounded-full p-2 transition-all hover:bg-[#022442]">
-                    <RiToolsFill className="text-white text-lg" />
-                  </div>
-                </Tooltip>
-              )}
+    <div className="flex flex-col bg-[#011221] border-1 rounded-3xl lg:rounded-lg w-[320px] 3xl:w-[370px] h-[315px] relative flex-shrink">
+      <Skeleton
+        isLoaded={isImageLoaded}
+        className="rounded-t-3xl lg:rounded-t-lg h-1/2"
+      >
+        <div className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg">
+          {/* Subtle overlay gradient for better text visibility */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#011221] z-10 opacity-60"></div>
+          
+          {/* Showcase Image */}
+          <Image
+            src={showcaseImage}
+            height={125}
+            width={370}
+            alt={title}
+            className="rounded-t-3xl lg:rounded-t-lg h-full w-full object-cover"
+            onLoad={() => setIsImageLoaded(true)}
+            onError={() => setIsImageLoaded(true)}
+            quality={100}
+          />
+          
+          {/* Tech Stack Icon */}
+          <div className="absolute top-2 right-2 flex items-center gap-2 z-40">
+            {building && (
               <Tooltip
                 showArrow={true}
                 placement="top"
                 content={
                   <div className="p-2">
-                    <p className="font-semibold">Tech Stack</p>
-                    <p className="text-xs">{techStack}</p>
+                    <p className="font-semibold">Work in Progress</p>
+                    <p className="text-xs">
+                      This project is actively being developed
+                    </p>
                   </div>
                 }
               >
                 <div className="bg-[#011221] rounded-full p-2 transition-all hover:bg-[#022442]">
-                  {getTechIcon(techStack)}
+                  <RiToolsFill className="text-white text-lg" />
                 </div>
               </Tooltip>
-            </div>
-          </div>
-        </Skeleton>
-        <div className="flex flex-col flex-grow p-4 justify-between">
-          <Skeleton isLoaded={isImageLoaded} className="mb-4">
-            <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
-            <p className="text-fade-text text-sm">{description}</p>
-          </Skeleton>
-          <Skeleton isLoaded={isImageLoaded} className="w-full">
-            <Button
-              as={Link}
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full z-40 rounded-md bg-[#1f2937] h-9 font-medium"
+            )}
+            <Tooltip
+              showArrow={true}
+              placement="top"
+              content={
+                <div className="p-2">
+                  <p className="font-semibold">Tech Stack</p>
+                  <p className="text-xs">{techStack}</p>
+                </div>
+              }
             >
-              view-project
-            </Button>
-          </Skeleton>
+              <div className="bg-[#011221] rounded-full p-2 transition-all hover:bg-[#022442]">
+                {getTechIcon(techStack)}
+              </div>
+            </Tooltip>
+          </div>
         </div>
+      </Skeleton>
+      
+      <div className="flex flex-col flex-grow p-4 justify-between">
+        <Skeleton isLoaded={isImageLoaded} className="mb-4">
+          <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
+          <p className="text-fade-text text-sm line-clamp-3">{description}</p>
+        </Skeleton>
+        
+        <Skeleton isLoaded={isImageLoaded} className="w-full">
+          <Button
+            as={Link}
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full z-40 rounded-md bg-[#1f2937] h-9 font-medium transition-opacity hover:opacity-90"
+          >
+            view-project
+          </Button>
+        </Skeleton>
       </div>
-    </>
+    </div>
   );
 };
 
