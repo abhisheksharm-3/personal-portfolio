@@ -39,7 +39,7 @@ const university = {
         "sgpa": 9.3,
         "cgpa": 9.3,
         "courses": ["C Programming 💻"],
-        "comment": "Great start! Still remember my first 'Hello World'"
+        "comment": "Great start! My first program was 'Hello Aru' — not telling who that was 😏"
       },
       {
         "semester": 2,
