@@ -144,7 +144,7 @@ const GraveyardEntrance: React.FC<GraveyardEntranceProps> = ({
             if (onAnimationComplete) {
               setTimeout(onAnimationComplete, 500);
             }
-          }, 3000);
+          }, 2000);
         }, 1500);
       }
     }, reducedMotion ? 60 : 120);

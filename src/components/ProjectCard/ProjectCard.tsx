@@ -61,7 +61,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         isLoaded={isImageLoaded}
         className="rounded-t-3xl lg:rounded-t-lg h-1/2"
       >
-        <div className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg">
+        {/* Added White bg for better readability */}
+        <div className="relative h-1/2 bg-cover rounded-t-3xl lg:rounded-t-lg bg-white"> 
           {/* Subtle overlay gradient for better text visibility */}
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#011221] z-10 opacity-60"></div>
           
