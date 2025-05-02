@@ -44,6 +44,14 @@ export const projects = [
     building: false,
   },
   {
+    title: "Nahmachine",
+    showcaseImage: "/images/projects/nahmachine.png",
+    description: "A website that helps saying no.",
+    link: "https://nahmachine.vercel.app/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript"],
+    building: false,
+  },
+  {
     title: "Votegrity",
     showcaseImage: "/images/projects/votegrity.png",
     description: "A dApp voting platform made with nextjs + solidity.",
