@@ -36,6 +36,14 @@ export const projects = [
     building: false,
   },
   {
+    title: "WesternFront",
+    showcaseImage: "/images/projects/westernfront.png",
+    description: "An Aggregator Website from reliable sources on Indi-Pak Conflict.",
+    link: "https://western-front.vercel.app",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "RSS"],
+    building: false,
+  },
+  {
     title: "Resummarize",
     showcaseImage: "/images/projects/resummarize.png",
     description: "An AI powered note taking WebApp with Supabase.",
