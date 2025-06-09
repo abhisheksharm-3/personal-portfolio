@@ -27,13 +27,13 @@ function LandingPage() {
           </div>
           <div className="flex flex-col gap-1 group">
             <span className="text-fade-text">
-              &#x2F;&#x2F; see the portfolio code on my github
+              &#x2F;&#x2F; check out my new portfolio in the works
             </span>
             <span className="transition-colors duration-300 hover:text-blue-text">
               <span className="text-blue-text">const</span>{" "}
-              <span className="text-green-text">githubLink</span> ={" "}
+              <span className="text-green-text">portfolioLink</span> ={" "}
               <span className="text-skin-text">
-                &quot;https://github.com/abhisheksharm-3/personal-portfolio&quot;
+                &quot;new.abhisheksharma.tech&quot;
               </span>
             </span>
             <span className="text-fade-text text-sm pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -62,13 +62,13 @@ function LandingPage() {
 
           <div className="pt-6 flex flex-col gap-3">
             <span className="text-fade-text">
-              &#x2F;&#x2F; see the portfolio code on my github
+              &#x2F;&#x2F; check out my new portfolio in the works
             </span>
             <span>
               <span className="text-blue-text">const</span>{" "}
-              <span className="text-green-text">githubLink</span> ={" "}
+              <span className="text-green-text">portfolioLink</span> ={" "}
               <span className="text-skin-text">
-                &quot;https://github.com/abhisheksharm-3/personal-portfolio&quot;
+                &quot;new.abhisheksharma.tech&quot;
               </span>
             </span>
             <span className="text-fade-text text-xs pt-1">
