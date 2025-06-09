@@ -37,7 +37,7 @@ function LandingPage() {
               </span>
             </span>
             <span className="text-fade-text text-sm pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              &#x2F;&#x2F; last updated: 2025-04-29
+              &#x2F;&#x2F; last updated: 2025-06-09
             </span>
           </div>
         </div>
@@ -72,7 +72,7 @@ function LandingPage() {
               </span>
             </span>
             <span className="text-fade-text text-xs pt-1">
-              &#x2F;&#x2F; last updated: 2025-04-29
+              &#x2F;&#x2F; last updated: 2025-06-09
             </span>
           </div>
         </div>
