@@ -115,13 +115,13 @@ const university = {
 const summary = {
   details: `{
   "profile": {
-    "title": "CS Student & Tech Enthusiast 👨‍💻",
+    "title": "CS Graduate & Tech Enthusiast 👨‍💻",
     "tagline": "Building useful stuff with code, one project at a time",
     "education": {
       "degree": "BE in Computer Science and Engineering",
       "institution": "CCET, Panjab University",
       "expected_graduation": "June 2025",
-      "current_cgpa": 8.23
+      "current_cgpa": 8.31
     },
     "key_attributes": [
       "Love building apps that solve real problems 📱",
@@ -339,7 +339,7 @@ const nerdy = {
     {
       "hobby": "Gaming 🎮",
       "current_favorites": [
-        "Valorant with college friends",
+        "Valorant with friends",
         "Red Dead Redemption 2 🤠"
       ],
       "gaming_philosophy": "Perfect way to unwind after debugging sessions",
@@ -350,6 +350,7 @@ const nerdy = {
       "favorites": [
         "Interstellar (watched 4 times!)",
         "The Martian",
+        "Ad Astra",
         "Inception"
       ],
       "why_i_love_it": "Blends technology with imagination"
