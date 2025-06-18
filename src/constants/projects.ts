@@ -168,7 +168,7 @@ export const projects = [
     title: "VisualAlg",
     showcaseImage: "/images/projects/visualalg.png",
     description: "A Website to Visualize BFS and DFS Algorithms.",
-    link: "https://visualalg.vercel.app/",
+    link: "https://graphsense.netlify.app/",
     techStack: ["React", "TailwindCSS", "JavaScript"],
     building: false,
   },
