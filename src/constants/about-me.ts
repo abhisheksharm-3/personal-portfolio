@@ -31,7 +31,7 @@ const university = {
     "university_name": "Panjab University",
     "college_name": "Chandigarh College of Engineering and Technology",
     "degree": "BE in Computer Science and Engineering",
-    "current_cgpa": 8.23,
+    "current_cgpa": 8.31,
     "total_credits": 184,
     "semesters": [
       {
@@ -98,6 +98,14 @@ const university = {
             "link_text": "Check it out here 🎉"
           }
         ]
+      },
+      {
+        "semester": 8,
+        "sgpa": 9.00,
+        "cgpa": 8.31,
+        "courses": ["Network Science", "ML & CI"],
+        "comment": "Wrapping up with a bang! 🚀",
+        "reflection": "Successfully completed my undergraduate degree with a strong final semester!"
       }
     ]
   }
