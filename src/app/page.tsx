@@ -33,7 +33,7 @@ function LandingPage() {
               <span className="text-blue-text">const</span>{" "}
               <span className="text-green-text">portfolioLink</span> ={" "}
               <span className="text-skin-text">
-                &quot;new.abhisheksharma.tech&quot;
+                &quot;new.abhisheksan.com&quot;
               </span>
             </span>
             <span className="text-fade-text text-sm pt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -68,7 +68,7 @@ function LandingPage() {
               <span className="text-blue-text">const</span>{" "}
               <span className="text-green-text">portfolioLink</span> ={" "}
               <span className="text-skin-text">
-                &quot;new.abhisheksharma.tech&quot;
+                &quot;new.abhisheksan.com&quot;
               </span>
             </span>
             <span className="text-fade-text text-xs pt-1">
