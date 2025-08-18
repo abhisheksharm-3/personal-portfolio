@@ -20,6 +20,14 @@ export const projects = [
     building: false,
   },
   {
+    title: "Inquora",
+    showcaseImage: "/images/projects/inquora.png",
+    description: "A RAG platform built with NextJs.",
+    link: "https://inquora.vercel.app/",
+    techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "RAG"],
+    building: false,
+  },
+  {
     title: "Retask",
     showcaseImage: "/images/projects/retask.png",
     description: "A minimal todo app with Jetpack Compose and MAD.",
