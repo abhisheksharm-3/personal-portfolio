@@ -94,7 +94,7 @@ const university = {
           {
             "type": "Hackathon Win",
             "description": "Won the Network 18 Track at Gen AI Exchange Hackathon by Google",
-            "link": "credify.fun",
+            "link": "verifiedbycredify.vercel.app",
             "link_text": "Check it out here 🎉"
           }
         ]

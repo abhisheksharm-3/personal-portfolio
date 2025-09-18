@@ -15,7 +15,7 @@ export const projects = [
     title: "Credify",
     showcaseImage: "/images/projects/credify.png",
     description: "A content verification platform built with nextjs + FastAPI.",
-    link: "https://credify.fun/",
+    link: "https://verifiedbycredify.vercel.app/",
     techStack: ["NextJs", "React", "TailwindCSS", "TypeScript", "FastAPI", "Python"],
     building: false,
   },
